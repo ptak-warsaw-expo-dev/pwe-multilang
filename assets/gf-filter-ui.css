@@ -1,0 +1,51 @@
+.pwe-gf-lang-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 16px 0;
+}
+
+.pwe-gf-lang-tab {
+    border: 1px solid #ccd0d4;
+    background: #fff;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.pwe-gf-lang-tab.is-active {
+    background: #2271b1;
+    border-color: #2271b1;
+    color: #fff;
+}
+
+/* ---- Pasek tytułów ---- */
+.pwe-gf-title-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 0 0 16px;
+}
+
+.pwe-gf-title-tab {
+    border: 1px solid #ccd0d4;
+    background: #fff;
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 12px;
+    max-width: 280px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.pwe-gf-title-tab.is-active {
+    background: #135e96;
+    border-color: #135e96;
+    color: #fff;
+}
+
+.pwe-gf-notification-hidden {
+    display: none !important;
+}
