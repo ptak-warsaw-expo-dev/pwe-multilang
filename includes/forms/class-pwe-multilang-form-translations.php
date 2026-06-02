@@ -47,8 +47,15 @@ final class PWE_Multilang_Form_Translations
 
         unset($field);
 
-        if (!empty($translations['_button'])) {
-            $form['button']['text'] = $translations['_button'];
+        $current_button = $form['button']['text'] ?? '';
+
+        if (
+            $current_button
+            && isset($translations['_button'][$current_button][$lang])
+            && is_string($translations['_button'][$current_button][$lang])
+        ) {
+            $form['button']['type'] = 'text';
+            $form['button']['text'] = $translations['_button'][$current_button][$lang];
         }
 
         return $form;
@@ -86,11 +93,20 @@ final class PWE_Multilang_Form_Translations
         $translations = [];
 
         foreach ($all as $admin_label => $langs) {
-            if (isset($langs[$lang]) && is_array($langs[$lang])) {
-                $translations[$admin_label] = $langs[$lang];
+
+            // specjalna obsługa przycisków
+            if ($admin_label === '_button') {
+                $translations['_button'] = $langs;
+                continue;
             }
+
+            if (!is_array($langs) || !array_key_exists($lang, $langs)) {
+                continue;
+            }
+
+            $translations[$admin_label] = $langs[$lang];
         }
 
         return $translations;
-    }
+}
 }

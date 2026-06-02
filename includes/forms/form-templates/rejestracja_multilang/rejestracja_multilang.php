@@ -18,7 +18,7 @@ final class PWE_Multilang_Form_Template_Rejestracja_Multilang {
         // META + SETTINGS
         $metaSettings = PWE_Multilang_GF_Meta_Settings::build(
             $title,
-            buttonText: 'Zarejestruj się',
+            buttonText: 'Register',
         );
 
         // POLA
@@ -146,6 +146,11 @@ final class PWE_Multilang_Form_Template_Rejestracja_Multilang {
                         'field'    => 'patron',
                         'operator' => 'is',
                         'value'    => 'gr2',
+                    ],
+                    [
+                        'field'    => 'location',
+                        'operator' => 'isnot',
+                        'value'    => 'platyna',
                     ],
                 ],
             ],

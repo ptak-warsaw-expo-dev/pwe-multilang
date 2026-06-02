@@ -20,11 +20,13 @@ final class PWE_Multilang_Page_Meta_Copier
             $safe_values = [];
 
             foreach ($meta_values as $meta_value) {
-                if (self::is_builder_or_uncode_header_meta_value($meta_value)) {
+                $value = maybe_unserialize($meta_value);
+
+                if (self::contains_builder_payload($value)) {
                     continue;
                 }
 
-                $safe_values[] = maybe_unserialize($meta_value);
+                $safe_values[] = $value;
             }
 
             if (empty($safe_values)) {
@@ -38,7 +40,8 @@ final class PWE_Multilang_Page_Meta_Copier
             }
         }
 
-        self::remove_uncode_header_meta_from_target($target_id);
+        self::copy_uncode_header_footer_meta($source_id, $target_id);
+        self::cleanup_uncode_page_id_references($source_id, $target_id);
 
         $thumbnail_id = get_post_thumbnail_id($source_id);
 
@@ -47,43 +50,37 @@ final class PWE_Multilang_Page_Meta_Copier
         }
     }
 
-    /**
-     * Some page builders/themes keep a second copy of the page layout in post meta.
-     *
-     * In Uncode + WPBakery the duplicated layout may be rendered inside:
-     * .page-header > .header-wrapper > .header-uncode-block
-     *
-     * The real page body is already copied through post_content in PageCreator.
-     * We should not copy VC/WPBakery payloads or Uncode header-block settings,
-     * because Uncode can then render the same content again as a page header block.
-     */
     private static function should_skip_meta_key(string $meta_key): bool
     {
         $lower_meta_key = strtolower($meta_key);
 
+        /*
+         * Uncode kopiujemy osobno, bo zwykłe kopiowanie _uncode_* potrafi ustawić
+         * nowo tworzoną stronę jako Content Block i wtedy .page-header renderuje
+         * tę samą treść drugi raz. Fantastyczna rozrywka, naprawdę.
+         */
+        if (strpos($lower_meta_key, '_uncode_') === 0 || strpos($lower_meta_key, 'uncode_') === 0) {
+            return true;
+        }
+
         $excluded_meta_keys = [
-            // WordPress internal/editor meta.
             '_edit_lock',
             '_edit_last',
             '_wp_old_slug',
 
-            // WPML internal meta.
             '_icl_lang_duplicate_of',
             '_wpml_media_featured',
             '_wpml_media_duplicate',
 
-            // PWE Multilang internal meta.
             '_pwe_json_page_key',
             '_pwe_json_language',
             '_pwe_json_url',
             '_pwe_created_as_home_translation',
 
-            // Elementor, just in case the plugin is used on mixed sites.
             '_elementor_data',
             '_elementor_css',
             '_elementor_page_assets',
 
-            // WPBakery / Visual Composer generated settings or cached layout data.
             '_vc_post_settings',
             '_vc_shortcodes_custom_css',
             '_vc_post_custom_layout',
@@ -91,24 +88,10 @@ final class PWE_Multilang_Page_Meta_Copier
             '_wpb_shortcodes_custom_css',
             '_wpb_post_custom_layout',
 
-            // Generic builder payloads.
             '_builder_content',
             '_builder_data',
             '_builder_json',
             '_builder_layout',
-
-            // Common Uncode page-header / content-block meta keys.
-            '_uncode_header_type',
-            '_uncode_headers',
-            '_uncode_header',
-            '_uncode_header_block',
-            '_uncode_header_blocks',
-            '_uncode_page_header',
-            '_uncode_specific_header',
-            '_uncode_specific_header_type',
-            '_uncode_specific_header_block',
-            '_uncode_specific_headers',
-            '_uncode_specific_page_header',
         ];
 
         if (in_array($lower_meta_key, $excluded_meta_keys, true)) {
@@ -135,22 +118,247 @@ final class PWE_Multilang_Page_Meta_Copier
             }
         }
 
-        // Do not block all _uncode_* meta, because some of it controls normal page layout.
-        // But Uncode header/page-header meta is exactly where the duplicated content is being rendered.
-        if (strpos($lower_meta_key, 'uncode') !== false) {
-            $uncode_header_fragments = [
-                'header',
-                'headers',
-                'page_header',
-                'page-header',
-                'header_block',
-                'header-block',
-                'uncode_block',
-                'uncode-block',
-            ];
+        return false;
+    }
 
-            foreach ($uncode_header_fragments as $fragment) {
-                if (strpos($lower_meta_key, $fragment) !== false) {
+    /**
+     * Kopiuje ustawienia Uncode header/footer/page-header.
+     *
+     * Najważniejsze: nie kopiujemy żadnych selectorów Content Blocka oraz
+     * usuwamy wszystkie ukryte odwołania do ID strony źródłowej/docelowej.
+     * Jeżeli takie ID zostanie w _uncode_* headera, Uncode potrafi wyrenderować
+     * bieżącą stronę w .page-header. Tak, to jest tak głupie, jak brzmi.
+     */
+    private static function copy_uncode_header_footer_meta(int $source_id, int $target_id): void
+    {
+        $source_meta = get_post_meta($source_id);
+
+        foreach ($source_meta as $meta_key => $meta_values) {
+            $meta_key = (string) $meta_key;
+
+            if (!self::is_uncode_header_footer_meta_key($meta_key)) {
+                continue;
+            }
+
+            $safe_values = [];
+
+            foreach ($meta_values as $meta_value) {
+                $value = maybe_unserialize($meta_value);
+                $cleaned_value = self::sanitize_uncode_header_footer_value($value, $meta_key, $source_id, $target_id);
+
+                if ($cleaned_value === null || $cleaned_value === '') {
+                    continue;
+                }
+
+                if (self::contains_builder_payload($cleaned_value)) {
+                    continue;
+                }
+
+                $safe_values[] = $cleaned_value;
+            }
+
+            delete_post_meta($target_id, $meta_key);
+
+            foreach ($safe_values as $safe_value) {
+                add_post_meta($target_id, $meta_key, $safe_value);
+            }
+        }
+    }
+
+    private static function is_uncode_header_footer_meta_key(string $meta_key): bool
+    {
+        $key = strtolower($meta_key);
+
+        if (strpos($key, '_uncode_') !== 0 && strpos($key, 'uncode_') !== 0) {
+            return false;
+        }
+
+        $allowed_fragments = [
+            'header',
+            'headers',
+            'footer',
+            'footers',
+            'page_header',
+            'page-header',
+            'menu',
+            'navigation',
+            'navbar',
+            'logo',
+            'title',
+            'breadcrumb',
+            'breadcrumbs',
+        ];
+
+        foreach ($allowed_fragments as $fragment) {
+            if (strpos($key, $fragment) !== false) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private static function sanitize_uncode_header_footer_value($value, string $context_key, int $source_id, int $target_id, int $depth = 0)
+    {
+        if ($depth > 12) {
+            return $value;
+        }
+
+        if (is_object($value)) {
+            $value = (array) $value;
+        }
+
+        if (is_array($value)) {
+            $cleaned = [];
+
+            foreach ($value as $key => $item) {
+                $key_string = is_string($key) ? strtolower($key) : (string) $key;
+                $child_context = strtolower($context_key . '.' . $key_string);
+
+                if (self::contains_builder_payload($item)) {
+                    continue;
+                }
+
+                /*
+                 * Nie kopiujemy pola Content Block jako takiego.
+                 * Jeżeli użytkownik chce, może je ustawić ręcznie, ale wtyczka nie ma
+                 * prawa wstawić tam ID strony, bo wtedy strona staje się własnym headerem.
+                 */
+                if (self::is_uncode_content_block_selector_context($child_context)) {
+                    continue;
+                }
+
+                /*
+                 * Krytyczne: usuń każde ukryte ID strony źródłowej/docelowej z Uncode header/footer.
+                 * W praktyce to właśnie takie ID wpada w Content Block i powoduje duplikację.
+                 */
+                if (self::value_is_post_id($item, $source_id) || self::value_is_post_id($item, $target_id)) {
+                    continue;
+                }
+
+                $cleaned_item = self::sanitize_uncode_header_footer_value($item, $child_context, $source_id, $target_id, $depth + 1);
+
+                if ($cleaned_item === null || $cleaned_item === '') {
+                    continue;
+                }
+
+                $cleaned[$key] = $cleaned_item;
+            }
+
+            return empty($cleaned) ? null : $cleaned;
+        }
+
+        if (self::contains_builder_payload($value)) {
+            return null;
+        }
+
+        if (self::value_is_post_id($value, $source_id) || self::value_is_post_id($value, $target_id)) {
+            return null;
+        }
+
+        if (self::scalar_value_is_uncode_content_block_mode($value)) {
+            return null;
+        }
+
+        return $value;
+    }
+
+    private static function is_uncode_content_block_selector_context(string $context): bool
+    {
+        $context = strtolower($context);
+
+        $header_footer_context = (
+            strpos($context, 'header') !== false
+            || strpos($context, 'footer') !== false
+            || strpos($context, 'page_header') !== false
+            || strpos($context, 'page-header') !== false
+        );
+
+        if (!$header_footer_context) {
+            return false;
+        }
+
+        $selector_fragments = [
+            'content_block',
+            'content-block',
+            'contentblock',
+            'uncode_block',
+            'uncode-block',
+            'uncodeblock',
+            'block_id',
+            'block-id',
+            'header_block',
+            'header-block',
+            'footer_block',
+            'footer-block',
+            'page_header_block',
+            'page-header-block',
+            'headers.value',
+            'header.value',
+            'page_header.value',
+            'page-header.value',
+        ];
+
+        foreach ($selector_fragments as $fragment) {
+            if (strpos($context, $fragment) !== false) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    private static function value_is_post_id($value, int $post_id): bool
+    {
+        if ($post_id <= 0) {
+            return false;
+        }
+
+        if (is_int($value)) {
+            return $value === $post_id;
+        }
+
+        if (is_float($value)) {
+            return (int) $value === $post_id;
+        }
+
+        if (is_string($value)) {
+            $trimmed = trim($value);
+            return $trimmed !== '' && ctype_digit($trimmed) && (int) $trimmed === $post_id;
+        }
+
+        return false;
+    }
+
+    private static function scalar_value_is_uncode_content_block_mode($value): bool
+    {
+        if (!is_string($value) || $value === '') {
+            return false;
+        }
+
+        $values_to_check = [
+            $value,
+            urldecode($value),
+            html_entity_decode($value, ENT_QUOTES, 'UTF-8'),
+            html_entity_decode(urldecode($value), ENT_QUOTES, 'UTF-8'),
+        ];
+
+        $blocked_values = [
+            'header-uncode-block',
+            'header_uncode_block',
+            'uncode-block',
+            'uncode_block',
+            'uncodeblock',
+            'content-block',
+            'content_block',
+            'contentblock',
+        ];
+
+        foreach ($values_to_check as $value_to_check) {
+            $lower_value = strtolower($value_to_check);
+
+            foreach ($blocked_values as $blocked_value) {
+                if (strpos($lower_value, $blocked_value) !== false) {
                     return true;
                 }
             }
@@ -159,22 +367,51 @@ final class PWE_Multilang_Page_Meta_Copier
         return false;
     }
 
-    private static function is_builder_or_uncode_header_meta_value($meta_value): bool
+    private static function cleanup_uncode_page_id_references(int $source_id, int $target_id): void
     {
-        $unserialized_value = maybe_unserialize($meta_value);
+        $target_meta = get_post_meta($target_id);
 
-        return self::contains_blocked_content($unserialized_value);
+        foreach ($target_meta as $meta_key => $meta_values) {
+            $meta_key = (string) $meta_key;
+
+            if (!self::is_uncode_header_footer_meta_key($meta_key)) {
+                continue;
+            }
+
+            $new_values = [];
+
+            foreach ($meta_values as $meta_value) {
+                $value = maybe_unserialize($meta_value);
+                $cleaned_value = self::sanitize_uncode_header_footer_value($value, $meta_key, $source_id, $target_id);
+
+                if ($cleaned_value === null || $cleaned_value === '') {
+                    continue;
+                }
+
+                if (self::contains_builder_payload($cleaned_value)) {
+                    continue;
+                }
+
+                $new_values[] = $cleaned_value;
+            }
+
+            delete_post_meta($target_id, $meta_key);
+
+            foreach ($new_values as $new_value) {
+                add_post_meta($target_id, $meta_key, $new_value);
+            }
+        }
     }
 
-    private static function contains_blocked_content($value, int $depth = 0): bool
+    private static function contains_builder_payload($value, int $depth = 0): bool
     {
-        if ($depth > 6) {
+        if ($depth > 8) {
             return false;
         }
 
         if (is_array($value)) {
             foreach ($value as $item) {
-                if (self::contains_blocked_content($item, $depth + 1)) {
+                if (self::contains_builder_payload($item, $depth + 1)) {
                     return true;
                 }
             }
@@ -183,7 +420,7 @@ final class PWE_Multilang_Page_Meta_Copier
         }
 
         if (is_object($value)) {
-            return self::contains_blocked_content((array) $value, $depth + 1);
+            return self::contains_builder_payload((array) $value, $depth + 1);
         }
 
         if (!is_string($value) || $value === '') {
@@ -197,8 +434,7 @@ final class PWE_Multilang_Page_Meta_Copier
             html_entity_decode(urldecode($value), ENT_QUOTES, 'UTF-8'),
         ];
 
-        $blocked_markers = [
-            // WPBakery/PWE layout duplicated from post_content.
+        $builder_markers = [
             '[vc_row',
             '[vc_column',
             '[vc_column_text',
@@ -208,19 +444,12 @@ final class PWE_Multilang_Page_Meta_Copier
             'pwe_element=',
             'pwe_element=&quot;',
             'pwe_element=&#034;',
-
-            // Uncode header/content-block render markers.
-            'header-uncode-block',
-            'header-wrapper',
-            'page-header',
-            'uncode-block',
-            'uncode_block',
         ];
 
         foreach ($values_to_check as $value_to_check) {
             $lower_value = strtolower($value_to_check);
 
-            foreach ($blocked_markers as $marker) {
+            foreach ($builder_markers as $marker) {
                 if (strpos($lower_value, strtolower($marker)) !== false) {
                     return true;
                 }
@@ -230,21 +459,38 @@ final class PWE_Multilang_Page_Meta_Copier
         return false;
     }
 
-    /**
-     * Safety cleanup for newly created translated pages.
-     *
-     * If WordPress/WPML/Uncode adds default header meta during insertion, remove only
-     * Uncode header-related meta from the target. Do not remove all _uncode_* meta.
-     */
-    private static function remove_uncode_header_meta_from_target(int $target_id): void
+    private static function cleanup_uncode_target_self_references(int $target_id): void
     {
         $target_meta = get_post_meta($target_id);
 
-        foreach (array_keys($target_meta) as $meta_key) {
+        foreach ($target_meta as $meta_key => $meta_values) {
             $meta_key = (string) $meta_key;
 
-            if (self::should_skip_meta_key($meta_key)) {
-                delete_post_meta($target_id, $meta_key);
+            if (!self::is_uncode_header_footer_meta_key($meta_key)) {
+                continue;
+            }
+
+            $new_values = [];
+
+            foreach ($meta_values as $meta_value) {
+                $value = maybe_unserialize($meta_value);
+                $cleaned_value = self::sanitize_uncode_value($value, $meta_key, $target_id);
+
+                if ($cleaned_value === null || $cleaned_value === '') {
+                    continue;
+                }
+
+                if (self::contains_builder_payload($cleaned_value)) {
+                    continue;
+                }
+
+                $new_values[] = $cleaned_value;
+            }
+
+            delete_post_meta($target_id, $meta_key);
+
+            foreach ($new_values as $new_value) {
+                add_post_meta($target_id, $meta_key, $new_value);
             }
         }
     }
@@ -258,7 +504,6 @@ final class PWE_Multilang_Page_Meta_Copier
             '_rocket_exclude_delay_js',
             '_rocket_exclude_lazyload',
             '_rocket_exclude_lazyload_iframes',
-
         ];
 
         foreach ($rocket_meta_keys as $meta_key) {

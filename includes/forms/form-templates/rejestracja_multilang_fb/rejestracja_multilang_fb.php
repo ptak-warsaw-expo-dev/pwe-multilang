@@ -18,7 +18,7 @@ final class PWE_Multilang_Form_Template_Rejestracja_Fb_Multilang {
         // META + SETTINGS
         $metaSettings = PWE_Multilang_GF_Meta_Settings::build(
             $title,
-            buttonText: 'Zarejestruj się',
+            buttonText: 'Register',
         );
 
         // POLA

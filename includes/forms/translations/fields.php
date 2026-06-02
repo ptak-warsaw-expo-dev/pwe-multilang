@@ -163,41 +163,41 @@ return [
         'cs' => [
             'label' => 'Souhlas se zpracováním osobních údajů',
 
-            'checkboxLabel' => 'Souhlasím se zpracováním svých osobních údajů společností PTAK WARSAW EXPO sp. z o.o. pro účely zasílání zpráv. <span class="show-consent">(Více)</span>',
+            'checkboxLabel' => 'Souhlasím se zpracováním svých osobních údajů společností PTAK WARSAW EXPO sp. z o.o. za účelem zasílání zpráv. <span class="show-consent">(Více)</span>',
 
-            'description' => 'Souhlasím se zpracováním svých osobních údajů společností PTAK WARSAW EXPO sp. z o.o., tj. 1) jméno a příjmení; 2) telefonní číslo pro marketingové účely související s produkty a službami nabízenými společností Ptak Warsaw Expo sp. z o.o. prostřednictvím terminálů telekomunikační služby ve smyslu článku 172 zákona ze dne 16. července 2014 - Zákon o telekomunikacích. Vím, že souhlas je dobrovolný, ale nezbytný pro registraci. Svůj souhlas mohu kdykoli odvolat.',
+            'description' => 'Souhlasím se zpracováním svých osobních údajů společností PTAK WARSAW EXPO sp. z o.o., tj. 1) jméno a příjmení; 2) telefonní číslo pro marketingové účely související s produkty a službami nabízenými společností Ptak Warsaw Expo sp. z o.o. prostřednictvím telekomunikačního koncového zařízení ve smyslu článku 172 zákona ze dne 16. července 2014 - telekomunikační zákon. Vím, že souhlas je dobrovolný, ale nezbytný pro registraci. Svůj souhlas mohu kdykoli odvolat. Vím, že souhlas je dobrovolný, ale nezbytný pro registraci. Svůj souhlas mohu kdykoli odvolat.',
         ],
 
         'de' => [
             'label' => 'Einwilligung zur Verarbeitung personenbezogener Daten',
 
-            'checkboxLabel' => 'Ich stimme der Verarbeitung meiner personenbezogenen Daten durch PTAK WARSAW EXPO sp. z o.o. zum Zweck des Nachrichtenversands zu. <span class="show-consent">(Mehr)</span>',
+            'checkboxLabel' => 'Ich stimme der Verarbeitung meiner personenbezogenen Daten durch PTAK WARSAW EXPO sp. z o.o. zum Zweck des Versands von Nachrichten zu. <span class="show-consent">(Mehr)</span>',
 
-            'description' => 'Ich stimme der Verarbeitung meiner personenbezogenen Daten durch PTAK WARSAW EXPO sp. z o.o. zu, d. h. 1) Vor- und Nachname; 2) Telefonnummer zu Marketingzwecken im Zusammenhang mit den von Ptak Warsaw Expo sp. z o.o. angebotenen Produkten und Dienstleistungen mittels Telekommunikationsendgeräten im Sinne von Artikel 172 des Gesetzes vom 16. Juli 2014 - Telekommunikationsgesetz. Mir ist bekannt, dass die Einwilligung freiwillig, aber für die Registrierung erforderlich ist. Ich kann meine Einwilligung jederzeit widerrufen.',
+            'description' => 'Ich stimme der Verarbeitung meiner personenbezogenen Daten durch PTAK WARSAW EXPO sp. z o.o. zu, d. h. 1) Vor- und Nachname; 2) Telefonnummer für Marketingzwecke im Zusammenhang mit den von Ptak Warsaw Expo sp. z o.o. angebotenen Produkten und Dienstleistungen mittels Telekommunikationsendgeräten im Sinne des Artikels 172 des Gesetzes vom 16. Juli 2014 - Telekommunikationsgesetz. Ich weiß, dass die Einwilligung freiwillig, aber für die Registrierung notwendig ist. Ich kann meine Einwilligung jederzeit widerrufen. Ich weiß, dass die Einwilligung freiwillig, aber für die Registrierung notwendig ist. Ich kann meine Einwilligung jederzeit widerrufen.',
         ],
 
         'lt' => [
             'label' => 'Sutikimas tvarkyti asmens duomenis',
 
-            'checkboxLabel' => 'Sutinku, kad PTAK WARSAW EXPO sp. z o.o. tvarkytų mano asmens duomenis žinučių siuntimo tikslais. <span class="show-consent">(Daugiau)</span>',
+            'checkboxLabel' => 'Sutinku, kad PTAK WARSAW EXPO sp. z o.o. tvarkytų mano asmens duomenis žinučių siuntimo tikslu. <span class="show-consent">(Daugiau)</span>',
 
-            'description' => 'Sutinku, kad PTAK WARSAW EXPO sp. z o.o. tvarkytų mano asmens duomenis, t. y. 1) vardą ir pavardę; 2) telefono numerį rinkodaros tikslais, susijusiais su Ptak Warsaw Expo sp. z o.o. siūlomais produktais ir paslaugomis, naudojant telekomunikacinės paslaugos terminalus, kaip apibrėžta Telekomunikacinių paslaugų įstatymo, priimto 2014 m. liepos 16 d., 172 straipsnyje. Žinau, kad sutikimas yra savanoriškas, tačiau būtinas registracijai. Galiu bet kada atšaukti savo sutikimą.',
+            'description' => 'Sutinku, kad PTAK WARSAW EXPO sp. z o.o. tvarkytų mano asmens duomenis, t. y. 1) vardą ir pavardę; 2) telefono numerį rinkodaros tikslais, susijusiais su produktais ir paslaugomis, kurias siūlo Ptak Warsaw Expo sp. z o.o., naudodamasi terminaline telekomunikacine įranga pagal 2014 m. liepos 16 d. Telekomunikacijų įstatymo 172 straipsnį. Žinau, kad sutikimas yra savanoriškas, tačiau būtinas registracijai. Galiu bet kada atšaukti savo sutikimą. Žinau, kad sutikimas yra savanoriškas, tačiau būtinas registracijai. Galiu bet kada atšaukti savo sutikimą.',
         ],
 
         'lv' => [
             'label' => 'Piekrišana personas datu apstrādei',
 
-            'checkboxLabel' => 'Es piekrītu, ka PTAK WARSAW EXPO sp. z o.o. apstrādā manus personas datus ziņojumu sūtīšanas nolūkos. <span class="show-consent">(Vairāk)</span>',
+            'checkboxLabel' => 'Es piekrītu, ka PTAK WARSAW EXPO sp. z o.o. apstrādā manus personas datus ziņojumu sūtīšanas nolūkā. <span class="show-consent">(Vairāk)</span>',
 
-            'description' => 'Es piekrītu, ka PTAK WARSAW EXPO sp. z o.o. apstrādā manus personas datus, t.i., 1) vārdu un uzvārdu; 2) tālruņa numuru mārketinga nolūkos, kas saistīti ar Ptak Warsaw Expo sp. z o.o. piedāvātajiem produktiem un pakalpojumiem, izmantojot telekomunikāciju pakalpojuma termināļus saskaņā ar 2014. gada 16. jūlija Telekomunikāciju likuma 172. pantu. Es zinu, ka piekrišana ir brīvprātīga, bet nepieciešama reģistrācijai. Es varu jebkurā laikā atsaukt savu piekrišanu.',
+            'description' => 'Es piekrītu, ka PTAK WARSAW EXPO sp. z o.o. apstrādā manus personas datus, t.i., 1) vārdu un uzvārdu; 2) tālruņa numuru mārketinga nolūkos, kas saistīti ar Ptak Warsaw Expo sp. z o.o. piedāvātajiem produktiem un pakalpojumiem, izmantojot terminālās telekomunikāciju iekārtas saskaņā ar 2014. gada 16. jūlija Telekomunikāciju likuma 172. panta prasībām. Zinu, ka piekrišana ir brīvprātīga, bet nepieciešama reģistrācijai. Es varu jebkurā laikā atsaukt savu piekrišanu. Zinu, ka piekrišana ir brīvprātīga, bet nepieciešama reģistrācijai. Es varu jebkurā laikā atsaukt savu piekrišanu.',
         ],
 
         'it' => [
             'label' => 'Consenso al trattamento dei dati personali',
 
-            'checkboxLabel' => 'Acconsento al trattamento dei miei dati personali da parte di PTAK WARSAW EXPO sp. z o.o. per le finalità di invio di comunicazioni. <span class="show-consent">(Altro)</span>',
+            'checkboxLabel' => 'Acconsento al trattamento dei miei dati personali da parte di PTAK WARSAW EXPO sp. z o.o. al fine di inviare messaggi. <span class="show-consent">(Altro)</span>',
 
-            'description' => 'Acconsento al trattamento dei miei dati personali da parte di PTAK WARSAW EXPO sp. z o.o., ovvero: 1) nome e cognome; 2) numero di telefono per finalità di marketing relative ai prodotti e servizi offerti da Ptak Warsaw Expo sp. z o.o. tramite apparecchi terminali di telecomunicazioni ai sensi dell\'articolo 172 della Legge del 16 luglio 2014 - Legge sulle telecomunicazioni. Sono consapevole che il consenso è volontario ma necessario per la registrazione. Posso revocare il mio consenso in qualsiasi momento.',
+            'description' => 'Acconsento al trattamento dei miei dati personali da parte di PTAK WARSAW EXPO sp. z o.o., ossia: 1) nome e cognome; 2) numero di telefono per finalità di marketing relative ai prodotti e servizi offerti da Ptak Warsaw Expo sp. z o.o. mediante apparecchiature terminali di telecomunicazione ai sensi dell articolo 172 della legge del 16 luglio 2014 - legge sulle telecomunicazioni. So che il consenso è volontario ma necessario per la registrazione. Posso revocare il mio consenso in qualsiasi momento. So che il consenso è volontario ma necessario per la registrazione. Posso revocare il mio consenso in qualsiasi momento.',
         ],
 
         'et' => [
@@ -205,7 +205,7 @@ return [
 
             'checkboxLabel' => 'Nõustun, et PTAK WARSAW EXPO sp. z o.o. töötleb minu isikuandmeid sõnumite saatmise eesmärgil. <span class="show-consent">(Rohkem)</span>',
 
-            'description' => 'Nõustun, et PTAK WARSAW EXPO sp. z o.o. töötleb minu isikuandmeid, st 1) ees- ja perekonnanimi; 2) telefoninumber turunduse eesmärgil, mis on seotud Ptak Warsaw Expo sp. z o.o. pakutavate toodete ja teenustega, kasutades telekommunikatsiooni teenuse terminaalseadmeid vastavalt 2014. aasta 16. juuli telekommunikatsiooni seaduse artiklile 172. Olen teadlik, et nõusolek on vabatahtlik, kuid vajalik registreerimiseks. Võin oma nõusoleku igal ajal tagasi võtta.',
+            'description' => 'Nõustun, et PTAK WARSAW EXPO sp. z o.o. töötleb minu isikuandmeid, st 1) ees- ja perekonnanimi; 2) telefoninumber turunduslikel eesmärkidel, mis on seotud Ptak Warsaw Expo sp. z o.o. pakutavate toodete ja teenustega, kasutades lõppseadmeid vastavalt 2014. aasta 16. juuli telekommunikatsiooni seaduse 172. artiklile. Olen teadlik, et nõusolek on vabatahtlik, kuid vajalik registreerimiseks. Võin oma nõusoleku igal ajal tagasi võtta. Olen teadlik, et nõusolek on vabatahtlik, kuid vajalik registreerimiseks. Võin oma nõusoleku igal ajal tagasi võtta.',
         ],
 
         'ro' => [
@@ -213,15 +213,15 @@ return [
 
             'checkboxLabel' => 'Sunt de acord ca PTAK WARSAW EXPO sp. z o.o. să prelucreze datele mele cu caracter personal în scopul trimiterii de mesaje. <span class="show-consent">(Mai mult)</span>',
 
-            'description' => 'Sunt de acord ca PTAK WARSAW EXPO sp. z o.o. să prelucreze datele mele cu caracter personal, și anume: 1) numele și prenumele; 2) numărul de telefon în scopuri de marketing legate de produsele și serviciile oferite de Ptak Warsaw Expo sp. z o.o. prin intermediul terminalelor serviciilor de telecomunicații în sensul articolului 172 din Legea din 16 iulie 2014 - Legea telecomunicațiilor. Știu că consimțământul este voluntar, dar necesar pentru înregistrare. Îmi pot retrage consimțământul în orice moment.',
+            'description' => 'Sunt de acord ca PTAK WARSAW EXPO sp. z o.o. să prelucreze datele mele cu caracter personal, și anume: 1) numele și prenumele; 2) numărul de telefon în scopuri de marketing legate de produsele și serviciile oferite de Ptak Warsaw Expo sp. z o.o., prin intermediul echipamentelor terminale de comunicații în sensul articolului 172 din Legea din 16 iulie 2014 - Legea comunicațiilor electronice. Știu că consimțământul este voluntar, dar necesar pentru înregistrare. Îmi pot retrage consimțământul în orice moment. Știu că consimțământul este voluntar, dar necesar pentru înregistrare. Îmi pot retrage consimțământul în orice moment.',
         ],
 
         'sk' => [
             'label' => 'Súhlas so spracovaním osobných údajov',
 
-            'checkboxLabel' => 'Súhlasím so spracovaním mojich osobných údajov spoločnosťou PTAK WARSAW EXPO sp. z o.o. na účely zasielania správ. <span class="show-consent">(Viac)</span>',
+            'checkboxLabel' => 'Súhlasím so spracovaním mojich osobných údajov spoločnosťou PTAK WARSAW EXPO sp. z o.o. za účelom odosielania správ. <span class="show-consent">(Viac)</span>',
 
-            'description' => 'Súhlasím so spracovaním mojich osobných údajov spoločnosťou PTAK WARSAW EXPO sp. z o.o., t. j. 1) meno a priezvisko; 2) telefónne číslo na marketingové účely súvisiace s produktmi a službami ponúkanými spoločnosťou Ptak Warsaw Expo sp. z o.o. prostredníctvom terminálov telekomunikačných služieb v zmysle článku 172 zákona z 16. júla 2014 - Zákon o telekomunikáciách. Viem, že súhlas je dobrovoľný, ale nevyhnutný na registráciu. Svoj súhlas môžem kedykoľvek odvolať.',
+            'description' => 'Súhlasím so spracovaním mojich osobných údajov spoločnosťou PTAK WARSAW EXPO sp. z o.o., t. j. 1) meno a priezvisko; 2) telefónne číslo na marketingové účely súvisiace s produktmi a službami ponúkanými spoločnosťou Ptak Warsaw Expo sp. z o.o. prostredníctvom telekomunikačného koncového zariadenia v zmysle článku 172 zákona zo dňa 16. júla 2014 - telekomunikačného zákona. Viem, že súhlas je dobrovoľný, ale nevyhnutný na registráciu. Svoj súhlas môžem kedykoľvek odvolať. Viem, že súhlas je dobrovoľný, ale nevyhnutný na registráciu. Svoj súhlas môžem kedykoľvek odvolať.',
         ],
 
         'uk' => [
@@ -229,20 +229,36 @@ return [
 
             'checkboxLabel' => 'Я погоджуюся на обробку моїх персональних даних компанією PTAK WARSAW EXPO sp. z o.o. з метою надсилання повідомлень. <span class="show-consent">(Більше)</span>',
 
-            'description' => 'Я погоджуюся на обробку моїх персональних даних компанією PTAK WARSAW EXPO sp. z o.o., а саме: 1) ім'я та прізвище; 2) номер телефону в маркетингових цілях, пов'язаних із продуктами та послугами, що пропонуються Ptak Warsaw Expo sp. z o.o., за допомогою терміналів телекомунікаційних послуг у розумінні статті 172 Закону від 16 липня 2014 року - Закону про телекомунікації. Я знаю, що згода є добровільною, але необхідною для реєстрації. Я можу відкликати свою згоду в будь-який час.',
+            'description' => 'Я погоджуюся на обробку моїх персональних даних компанією PTAK WARSAW EXPO sp. z o.o., а саме: 1) ім’я та прізвище; 2) номер телефону для маркетингових цілей, пов’язаних із продуктами та послугами, що пропонує Ptak Warsaw Expo sp. z o.o., за допомогою кінцевого телекомунікаційного обладнання відповідно до статті 172 Закону від 16 липня 2014 року «Про електронні комунікації». Я знаю, що згода є добровільною, але необхідною для реєстрації. Я можу відкликати свою згоду в будь-який час. Я знаю, що згода є добровільною, але необхідною для реєстрації. Я можу відкликати свою згоду в будь-який час.',
         ],
+
     ],
 
     '_button' => [
-        'en' => 'Register',
-        'cs' => 'Registrovat',
-        'de' => 'Registrieren',
-        'lt' => 'Registruotis',
-        'lv' => 'Reģistrēties',
-        'et' => 'Registreeru',
-        'ro' => 'Înregistrează-te',
-        'it' => 'Registrati',
-        'sk' => 'Registrovať sa',
-        'uk' => 'Зареєструватися',
+        'Submit' => [
+            'en' => 'Submit',
+            'cs' => 'Odeslat',
+            'de' => 'Absenden',
+            'lt' => 'Pateikti',
+            'lv' => 'Iesniegt',
+            'et' => 'Esita',
+            'ro' => 'Trimite',
+            'it' => 'Invia',
+            'sk' => 'Odoslať',
+            'uk' => 'Надіслати',
+        ],
+
+        'Register' => [
+            'en' => 'Register',
+            'cs' => 'Registrovat',
+            'de' => 'Registrieren',
+            'lt' => 'Registruotis',
+            'lv' => 'Reģistrēties',
+            'et' => 'Registreeru',
+            'ro' => 'Înregistrează-te',
+            'it' => 'Registrati',
+            'sk' => 'Registrovať sa',
+            'uk' => 'Зареєструватися',
+        ],
     ],
 ];
