@@ -166,6 +166,13 @@ final class PWE_Multilang_Page_Creator
             $event_year
         );
 
+        $en_block_id = (int) get_post_meta($en_page->ID, '_uncode_blocks_list', true);
+        $en_header_type = (string) get_post_meta($en_page->ID, '_uncode_header_type', true);
+
+        if ($en_block_id > 0 && $en_header_type === 'header_uncodeblock' && get_post_type($en_block_id) === 'uncodeblock') {
+            $post_content = '[pwe-elements-component-simple-header]' . "\n" . $post_content;
+        }
+
         return wp_insert_post([
             'post_type'      => 'page',
             'post_status'    => 'publish',

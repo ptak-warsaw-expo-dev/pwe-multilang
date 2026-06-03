@@ -38,9 +38,8 @@ final class PWE_Multilang_Form_Writer_Update {
             return;
         }
 
-        PWE_Multilang_Form_Writer_Helper::processQrAfterSave(
+        PWE_Multilang_Form_Writer_Helper::processQrShortcodesOnly(
             (int) $existing['id'],
-            $payload,
             $existing['title'] ?? ''
         );
     }

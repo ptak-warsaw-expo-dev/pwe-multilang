@@ -37,6 +37,8 @@ final class PWE_Multilang_Form_Writer_Helper {
         array $options
     ) : array {
 
+        unset($payload['qr']);
+
         if (isset($payload['description'])) {
             $existing['description'] = $payload['description'];
         }
@@ -121,10 +123,32 @@ final class PWE_Multilang_Form_Writer_Helper {
             $fields
         );
 
-        return self::resolveNotificationRecipients(
+        $notifications = self::resolveNotificationRecipients(
             $notifications,
             $fields
         );
+
+        return self::prepareQrAttachmentFlags($notifications);
+    }
+
+    private static function prepareQrAttachmentFlags(
+        array $notifications
+    ) : array {
+
+        foreach ($notifications as &$notification) {
+            if (empty($notification['attachQr'])) {
+                unset($notification['attachQr']);
+                continue;
+            }
+
+            $notification['pwe_attach_qr_image'] = 1;
+
+            unset($notification['attachQr']);
+        }
+
+        unset($notification);
+
+        return $notifications;
     }
 
     public static function processQrAfterSave(
@@ -164,10 +188,6 @@ final class PWE_Multilang_Form_Writer_Helper {
             if (!empty($form[$section])) {
                 self::replaceQrCodeId($form[$section], $slug);
             }
-        }
-
-        if (!empty($form['notifications'])) {
-            self::attachQrToNotifications($form['notifications'], $qrFeedId);
         }
 
         GFAPI::update_form($form);
@@ -362,23 +382,28 @@ final class PWE_Multilang_Form_Writer_Helper {
         $map = self::getFieldMapByAdminLabel($fields);
 
         foreach ($notifications as &$notification) {
-            if (
-                ($notification['toType'] ?? null) !== 'field'
-                || empty($notification['to'])
-            ) {
+            if (($notification['toType'] ?? '') !== 'field') {
                 continue;
             }
 
-            if (is_numeric($notification['to'])) {
-                $notification['toField'] = (string) $notification['to'];
-                unset($notification['to']);
+            $to = $notification['to'] ?? $notification['toField'] ?? '';
+
+            if ($to === '') {
                 continue;
             }
 
-            if (isset($map[$notification['to']])) {
-                $notification['toField'] = $map[$notification['to']];
-                unset($notification['to']);
+            if (isset($map[$to])) {
+                $fieldId = (string) $map[$to];
+            } elseif (is_numeric($to)) {
+                $fieldId = (string) $to;
+            } else {
+                continue;
             }
+
+            $notification['toType']  = 'field';
+            $notification['to']      = $fieldId;
+            $notification['toField'] = $fieldId;
+            $notification['toEmail'] = '';
         }
 
         unset($notification);
@@ -458,14 +483,31 @@ final class PWE_Multilang_Form_Writer_Helper {
             }
 
             $template = ltrim($notification['_template'], '/');
-            if (preg_match('/-([a-z]{2})\.html$/', $template, $m)) {
-                $notification['_pwe_lang'] = strtolower($m[1]);
-            }
-            $base = preg_replace('/-[a-z]{2}\.html$/', '', $template);
-            $path = rtrim($formDir, '/') . '/notifications/' . $base . '/' . $template;
+            $lang = self::getLangFromTemplateName($template);
 
-            if (is_file($path)) {
-                $notification['message'] = file_get_contents($path);
+            if ($lang) {
+                $notification['_pwe_lang'] = $lang;
+            }
+
+            $templateBase = preg_replace('/-[a-z]{2}\.html$/', '', $template);
+            $templateDir  = rtrim($formDir, '/') . '/notifications/' . $templateBase;
+
+            $customPath  = $templateDir . '/' . $template;
+            $defaultPath = $templateDir . '/' . $templateBase . '.html';
+
+            if (is_file($customPath)) {
+                $notification['message'] = file_get_contents($customPath);
+            } elseif (is_file($defaultPath)) {
+                $notification['message'] = file_get_contents($defaultPath);
+
+                if ($lang) {
+                    $notification['message'] = self::applyNotificationTranslations(
+                        $notification['message'],
+                        $lang,
+                        $templateBase,
+                        $formDir
+                    );
+                }
             }
 
             unset($notification['_template']);
@@ -474,6 +516,64 @@ final class PWE_Multilang_Form_Writer_Helper {
         unset($notification);
 
         return $notifications;
+    }
+    
+    private static function getLangFromTemplateName(string $template) : ?string {
+
+        if (preg_match('/-([a-z]{2})\.html$/', $template, $m)) {
+            return strtolower($m[1]);
+        }
+
+        return null;
+    }
+
+    private static function applyNotificationTranslations(
+        string $html,
+        string $lang,
+        string $templateBase,
+        string $formDir
+    ) : string {
+
+        $translations = self::getNotificationTranslations(
+            $lang,
+            $templateBase,
+            $formDir
+        );
+
+        if (empty($translations)) {
+            return $html;
+        }
+
+        foreach ($translations as $key => $value) {
+            $html = str_replace(
+                '{{' . $key . '}}',
+                $value,
+                $html
+            );
+        }
+
+        return $html;
+    }
+
+    private static function getNotificationTranslations(
+        string $lang,
+        string $templateBase,
+        string $formDir
+    ) : array {
+
+        $file = rtrim($formDir, '/') . '/notifications/' . $templateBase . '/translations.php';
+
+        if (!is_file($file)) {
+            return [];
+        }
+
+        $translations = include $file;
+
+        if (!is_array($translations)) {
+            return [];
+        }
+
+        return $translations[$lang] ?? [];
     }
 
     private static function addQrFeed(
@@ -630,8 +730,7 @@ final class PWE_Multilang_Form_Writer_Helper {
     }
 
     private static function attachQrToNotifications(
-        array &$notifications,
-        int $qrFeedId
+        array &$notifications
     ) : void {
 
         foreach ($notifications as &$notification) {
@@ -639,7 +738,7 @@ final class PWE_Multilang_Form_Writer_Helper {
                 continue;
             }
 
-            $notification['spgfqrcode_notification_feed_' . $qrFeedId] = 'yes';
+            $notification['pwe_attach_qr_image'] = 1;
 
             unset($notification['attachQr']);
         }
@@ -731,5 +830,34 @@ final class PWE_Multilang_Form_Writer_Helper {
         if (class_exists('PWE_Multilang_Form_Log')) {
             PWE_Multilang_Form_Log::warn('FORM: ' . $message, $context);
         }
+    }
+
+    public static function processQrShortcodesOnly(
+        int $formId,
+        string $fallbackTitle = ''
+    ) : void {
+
+        $form = GFAPI::get_form($formId);
+
+        if (empty($form) || !is_array($form)) {
+            return;
+        }
+
+        $title = $form['title'] ?? $fallbackTitle;
+        $slug = self::makeQrNameSlug($title);
+
+        if ($slug === '') {
+            return;
+        }
+
+        foreach (['confirmations', 'notifications'] as $section) {
+            if (empty($form[$section])) {
+                continue;
+            }
+
+            self::replaceQrCodeId($form[$section], $slug);
+        }
+
+        GFAPI::update_form($form);
     }
 }

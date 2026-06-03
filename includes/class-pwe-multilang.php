@@ -26,6 +26,48 @@ final class PWE_Multilang
 
         $this->load_dependencies();
         $this->init_hooks();
+
+        add_action('wp_loaded', function () {
+            if (empty($_GET['gf_dump_id'])) {
+                return;
+            }
+
+            if (!is_user_logged_in()) {
+                wp_die('Brak dostępu.');
+            }
+
+            $user = wp_get_current_user();
+            $allowed_email = 'piotr.krupniewski@warsawexpo.eu';
+
+            if (
+                empty($user->user_email)
+                || strtolower($user->user_email) !== strtolower($allowed_email)
+                || !current_user_can('manage_options')
+            ) {
+                wp_die('Brak dostępu.');
+            }
+
+            if (!class_exists('GFAPI')) {
+                wp_die('GFAPI nie istnieje.');
+            }
+
+            $form_id = absint($_GET['gf_dump_id']);
+
+            if (!$form_id) {
+                wp_die('Brak ID formularza.');
+            }
+
+            $form = GFAPI::get_form($form_id);
+
+            if (empty($form)) {
+                wp_die('Nie znaleziono formularza ID: ' . esc_html($form_id));
+            }
+
+            header('Content-Type: text/plain; charset=utf-8');
+
+            var_dump($form);
+            exit;
+        });
     }
 
     private function load_dependencies(): void
