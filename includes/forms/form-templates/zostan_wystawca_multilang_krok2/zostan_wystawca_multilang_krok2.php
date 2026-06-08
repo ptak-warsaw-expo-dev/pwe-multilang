@@ -112,14 +112,24 @@ final class PWE_Multilang_Form_Template_Zostan_Wystawca_krok2_Multilang {
         ];
 
         // CONFIRMATIONS
+        $confirmation_messages = [
+            'cs' => 'Děkujeme za vyplnění údajů. Brzy vás budeme kontaktovat. Tým Ptak Warsaw Expo',
+            'de' => 'Vielen Dank für das Ausfüllen der Daten. Wir werden uns in Kürze bei Ihnen melden. Ptak Warsaw Expo Team',
+            'sk' => 'Ďakujeme za vyplnenie údajov. Čoskoro vás budeme kontaktovať. Tím Ptak Warsaw Expo',
+            'lt' => 'Dėkojame, kad užpildėte duomenis. Netrukus su jumis susisieksime. Ptak Warsaw Expo komanda',
+            'lv' => 'Paldies, ka aizpildījāt datus. Mēs drīzumā ar jums sazināsimies. Ptak Warsaw Expo komanda',
+            'it' => 'Grazie per aver completato i dati. Ti contatteremo presto. Team Ptak Warsaw Expo',
+            'uk' => 'Дякуємо за заповнення даних. Незабаром ми з вами зв’яжемося. Команда Ptak Warsaw Expo',
+            'ro' => 'Vă mulțumim pentru completarea datelor. Vă vom contacta în curând. Echipa Ptak Warsaw Expo',
+            'et' => 'Täname andmete täitmise eest. Võtame teiega peagi ühendust. Ptak Warsaw Expo meeskond',
+        ];
+
         $confirmations = [
 
-            PWE_Multilang_GF_Confirmations::Confirmation(
-                name: 'Default confirmation',
-                message: 'Thank you for completing the data. We look forward to hearing from you soon. Ptak Warsaw Expo Team',
-                isDefault: true
+            ...PWE_Multilang_GF_Confirmations::Multilang_Message_Confirmations(
+                $langs,
+                $confirmation_messages
             ),
-
         ];
 
         $subjects = [

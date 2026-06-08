@@ -138,5 +138,44 @@ final class PWE_Multilang_GF_Confirmations
 
         return $confirmations;
     }
+
+    public static function Multilang_Message_Confirmations(
+        array $langs,
+        array $messages,
+        string $langField = 'lang'
+    ): array {
+        $confirmations = [];
+
+        foreach ($langs as $lang) {
+            $lang = strtolower($lang);
+
+            if (in_array($lang, ['pl', 'en'], true)) {
+                continue;
+            }
+
+            if (empty($messages[$lang])) {
+                continue;
+            }
+
+            $confirmations[] = self::Confirmation(
+                name: 'Confirmation - ' . strtoupper($lang),
+                type: 'message',
+                message: $messages[$lang],
+                conditionalLogic: [
+                    'actionType' => 'show',
+                    'logicType'  => 'all',
+                    'rules' => [
+                        [
+                            'field'    => $langField,
+                            'operator' => 'is',
+                            'value'    => $lang,
+                        ],
+                    ],
+                ],
+            );
+        }
+
+        return $confirmations;
+    }
 }
 

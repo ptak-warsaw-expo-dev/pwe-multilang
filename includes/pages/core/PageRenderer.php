@@ -21,6 +21,21 @@ final class PWE_Multilang_Page_Renderer
         ) {
             try {
                 $result = PWE_Multilang_Page_Creator::create_missing_wpml_pages_from_json($event_year);
+
+                $options = get_option('pwe_general_options', []);
+                $options['pwe_create_forms_year'] = $event_year;
+                update_option('pwe_general_options', $options);
+
+                if (class_exists('GFAPI') && class_exists('PWE_Multilang_Form_Core')) {
+                    PWE_Multilang_Form_Core::run();
+
+                    $result['forms_resynced'] = true;
+                    $result['forms_resynced_message'] = 'Formularze zostały ponownie zapisane po utworzeniu stron.';
+                } else {
+                    $result['forms_resynced'] = false;
+                    $result['forms_resynced_message'] = 'Pominięto aktualizację formularzy — brak GFAPI albo PWE_Multilang_Form_Core.';
+                }
+
             } catch (Throwable $e) {
                 $result = [
                     'status'  => 'critical_error',

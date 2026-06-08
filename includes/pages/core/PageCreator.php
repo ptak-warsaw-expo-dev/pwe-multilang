@@ -160,6 +160,7 @@ final class PWE_Multilang_Page_Creator
     private static function insert_translation_page(WP_Post $en_page, array $data, string $slug, string $lang_code, int $event_year)
     {
         $parent_id = PWE_Multilang_Page_Finder::get_translated_parent_id((int) $en_page->post_parent, $lang_code);
+
         $post_content = PWE_Multilang_Page_Content_Transformer::transform_for_language(
             (string) $en_page->post_content,
             $lang_code,
@@ -173,7 +174,9 @@ final class PWE_Multilang_Page_Creator
             $post_content = '[pwe-elements-component-simple-header]' . "\n" . $post_content;
         }
 
-        return wp_insert_post([
+        do_action('wpml_switch_language', $lang_code);
+
+        $new_page_id = wp_insert_post([
             'post_type'      => 'page',
             'post_status'    => 'publish',
             'post_title'     => sanitize_text_field((string) $data['label']),
@@ -185,6 +188,10 @@ final class PWE_Multilang_Page_Creator
             'ping_status'    => $en_page->ping_status,
             'menu_order'     => $en_page->menu_order,
         ], true);
+
+        do_action('wpml_switch_language', null);
+
+        return $new_page_id;
     }
 
     private static function connect_wpml_translation(int $new_page_id, string $element_type, int $trid, string $lang_code): void

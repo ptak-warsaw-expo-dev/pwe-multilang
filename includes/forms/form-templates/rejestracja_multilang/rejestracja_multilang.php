@@ -126,29 +126,29 @@ final class PWE_Multilang_Form_Template_Rejestracja_Multilang {
         ];
 
         $user_notification_variants = [
-            [
-                'name'     => 'Thank you for registering for the Fair - (gr1)',
-                'template' => 'thank-you-for-registering-for-the-fair-gr1-{lang}.html',
-                'attachQr' => true,
-                'rules'    => [
-                    [
-                        'field'    => 'patron',
-                        'operator' => 'is',
-                        'value'    => 'gr1',
-                    ],
-                ],
-            ],
+            // [
+            //     'name'     => 'Thank you for registering for the Fair - (gr1)',
+            //     'template' => 'thank-you-for-registering-for-the-fair-gr1-{lang}.html',
+            //     'attachQr' => true,
+            //     'rules'    => [
+            //         [
+            //             'field'    => 'patron',
+            //             'operator' => 'is',
+            //             'value'    => 'gr1',
+            //         ],
+            //     ],
+            // ],
 
             [
-                'name'     => 'Thank you for registering for the Fair - (gr2)',
+                'name'     => 'Thank you for registering for the Fair',
                 'template' => 'thank-you-for-registering-for-the-fair-gr2-{lang}.html',
                 'attachQr' => true,
                 'rules'    => [
-                    [
-                        'field'    => 'patron',
-                        'operator' => 'is',
-                        'value'    => 'gr2',
-                    ],
+                    // [
+                    //     'field'    => 'patron',
+                    //     'operator' => 'is',
+                    //     'value'    => 'gr2',
+                    // ],
                     [
                         'field'    => 'location',
                         'operator' => 'isnot',
@@ -158,15 +158,15 @@ final class PWE_Multilang_Form_Template_Rejestracja_Multilang {
             ],
 
             [
-                'name'     => 'Thank you for registering for the Fair - (gr2) - platyna',
+                'name'     => 'Thank you for registering for the Fair - platyna',
                 'template' => 'thank-you-for-registering-for-the-fair-gr2-platyna-{lang}.html',
                 'attachQr' => true,
                 'rules'    => [
-                    [
-                        'field'    => 'patron',
-                        'operator' => 'is',
-                        'value'    => 'gr2',
-                    ],
+                    // [
+                    //     'field'    => 'patron',
+                    //     'operator' => 'is',
+                    //     'value'    => 'gr2',
+                    // ],
                     [
                         'field'    => 'location',
                         'operator' => 'is',
@@ -175,18 +175,18 @@ final class PWE_Multilang_Form_Template_Rejestracja_Multilang {
                 ],
             ],
 
-            [
-                'name'     => 'Thank you for registering for the Fair - (gr3)',
-                'template' => 'thank-you-for-registering-for-the-fair-gr3-{lang}.html',
-                'attachQr' => true,
-                'rules'    => [
-                    [
-                        'field'    => 'patron',
-                        'operator' => 'is',
-                        'value'    => 'gr3',
-                    ],
-                ],
-            ],
+            // [
+            //     'name'     => 'Thank you for registering for the Fair - (gr3)',
+            //     'template' => 'thank-you-for-registering-for-the-fair-gr3-{lang}.html',
+            //     'attachQr' => true,
+            //     'rules'    => [
+            //         [
+            //             'field'    => 'patron',
+            //             'operator' => 'is',
+            //             'value'    => 'gr3',
+            //         ],
+            //     ],
+            // ],
 
             [
                 'name'     => 'Resend',
