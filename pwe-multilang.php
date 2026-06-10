@@ -3,7 +3,7 @@
  * Plugin Name: PWE Multilang
  * Plugin URI: https://github.com/ptak-warsaw-expo-dev/pwe-multilang
  * Description: Generate pages and forms for multiple languages in WordPress. This plugin is designed to work with the WPML and Gravity Forms, which provides multilingual support for WordPress sites.
- * Version: 1.0.4
+ * Version: 1.0.5
  * Author: Piotr Krupniewski
  * Author URI: https://github.com/PiotrKrupniewski
  * License: GPL v2 or later
