@@ -76,7 +76,7 @@ final class PWE_Multilang_Form_Template_Rejestracja_Multilang {
                 description: 'I agree to the processing by PTAK WARSAW EXPO sp. z o.o. of my personal data, i.e. 1) name and surname; 2) e-mail address; 3) telephone number for the purposes of sending marketing and commercial messages related to products and services offered by Ptak Warsaw Expo sp. z o.o. by means of electronic communication or direct remote communication, including receiving commercial information, pursuant to the Act of 18 July 2002 on the provision of services by electronic means. I know that the consent is voluntary but necessary for registration. I can withdraw my consent at any time.',
             ),
 
-            // PWE_Multilang_GF_Fields::Captcha(),
+            PWE_Multilang_GF_Fields::Captcha(),
 
         ];
 

@@ -50,6 +50,8 @@ final class PWE_Multilang_Form_Template_Rejestracja_Fb_Multilang {
                 visibility: 'hidden',
             ),
 
+            PWE_Multilang_GF_Fields::Captcha(),
+
         ];
 
         // CONFIRMATIONS

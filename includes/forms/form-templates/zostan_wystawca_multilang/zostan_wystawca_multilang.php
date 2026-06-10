@@ -104,7 +104,7 @@ final class PWE_Multilang_Form_Template_Zostan_Wystawca_Multilang {
                 description: 'I agree to the processing by PTAK WARSAW EXPO sp. z o.o. of my personal data, i.e. 1) name and surname; 2) telephone number for marketing purposes related to products and services offered by Ptak Warsaw Expo sp. z o.o. by means of terminal telecommunications equipment within the meaning of article 172 of the Act of 16 July 2014 - Telecommunications law. I know that consent is voluntary, but necessary for registration. I can withdraw my consent at any time. I know that the consent is voluntary but necessary for registration. I can withdraw my consent at any time.',
             ),
 
-            // PWE_Multilang_GF_Fields::Captcha(),
+            PWE_Multilang_GF_Fields::Captcha(),
 
         ];
 
