@@ -10,7 +10,8 @@
         "sk": { "label": "Domovská stránka", "url": "/" },
         "uk": { "label": "Головна", "url": "/" },
         "ro": { "label": "Acasă", "url": "/" },
-        "et": { "label": "Kodu", "url": "/" }
+        "et": { "label": "Kodu", "url": "/" },
+        "hu": { "label": "Kezdőlap", "url": "/" }
     },
     "dla_odwiedzajacych": {
         "pl": { "label": "Dla odwiedzających", "url": "/dla-odwiedzajacych/" },
@@ -23,7 +24,8 @@
         "sk": { "label": "Pre návštevníkov", "url": "/pre-navstevnikov/" },
         "uk": { "label": "Для відвідувачів", "url": "/dlya-vidviduvachiv/" },
         "ro": { "label": "Pentru vizitatori", "url": "/pentru-vizitatori/" },
-        "et": { "label": "Külastajatele", "url": "/kylastajatele/" }
+        "et": { "label": "Külastajatele", "url": "/kylastajatele/" },
+        "hu": { "label": "Látogatóknak", "url": "/latogatoknak/" }
     },
     "dla_wystawcow": {
         "pl": { "label": "Dla wystawców", "url": "/dla-wystawcow/" },
@@ -36,7 +38,8 @@
         "sk": { "label": "Pre vystavovateľov", "url": "/pre-vystavovatelov/" },
         "uk": { "label": "Для експонентів", "url": "/dlya-eksponentiv/" },
         "ro": { "label": "Pentru exhibitori", "url": "/pentru-exhibitori/" },
-        "et": { "label": "Eksponentidele", "url": "/eksponentidele/" }
+        "et": { "label": "Eksponentidele", "url": "/eksponentidele/" },
+        "hu": { "label": "Eksponenseknek", "url": "/eksponenseknek/" }
     },
     "informacje_organizacyjne_dla_wystawcow": {
         "pl": { "label": "Informacje organizacyjne dla Wystawców", "url": "/informacje-organizacyjne-dla-wystawcow/" },
@@ -49,7 +52,8 @@
         "sk": { "label": "Organizačné informácie pre vystavovateľov", "url": "/organizacne-informacie-pre-vystavovatelov/" },
         "uk": { "label": "Організаційна інформація для експонентів", "url": "/organizacijna-informacija-dlya-eksponentiv/" },
         "ro": { "label": "Informații organizatorice pentru exhibitori", "url": "/informations-organisatrices-pour-exhibitors/" },
-        "et": { "label": "Organisatsiooniline teave eksponentidele", "url": "/organisatsiooniline-teave-eksponentidele/" }
+        "et": { "label": "Organisatsiooniline teave eksponentidele", "url": "/organisatsiooniline-teave-eksponentidele/" },
+        "hu": { "label": "Szervezési információk az exhibitoroknak", "url": "/organizatorikus-informaciok-az-exhibitoroknak/" }
     },
     "kontakt": {
         "pl": { "label": "Kontakt", "url": "/kontakt/" },
@@ -62,7 +66,8 @@
         "sk": { "label": "Kontakt", "url": "/kontakt/" },
         "uk": { "label": "Контакти", "url": "/kontakty/" },
         "ro": { "label": "Contact", "url": "/contact/" },
-        "et": { "label": "Kontakt", "url": "/kontakt/" }
+        "et": { "label": "Kontakt", "url": "/kontakt/" },
+        "hu": { "label": "Kapcsolat", "url": "/kapcsolat/" }
     },
     "krok2": {
         "pl": { "label": "krok2", "url": "/krok2/" },
@@ -75,7 +80,8 @@
         "sk": { "label": "krok2", "url": "/krok2/" },
         "uk": { "label": "крок2", "url": "/krok-2/" },
         "ro": { "label": "pasul 2", "url": "/pasul-2/" },
-        "et": { "label": "2. samm", "url": "/2-samm/" }
+        "et": { "label": "2. samm", "url": "/2-samm/" },
+        "hu": { "label": "2. lépés", "url": "/2-lepes/" }
     },
     "wypromuj_sie": {
         "pl": { "label": "Wypromuj się", "url": "/wypromuj-sie/" },
@@ -88,7 +94,8 @@
         "sk": { "label": "Zviditeľnite sa", "url": "/zviditelnite-sa/" },
         "uk": { "label": "Просуньте свій бізнес", "url": "/prosunte-svij-biznes/" },
         "ro": { "label": "Promovează-ți afacerea", "url": "/promoveaza-ti-afacerea/" },
-        "et": { "label": "Edastage oma ettevõtlust", "url": "/edastage-oma-ettevotlust/" }
+        "et": { "label": "Edastage oma ettevõtlust", "url": "/edastage-oma-ettevotlust/" },
+        "hu": { "label": "Promoválja vállalkozását", "url": "/promovalja-vallalkozasat/" }
     },
     "katalog_wystawcow": {
         "pl": { "label": "Katalog wystawców", "url": "/katalog-wystawcow/" },
@@ -101,7 +108,8 @@
         "sk": { "label": "Zoznam vystavovateľov", "url": "/katalog-vystavovatelov/" },
         "uk": { "label": "Каталог експонентів", "url": "/katalog-eksponentiv/" },
         "ro": { "label": "Catalogul exhibitorilor", "url": "/catalogul-exhibitorilor/" },
-        "et": { "label": "Eksponentide kataloog", "url": "/eksponentide-kataloog/" }
+        "et": { "label": "Eksponentide kataloog", "url": "/eksponentide-kataloog/" },
+        "hu": { "label": "Katalógus az exhibitorokról", "url": "/katalogus-az-exhibitorokrol/" }
     },
     "rejestracja": {
         "pl": { "label": "Rejestracja", "url": "/rejestracja/" },
@@ -114,7 +122,8 @@
         "sk": { "label": "Registrácia", "url": "/registracia/" },
         "uk": { "label": "Реєстрація", "url": "/reyestraciya/" },
         "ro": { "label": "Înregistrare", "url": "/inregistrare/" },
-        "et": { "label": "Registreerimine", "url": "/registreerimine/" }
+        "et": { "label": "Registreerimine", "url": "/registreerimine/" },
+        "hu": { "label": "Regisztráció", "url": "/regisztracio/" }
     },
     "zostan_wystawca": {
         "pl": { "label": "Zostań wystawcą", "url": "/zostan-wystawca/" },
@@ -127,7 +136,8 @@
         "sk": { "label": "Staňte sa vystavovateľom", "url": "/stante-sa-vystavovatelom/" },
         "uk": { "label": "Стати експонентом", "url": "/staty-eksponentom/" },
         "ro": { "label": "Deveniți exhibitor", "url": "/deveniti-exhibitor/" },
-        "et": { "label": "Saage eksponent", "url": "/saage-eksponent/" }
+        "et": { "label": "Saage eksponent", "url": "/saage-eksponent/" },
+        "hu": { "label": "Legyen kiállító", "url": "/legyen-kiallito/" }
     },
     "potwierdzenie_rejestracji_wystawcy": {
         "pl": { "label": "Potwierdzenie rejestracji wystawcy", "url": "/potwierdzenie-rejestracji-wystawcy/" },
@@ -140,6 +150,7 @@
         "sk": { "label": "Potvrdenie registrácie vystavovateľa", "url": "/potvrdenie-registracie-vystavovatela/" },
         "uk": { "label": "Підтвердження реєстрації експонента", "url": "/pidtverdzhennya-reyestraciyi-eksponenta/" },
         "ro": { "label": "Confirmarea înregistrării exhibitorului", "url": "/confirmarea-inregistrarii-exhibitorului/" },
-        "et": { "label": "Eksponentide registreerimise kinnitus", "url": "/eksponentide-registreerimise-kinnitus/" }
+        "et": { "label": "Eksponentide registreerimise kinnitus", "url": "/eksponentide-registreerimise-kinnitus/" },
+        "hu": { "label": "Kiállítói regisztráció visszaigazolása", "url": "/kiallito-regisztracio-visszaigazolasa/" }
     }
 }
