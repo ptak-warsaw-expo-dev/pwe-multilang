@@ -27,6 +27,7 @@ final class PWE_Multilang_Page_Config
             'uk' => 'Ukraiński',
             'ro' => 'Rumuński',
             'et' => 'Estoński',
+            'hu' => 'Węgierski',
         ];
     }
 
