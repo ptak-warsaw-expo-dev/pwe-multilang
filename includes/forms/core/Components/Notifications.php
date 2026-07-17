@@ -3,6 +3,36 @@ if (!defined('ABSPATH')) exit;
 
 final class PWE_Multilang_GF_Notifications {
 
+    private static function normalizeLangCode(string $lang) : string {
+        $lang = strtolower(trim($lang));
+
+        if (preg_match('/^[a-z]{2}/', $lang, $m)) {
+            return $m[0];
+        }
+
+        return $lang;
+    }
+
+    private static function normalizeLangList(array $langs) : array {
+        $out = [];
+
+        foreach ($langs as $lang) {
+            if (!is_string($lang) || $lang === '') {
+                continue;
+            }
+
+            $normalized = self::normalizeLangCode($lang);
+
+            if ($normalized === '') {
+                continue;
+            }
+
+            $out[$normalized] = $normalized;
+        }
+
+        return array_values($out);
+    }
+
     private static function val($v, $d) {
         return ($v === null || $v === '') ? $d : $v;
     }
@@ -91,9 +121,11 @@ final class PWE_Multilang_GF_Notifications {
             ];
         }
 
+        $active_languages = self::normalizeLangList(array_keys($active_languages));
+
         $notifications = [];
 
-        foreach ($active_languages as $lang_code => $lang_data) {
+        foreach ($active_languages as $lang_code) {
             if (in_array($lang_code, ['pl', 'en'], true)) {
                 continue;
             }
@@ -121,6 +153,19 @@ final class PWE_Multilang_GF_Notifications {
             );
         }
 
+        if (empty($notifications)) {
+            return [
+                self::Notification(
+                    name: $name,
+                    to: $to,
+                    subject: $subject,
+                    message: '{all_fields}',
+                    disableAutoformat: false,
+                    isActive: $isActive,
+                ),
+            ];
+        }
+
         return $notifications;
     }
 
@@ -131,6 +176,18 @@ final class PWE_Multilang_GF_Notifications {
     ) : array {
 
         $notifications = [];
+
+        $langs = self::normalizeLangList($langs);
+
+        $normalizedSubjects = [];
+
+        foreach ($subjects as $lang => $subject) {
+            if (!is_string($lang) || !is_string($subject)) {
+                continue;
+            }
+
+            $normalizedSubjects[self::normalizeLangCode($lang)] = $subject;
+        }
 
         foreach ($langs as $lang) {
 
@@ -152,7 +209,7 @@ final class PWE_Multilang_GF_Notifications {
                     'value'    => $lang,
                 ];
 
-                $subject = $subjects[$lang]
+                $subject = $normalizedSubjects[$lang]
                     ?? $variant['subject']
                     ?? '{trade_fair_name}';
 

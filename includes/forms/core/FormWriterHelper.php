@@ -210,16 +210,31 @@ final class PWE_Multilang_Form_Writer_Helper {
 
             if ($adminLabel && isset($existingMap[$adminLabel])) {
                 $field['id'] = $existingMap[$adminLabel];
+                self::assignConsentInputIds($field);
                 continue;
             }
 
             $maxId++;
             $field['id'] = $maxId;
+            self::assignConsentInputIds($field);
         }
 
         unset($field);
 
         return $fields;
+    }
+
+    private static function assignConsentInputIds(array &$field) : void {
+
+        if (($field['type'] ?? null) !== 'consent' || empty($field['id'])) {
+            return;
+        }
+
+        $field['inputs'] = [
+            [ 'id' => $field['id'] . '.1', 'label' => 'Zgoda', 'name' => '' ],
+            [ 'id' => $field['id'] . '.2', 'label' => 'Tekst', 'name' => '', 'isHidden' => true ],
+            [ 'id' => $field['id'] . '.3', 'label' => 'Opis', 'name' => '', 'isHidden' => true ],
+        ];
     }
 
     private static function normalizeFields(array $fields) : array {

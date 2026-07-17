@@ -75,6 +75,7 @@ final class PWE_Multilang_Form_Template_Rejestracja_Fb_Multilang {
             'uk' => 'Дякуємо за реєстрацію на виставку {pwe_name_lang}',
             'ro' => 'Vă mulțumim că v-ați înregistrat la târgul comercial {pwe_name_lang}',
             'et' => 'Täname teid {pwe_name_lang} messile registreerumise eest',
+            'hu' => 'Köszönjük, hogy regisztrált a {pwe_name_lang} vásárra',
         ];
 
         $user_notification_variants = [

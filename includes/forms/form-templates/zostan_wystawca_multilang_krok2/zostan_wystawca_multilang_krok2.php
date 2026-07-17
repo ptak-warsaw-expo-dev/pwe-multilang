@@ -122,6 +122,7 @@ final class PWE_Multilang_Form_Template_Zostan_Wystawca_krok2_Multilang {
             'uk' => 'Дякуємо за заповнення даних. Незабаром ми з вами зв’яжемося. Команда Ptak Warsaw Expo',
             'ro' => 'Vă mulțumim pentru completarea datelor. Vă vom contacta în curând. Echipa Ptak Warsaw Expo',
             'et' => 'Täname andmete täitmise eest. Võtame teiega peagi ühendust. Ptak Warsaw Expo meeskond',
+            'hu' => 'Köszönjük az adatok kitöltését. Hamarosan felvesszük Önnel a kapcsolatot. Ptak Warsaw Expo csapat',
         ];
 
         $confirmations = [
@@ -142,6 +143,7 @@ final class PWE_Multilang_Form_Template_Zostan_Wystawca_krok2_Multilang {
             'uk' => 'Дякуємо за реєстрацію в якості учасника виставки {pwe_name_lang}',
             'ro' => 'Vă mulțumim că v-ați înregistrat la târgul comercial {pwe_name_lang}',
             'et' => 'Täname teid {pwe_name_lang} messile registreerumise eest',
+            'hu' => 'Köszönjük, hogy regisztrált a {pwe_name_lang} kiállításra',
         ];
 
         $user_notification_variants = [

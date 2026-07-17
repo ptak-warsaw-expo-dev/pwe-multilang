@@ -42,6 +42,10 @@ return [
             'label'       => 'Електронна пошта',
             'placeholder' => 'Електронна пошта',
         ],
+        'hu' => [
+            'label'       => 'E-mail',
+            'placeholder' => 'E-mail',
+        ],
     ],
 
     'phone' => [
@@ -80,6 +84,10 @@ return [
         'uk' => [
             'label'       => 'Номер телефону',
             'placeholder' => 'Номер телефону',
+        ],
+        'hu' => [
+            'label'       => 'Telefonszám',
+            'placeholder' => 'Telefonszám',
         ],
     ],
 
@@ -155,6 +163,14 @@ return [
             'checkboxLabel' => 'Я погоджуюся на обробку моїх персональних даних компанією PTAK WARSAW EXPO sp. z o.o. для маркетингових цілей та надсилання повідомлень. <span class="show-consent">(Більше)</span>',
 
             'description' => 'Я погоджуюся на обробку моїх персональних даних компанією PTAK WARSAW EXPO sp. z o.o., а саме: 1) ім’я та прізвище; 2) адреса електронної пошти; 3) номер телефону з метою надсилання маркетингових і комерційних повідомлень, пов’язаних із продуктами та послугами, що пропонуються Ptak Warsaw Expo sp. z o.o., засобами електронного зв’язку або прямого дистанційного зв’язку, включаючи отримання комерційної інформації, відповідно до Закону від 18 липня 2002 року про надання електронних послуг. Я знаю, що згода є добровільною, але необхідною для реєстрації. Я можу відкликати свою згоду в будь-який час.',
+        ],
+
+        'hu' => [
+            'label' => 'Hozzájárulás a személyes adatok feldolgozásához',
+
+            'checkboxLabel' => 'Hozzájárulok ahhoz, hogy a PTAK WARSAW EXPO sp. z o.o. a személyes adataimat marketing célokra és üzenetek küldésére feldolgozza. <span class="show-consent">(Több)</span>',
+
+            'description' => 'Hozzájárulok ahhoz, hogy a PTAK WARSAW EXPO sp. z o.o. a személyes adataimat, nevezetesen: 1) név és vezetéknév; 2) e-mail cím; 3) telefonszám feldolgozza marketing és üzleti üzenetek küldésének céljából, amelyek a Ptak Warsaw Expo sp. z o.o. által kínált termékekkel és szolgáltatásokkal kapcsolatosak, elektronikus kommunikáció vagy közvetlen távkommunikáció útján, beleértve a kereskedelmi információk fogadását is, az elektronikus szolgáltatásnyújtásról szóló 2002. július 18-i törvény értelmében. Tudom, hogy a hozzájárulás önkéntes, de szükséges a regisztrációhoz. Bármikor visszavonhatom a hozzájárulásomat.',
         ],
     ],
 
@@ -232,6 +248,14 @@ return [
             'description' => 'Я погоджуюся на обробку моїх персональних даних компанією PTAK WARSAW EXPO sp. z o.o., а саме: 1) ім’я та прізвище; 2) номер телефону для маркетингових цілей, пов’язаних із продуктами та послугами, що пропонує Ptak Warsaw Expo sp. z o.o., за допомогою кінцевого телекомунікаційного обладнання відповідно до статті 172 Закону від 16 липня 2014 року «Про електронні комунікації». Я знаю, що згода є добровільною, але необхідною для реєстрації. Я можу відкликати свою згоду в будь-який час. Я знаю, що згода є добровільною, але необхідною для реєстрації. Я можу відкликати свою згоду в будь-який час.',
         ],
 
+        'hu' => [
+            'label' => 'Hozzájárulás a személyes adatok feldolgozásához',
+
+            'checkboxLabel' => 'Hozzájárulok ahhoz, hogy a PTAK WARSAW EXPO sp. z o.o. a személyes adataimat üzenetek küldésének céljából feldolgozza. <span class="show-consent">(Több)</span>',
+
+            'description' => 'Hozzájárulok ahhoz, hogy a PTAK WARSAW EXPO sp. z o.o. a személyes adataimat, nevezetesen: 1) név és vezetéknév; 2) telefonszám marketing célokra, amelyek a Ptak Warsaw Expo sp. z o.o. által kínált termékekkel és szolgáltatásokkal kapcsolatosak, a távközlési végberendezések használatával az elektronikus kommunikációról szóló 2014. július 16-i törvény 172. cikkének értelmében feldolgozza. Tudom, hogy a hozzájárulás önkéntes, de szükséges a regisztrációhoz. Bármikor visszavonhatom a hozzájárulásomat. Tudom, hogy a hozzájárulás önkéntes, de szükséges a regisztrációhoz. Bármikor visszavonhatom a hozzájárulásomat.',
+        ],
+
     ],
 
     '_button' => [
@@ -246,6 +270,7 @@ return [
             'it' => 'Invia',
             'sk' => 'Odoslať',
             'uk' => 'Надіслати',
+            'hu' => 'Küldés',
         ],
 
         'Register' => [
@@ -259,6 +284,7 @@ return [
             'it' => 'Registrati',
             'sk' => 'Registrovať sa',
             'uk' => 'Зареєструватися',
+            'hu' => 'Regisztráció',
         ],
     ],
 ];
