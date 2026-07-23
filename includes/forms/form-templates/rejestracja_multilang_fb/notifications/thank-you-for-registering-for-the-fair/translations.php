@@ -20,7 +20,7 @@ return [
                   Pokud nevidíte QR kód, vypněte pro tento e-mail možnost blokování obrázků.
                 ',
     'calendar_reminder_notice' => '
-      Veletrh [trade_fair_name] se uskuteční v termínu [trade_fair_date]. Uložte si toto
+      Veletrh [trade_fair_name] se uskuteční v termínu [trade_fair_date_multilang]. Uložte si toto
       datum do kalendáře, abyste na něj nezapomněli.
     ',
     'signoff' => '
@@ -51,7 +51,7 @@ return [
                   Wenn Sie den QR-Code nicht sehen, deaktivieren Sie bitte für diese E-Mail die Option zum Blockieren von Bildern.
                 ',
     'calendar_reminder_notice' => '
-      Die Messe [trade_fair_name] findet am [trade_fair_date] statt. Speichern Sie dieses
+      Die Messe [trade_fair_name] findet am [trade_fair_date_multilang] statt. Speichern Sie dieses
       Datum in Ihrem Kalender, damit Sie es nicht vergessen.
     ',
     'signoff' => '
@@ -79,7 +79,7 @@ return [
                   Kui te QR-koodi ei näe, lülitage selle e-kirja jaoks piltide blokeerimine välja.
                 ',
     'calendar_reminder_notice' => '
-      Mess [trade_fair_name] toimub ajavahemikul [trade_fair_date]. Salvestage see kuupäev kalendrisse, et te seda ei unustaks.
+      Mess [trade_fair_name] toimub ajavahemikul [trade_fair_date_multilang]. Salvestage see kuupäev kalendrisse, et te seda ei unustaks.
     ',
     'signoff' => '
       Lugupidamisega, [trade_fair_name] meeskond
@@ -109,7 +109,7 @@ return [
                   Se non vedi il codice QR, disattiva per questa e-mail l’opzione di blocco delle immagini.
                 ',
     'calendar_reminder_notice' => '
-      La fiera [trade_fair_name] si terrà il [trade_fair_date]. Salva questa
+      La fiera [trade_fair_name] si terrà il [trade_fair_date_multilang]. Salva questa
       data nel calendario per non dimenticarla.
     ',
     'signoff' => '
@@ -140,7 +140,7 @@ return [
                   Jei nematote QR kodo, išjunkite šio el. laiško paveikslėlių blokavimo parinktį.
                 ',
     'calendar_reminder_notice' => '
-      Paroda [trade_fair_name] vyks [trade_fair_date]. Išsaugokite šią
+      Paroda [trade_fair_name] vyks [trade_fair_date_multilang]. Išsaugokite šią
       datą kalendoriuje, kad jos nepamirštumėte.
     ',
     'signoff' => '
@@ -171,7 +171,7 @@ return [
                   Ja neredzat QR kodu, izslēdziet šim e-pastam attēlu bloķēšanas opciju.
                 ',
     'calendar_reminder_notice' => '
-      Izstāde [trade_fair_name] notiks [trade_fair_date]. Saglabājiet šo
+      Izstāde [trade_fair_name] notiks [trade_fair_date_multilang]. Saglabājiet šo
       datumu kalendārā, lai to neaizmirstu.
     ',
     'signoff' => '
@@ -199,7 +199,7 @@ return [
                   Dacă nu vedeți codul QR, dezactivați blocarea imaginilor pentru acest e-mail.
                 ',
     'calendar_reminder_notice' => '
-      Târgul [trade_fair_name] va avea loc în perioada [trade_fair_date]. Salvați această dată în calendar ca să nu uitați de ea.
+      Târgul [trade_fair_name] va avea loc în perioada [trade_fair_date_multilang]. Salvați această dată în calendar ca să nu uitați de ea.
     ',
     'signoff' => '
       Cu stimă, echipa [trade_fair_name]
@@ -229,7 +229,7 @@ return [
                   Ak nevidíte QR kód, vypnite pre tento e-mail možnosť blokovania obrázkov.
                 ',
     'calendar_reminder_notice' => '
-      Veľtrh [trade_fair_name] sa uskutoční v termíne [trade_fair_date]. Uložte si tento
+      Veľtrh [trade_fair_name] sa uskutoční v termíne [trade_fair_date_multilang]. Uložte si tento
       dátum do kalendára, aby ste naň nezabudli.
     ',
     'signoff' => '
@@ -260,7 +260,7 @@ return [
                   Якщо Ви не бачите QR-код, вимкніть для цього листа опцію блокування зображень.
                 ',
     'calendar_reminder_notice' => '
-      Виставка [trade_fair_name] відбудеться [trade_fair_date]. Збережіть цю
+      Виставка [trade_fair_name] відбудеться [trade_fair_date_multilang]. Збережіть цю
       дату в календарі, щоб не забути про неї.
     ',
     'signoff' => '
@@ -289,7 +289,7 @@ return [
                   Ha nem látja a QR-kódot, kapcsolja ki a képek blokkolását ehhez az e-mailhez.
                 ',
     'calendar_reminder_notice' => '
-      A(z) [trade_fair_name] kiállítás [trade_fair_date] között kerül megrendezésre. Mentse el ezt a dátumot a naptárába, hogy ne felejtse el.
+      A(z) [trade_fair_name] kiállítás [trade_fair_date_multilang] között kerül megrendezésre. Mentse el ezt a dátumot a naptárába, hogy ne felejtse el.
     ',
     'signoff' => '
       Üdvözlettel, a(z) [trade_fair_name] csapata

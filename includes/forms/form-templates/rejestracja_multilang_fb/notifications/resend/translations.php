@@ -27,7 +27,7 @@ return [
           ',
     'qr_blocking_notice' => 'Pokud nevidíte QR kód, vypněte pro tento e-mail možnost blokování
           obrázků.',
-    'fair_date_notice' => 'Veletrh [trade_fair_name] se uskuteční v termínu [trade_fair_date]. ',
+    'fair_date_notice' => 'Veletrh [trade_fair_name] se uskuteční v termínu [trade_fair_date_multilang]. ',
     'add_to_calendar_label' => 'Uložte si toto datum do kalendáře,',
     'calendar_reminder_suffix' => ' abyste na něj nezapomněli.',
     'privacy_notice' => '
@@ -60,7 +60,7 @@ return [
           ',
     'qr_blocking_notice' => 'Wenn Sie den QR-Code nicht sehen, deaktivieren Sie bitte für diese E-Mail die Option zum Blockieren
           von Bildern.',
-    'fair_date_notice' => 'Die Messe [trade_fair_name] findet am [trade_fair_date] statt. ',
+    'fair_date_notice' => 'Die Messe [trade_fair_name] findet am [trade_fair_date_multilang] statt. ',
     'add_to_calendar_label' => 'Speichern Sie dieses Datum in Ihrem Kalender,',
     'calendar_reminder_suffix' => ' damit Sie es nicht vergessen.',
     'privacy_notice' => '
@@ -92,7 +92,7 @@ return [
     'free_ticket_label' => 'TEIE TASUTA PILET
           ',
     'qr_blocking_notice' => 'Kui te QR-koodi ei näe, lülitage selle e-kirja jaoks piltide blokeerimine välja.',
-    'fair_date_notice' => 'Mess [trade_fair_name] toimub ajavahemikul [trade_fair_date]. ',
+    'fair_date_notice' => 'Mess [trade_fair_name] toimub ajavahemikul [trade_fair_date_multilang]. ',
     'add_to_calendar_label' => 'Salvestage see kuupäev kalendrisse,',
     'calendar_reminder_suffix' => ' et te seda ei unustaks.',
     'privacy_notice' => '
@@ -125,7 +125,7 @@ return [
           ',
     'qr_blocking_notice' => 'Se non vedi il codice QR, disattiva per questa e-mail l’opzione di blocco
           delle immagini.',
-    'fair_date_notice' => 'La fiera [trade_fair_name] si terrà il [trade_fair_date]. ',
+    'fair_date_notice' => 'La fiera [trade_fair_name] si terrà il [trade_fair_date_multilang]. ',
     'add_to_calendar_label' => 'Salva questa data nel calendario,',
     'calendar_reminder_suffix' => ' per non dimenticarla.',
     'privacy_notice' => '
@@ -158,7 +158,7 @@ return [
           ',
     'qr_blocking_notice' => 'Jei nematote QR kodo, išjunkite šio el. laiško
           paveikslėlių blokavimo parinktį.',
-    'fair_date_notice' => 'Paroda [trade_fair_name] vyks [trade_fair_date]. ',
+    'fair_date_notice' => 'Paroda [trade_fair_name] vyks [trade_fair_date_multilang]. ',
     'add_to_calendar_label' => 'Išsaugokite šią datą kalendoriuje,',
     'calendar_reminder_suffix' => ' kad jos nepamirštumėte.',
     'privacy_notice' => '
@@ -191,7 +191,7 @@ return [
           ',
     'qr_blocking_notice' => 'Ja neredzat QR kodu, izslēdziet šim e-pastam
           attēlu bloķēšanas opciju.',
-    'fair_date_notice' => 'Izstāde [trade_fair_name] notiks [trade_fair_date]. ',
+    'fair_date_notice' => 'Izstāde [trade_fair_name] notiks [trade_fair_date_multilang]. ',
     'add_to_calendar_label' => 'Saglabājiet šo datumu kalendārā,',
     'calendar_reminder_suffix' => ' lai to neaizmirstu.',
     'privacy_notice' => '
@@ -223,7 +223,7 @@ return [
     'free_ticket_label' => 'BILETUL DUMNEAVOASTRĂ GRATUIT
           ',
     'qr_blocking_notice' => 'Dacă nu vedeți codul QR, dezactivați blocarea imaginilor pentru acest e-mail.',
-    'fair_date_notice' => 'Târgul [trade_fair_name] va avea loc în perioada [trade_fair_date]. ',
+    'fair_date_notice' => 'Târgul [trade_fair_name] va avea loc în perioada [trade_fair_date_multilang]. ',
     'add_to_calendar_label' => 'Salvați această dată în calendar,',
     'calendar_reminder_suffix' => ' ca să nu uitați de ea.',
     'privacy_notice' => '
@@ -256,7 +256,7 @@ return [
           ',
     'qr_blocking_notice' => 'Ak nevidíte QR kód, vypnite pre tento e-mail možnosť blokovania
           obrázkov.',
-    'fair_date_notice' => 'Veľtrh [trade_fair_name] sa uskutoční v termíne [trade_fair_date]. ',
+    'fair_date_notice' => 'Veľtrh [trade_fair_name] sa uskutoční v termíne [trade_fair_date_multilang]. ',
     'add_to_calendar_label' => 'Uložte si tento dátum do kalendára,',
     'calendar_reminder_suffix' => ' aby ste naň nezabudli.',
     'privacy_notice' => '
@@ -289,7 +289,7 @@ return [
           ',
     'qr_blocking_notice' => 'Якщо Ви не бачите QR-код, вимкніть для цього листа опцію блокування
           зображень.',
-    'fair_date_notice' => 'Виставка [trade_fair_name] відбудеться [trade_fair_date]. ',
+    'fair_date_notice' => 'Виставка [trade_fair_name] відбудеться [trade_fair_date_multilang]. ',
     'add_to_calendar_label' => 'Збережіть цю дату в календарі,',
     'calendar_reminder_suffix' => ' щоб не забути про неї.',
     'privacy_notice' => '
@@ -321,7 +321,7 @@ return [
     'free_ticket_label' => 'AZ ÖN INGYENES JEGYE
           ',
     'qr_blocking_notice' => 'Ha nem látja a QR-kódot, kapcsolja ki a képek blokkolását ehhez az e-mailhez.',
-    'fair_date_notice' => 'A(z) [trade_fair_name] kiállítás [trade_fair_date] között kerül megrendezésre. ',
+    'fair_date_notice' => 'A(z) [trade_fair_name] kiállítás [trade_fair_date_multilang] között kerül megrendezésre. ',
     'add_to_calendar_label' => 'Mentse el ezt a dátumot a naptárába,',
     'calendar_reminder_suffix' => ' hogy ne felejtse el.',
     'privacy_notice' => '
