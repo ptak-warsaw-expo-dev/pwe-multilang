@@ -50,6 +50,8 @@ final class PWE_Multilang_Form_Template_Rejestracja_Fb_Multilang {
                 visibility: 'hidden',
             ),
 
+            PWE_Multilang_GF_Fields::UTM(),
+
             PWE_Multilang_GF_Fields::Captcha(),
 
         ];
@@ -76,6 +78,8 @@ final class PWE_Multilang_Form_Template_Rejestracja_Fb_Multilang {
             'ro' => 'Vă mulțumim că v-ați înregistrat la târgul comercial {pwe_name_lang}',
             'et' => 'Täname teid {pwe_name_lang} messile registreerumise eest',
             'hu' => 'Köszönjük, hogy regisztrált a {pwe_name_lang} vásárra',
+            'fr' => 'Merci de vous être inscrit au salon {pwe_name_lang}',
+            'es' => 'Gracias por registrarte en la feria {pwe_name_lang}',
         ];
 
         $user_notification_variants = [

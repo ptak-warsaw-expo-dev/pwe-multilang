@@ -298,4 +298,63 @@ return [
     'rights_reserved' => 'Minden jog fenntartva',
     'privacy_notice' => 'Személyes adatainak kezelője a PTAK WARSAW EXPO sp. z o.o., székhelye Nadarzynban (irányítószám: 05-830), Al. Katowicka 62, a Nemzeti Bírósági Nyilvántartás vállalkozói nyilvántartásába KRS 0000671001 számon, adószám: 532544579. A személyes adatokat az Európai Parlament és a Tanács (EU) 2016/679 rendelete (2016. április 27.) a természetes személyeknek a személyes adatok kezelése tekintetében történő védelméről és az ilyen adatok szabad áramlásáról, valamint a 95/46/EK rendelet hatályon kívül helyezéséről (GDPR) megfelelően kezeljük, a fent említett rendelet 6. cikke (1) bekezdésének a) vagy b) pontja alapján, a fent említett hozzájárulásokban meghatározott célokra. Az adatokat a hozzájárulás visszavonásáig kezeljük, és kétévente rendszeresen felülvizsgáljuk. Személyes adatai átadhatók olyan harmadik feleknek, akik a PTAK WARSAW EXPO sp. z o.o. nevében személyes adatokat kezelnek az adatkezelésre vonatkozó megbízási szerződések alapján, azaz IT-szolgáltatóknak, marketing szolgáltatásokat nyújtó szervezeteknek, követelések érvényesítése és követelések behajtása céljából adatokat kezelő szervezeteknek vagy más szervezeteknek. Önnek joga van hozzáférni adataihoz, azok helyesbítéséhez és törléséhez, az adatok átviteléhez, valamint kérheti azok kezelésének korlátozását az Ön konkrét helyzetére való tekintettel, kifogást emelni és bármikor visszavonni a megadott hozzájárulást – a korábban megadott hozzájárulás visszavonása nem érinti a visszavonás előtti adatkezelés jogszerűségét –, valamint panaszt benyújtani a felügyeleti hatósághoz – a Személyes Adatvédelmi Hivatal elnökéhez. Az adatok nem kerülnek továbbításra harmadik országba, és nem vonatkoznak profilalkotásra, azaz automatizált döntéshozatalra. Az adatkezelő a következő e-mail címen érhető el: rodo@warsawexpo.eu.',
   ],
+  'fr' => [
+    'html_lang' => 'fr',
+    'notification_title' => "Confirmation d'inscription",
+    'greeting_with_name' => '
+      Bienvenue, {Imię i nazwisko:1},
+    ',
+    'registration_intro' => '
+      Merci de vous être inscrit à [trade_fair_name] au Ptak Warsaw Expo.
+      Tous les détails concernant le salon sont disponibles sur notre site
+      web
+      ',
+    'qr_code_instruction' => '
+                  Voici votre code QR, qui vous donne droit à l’entrée gratuite dans la zone
+                  d’exposition. Veuillez l’apporter avec vous.
+                ',
+    'qr_blocking_notice' => '
+                  Si vous ne voyez pas le code QR, désactivez le blocage des images pour cet e-mail.
+                ',
+    'calendar_reminder_notice' => '
+      Le salon [trade_fair_name] aura lieu du [trade_fair_date_multilang]. Enregistrez cette
+      date dans votre calendrier pour ne pas l’oublier.
+    ',
+    'signoff' => '
+      Cordialement, l’équipe de [trade_fair_name]
+    ',
+    'auto_generated_notice' => "Message généré automatiquement, merci de ne pas y répondre.",
+    'rights_reserved' => 'Tous droits réservés',
+    'privacy_notice' => '
+    Le responsable du traitement de vos données personnelles est PTAK WARSAW EXPO sp. z o.o., dont le siège social est situé à Nadarzyn (code postal : 05-830), Al. Katowicka 62, inscrite au registre des entrepreneurs du registre judiciaire national sous le numéro KRS 0000671001, NIP 532544579. Les données personnelles seront traitées conformément au règlement (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016 relatif à la protection des personnes physiques à l’égard du traitement des données à caractère personnel et à la libre circulation de ces données et abrogeant la directive 95/46/CE (RGPD), sur la base de l’article 6, paragraphe 1, lettres a ou b dudit règlement, aux fins indiquées dans le contenu des consentements susmentionnés. Les données seront traitées jusqu’au retrait du consentement et feront l’objet d’un examen périodique tous les deux ans. Vos données personnelles peuvent être transmises à des tiers qui traitent des données personnelles pour le compte de PTAK WARSAW EXPO sp. z o.o. sur la base de contrats de traitement, à savoir les fournisseurs de services informatiques, les entités fournissant des services de marketing, les entités traitant des données afin de faire valoir des réclamations et de recouvrer des créances ou d’autres entités. Vous avez le droit d’accéder à vos données, de les rectifier et de les supprimer, de transférer les données et de demander la limitation de leur traitement en raison de votre situation particulière, de vous opposer et de retirer votre consentement à tout moment ; toutefois, le retrait du consentement précédemment donné n’affecte pas la légalité du traitement effectué avant le retrait, ainsi que le droit d’introduire une plainte auprès de l’autorité de contrôle – le président du Bureau de protection des données personnelles. Les données ne seront pas transférées vers des pays tiers et ne feront pas l’objet d’un profilage, c’est-à-dire d’une prise de décision automatisée. Il est possible de contacter le responsable du traitement à l’adresse e-mail suivante : privacy@ptakexpo.pl',
+  ],
+  'es' => [
+    'html_lang' => 'es',
+    'notification_title' => 'Confirmación de registro',
+    'greeting_with_name' => '
+      Bienvenido, {Imię i nazwisko:1},
+    ',
+    'registration_intro' => '
+      Gracias por registrarse en [trade_fair_name] en Ptak Warsaw Expo.
+      Todos los detalles sobre la feria están disponibles en nuestro sitio web
+      ',
+    'qr_code_instruction' => '
+                  Este es su código QR, que le da derecho a la entrada gratuita al área
+                  de exposición. Por favor, llévelo consigo.
+                ',
+    'qr_blocking_notice' => '
+                  Si no ve el código QR, desactive el bloqueo de imágenes para este correo electrónico.
+                ',
+    'calendar_reminder_notice' => '
+      La feria [trade_fair_name] se llevará a cabo del [trade_fair_date_multilang]. Guarde esta
+      fecha en su calendario para no olvidarla.
+    ',
+    'signoff' => '
+      Atentamente, el equipo de [trade_fair_name]
+    ',
+    'auto_generated_notice' => 'Mensaje generado automáticamente, por favor no responda.',
+    'rights_reserved' => 'Todos los derechos reservados',
+    'privacy_notice' => '
+    El responsable del tratamiento de sus datos personales es PTAK WARSAW EXPO sp. z o.o., con domicilio social en Nadarzyn (código postal: 05-830), Al. Katowicka 62, inscrita en el Registro Nacional Judicial de Empresarios con el número KRS 0000671001, NIP 532544579. Los datos personales se tratarán de conformidad con el Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo de 27 de abril de 2016 relativo a la protección de las personas físicas en lo que respecta al tratamiento de datos personales y a la libre circulación de estos datos y por el que se deroga la Directiva 95/46/CE (RGPD), sobre la base del art. 6, apartado 1, letras a o b del citado Reglamento, para los fines indicados en el contenido de los consentimientos mencionados anteriormente. Los datos se tratarán hasta la retirada del consentimiento y se someterán a una revisión periódica cada dos años. Sus datos personales podrán ser transmitidos a terceros que traten datos personales en nombre de PTAK WARSAW EXPO sp. z o.o. sobre la base de contratos de encargo de tratamiento, es decir, proveedores de servicios informáticos, entidades que prestan servicios de marketing, entidades que tratan datos con el fin de hacer valer reclamaciones y recuperar créditos u otras entidades. Usted tiene derecho a acceder a sus datos, rectificarlos y eliminarlos, transferir los datos y solicitar la limitación de su tratamiento debido a su situación particular, oponerse y retirar el consentimiento otorgado en cualquier momento; sin embargo, la retirada del consentimiento previamente otorgado no afecta a la licitud del tratamiento realizado antes de la retirada, así como a presentar una reclamación ante la autoridad de control – el Presidente de la Oficina de Protección de Datos Personales. Los datos no se transferirán a terceros países y no estarán sujetos a perfilado, es decir, a procesos de toma de decisiones automatizados. Es posible ponerse en contacto con el responsable del tratamiento en la dirección de correo electrónico: privacy@ptakexpo.pl',
+  ]
 ];
