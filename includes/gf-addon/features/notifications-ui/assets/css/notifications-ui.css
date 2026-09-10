@@ -1,0 +1,11 @@
+#confirmation_list_form .check-column,
+#notification_list_form .check-column { width: 100px !important; }
+.pwe-gf-lang-tabs, .pwe-gf-title-tabs { display: flex; flex-wrap: wrap; gap: 7px; }
+.pwe-gf-lang-tabs { margin: 16px 0; }
+.pwe-gf-title-tabs { margin: 0 0 16px; }
+.pwe-gf-lang-tab, .pwe-gf-title-tab { border: 1px solid #dfe3e8; background: #fff; color: #374151; padding: 6px 12px; cursor: pointer; border-radius: 999px; font-size: 12px; font-weight: 600; line-height: 1.2; transition: .15s ease; }
+.pwe-gf-title-tab { max-width: 280px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.pwe-gf-lang-tab:hover, .pwe-gf-title-tab:hover { background: #f8fafc; border-color: #94a3b8; }
+.pwe-gf-lang-tab.is-active, .pwe-gf-title-tab.is-active, .pwe-gf-lang-tab.is-active:hover, .pwe-gf-title-tab.is-active:hover { background: #2d8653; border-color: #2d8653; color: #fff; }
+.pwe-gf-counter { margin: 8px 0 16px; color: #6b7280; font-size: 12px; font-weight: 600; }
+.pwe-gf-notification-hidden { display: none !important; }
