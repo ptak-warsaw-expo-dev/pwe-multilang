@@ -715,6 +715,4 @@ Zmiana wersji pluginu i zmiana `template_version` pełnią różne role:
 
 ## Licencja
 
-Kod wtyczki deklaruje licencję **GPL v2 or later** (`GPL-2.0-or-later`).
-
-Do repozytorium warto dodać osobny plik `LICENSE` z pełnym tekstem licencji. Biblioteka `plugin-update-checker` posiada własną licencję MIT w swoim katalogu.
+Ten projekt jest objęty licencją GPL v2 lub nowszą. Szczegóły: https://www.gnu.org/licenses/gpl-2.0.html
