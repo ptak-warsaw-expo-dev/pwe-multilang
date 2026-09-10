@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="{{lang}}" xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="color-scheme" content="light" />
+<meta name="supported-color-schemes" content="light" />
+<title>{{notification_title}}</title>
+<!--[if mso]>
+<noscript>
+<xml>
+<o:OfficeDocumentSettings>
+<o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml>
+</noscript>
+<style>
+  table {border-collapse: collapse;}
+  td, th, div, p, a, h1, h2, h3 {font-family: Arial, sans-serif;}
+</style>
+<![endif]-->
+<style>
+  /* Reset */
+  body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+  table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+  img { -ms-interpolation-mode: bicubic; border: 0; height: auto; line-height: 100%; outline: none; text-decoration: none; }
+  body { margin: 0; padding: 0; width: 100% !important; height: 100% !important; }
+
+  body, #bodyTable {
+    background-color: #ffffff;
+  }
+
+  .email-container {
+    max-width: 600px;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    padding: 14px 32px;
+    font-weight: 700;
+    font-size: 15px;
+    text-decoration: none;
+    color: #ffffff !important;
+    border-radius: 30px;
+    letter-spacing: 0.2px;
+  }
+
+  .btn-secondary {
+    display: inline-block;
+    padding: 11px 22px;
+    font-weight: 600;
+    font-size: 13px;
+    text-decoration: none;
+    color: #ffffff !important;
+    background-color: #D6B685;
+    border-radius: 24px;
+    letter-spacing: 0.3px;
+  }
+
+  .icon-box p {
+    margin: 8px 0 0;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.3;
+    text-align: center;
+    color: #6b5642;
+  }
+
+  .divider {
+    border-bottom: 1px solid #e6ddce;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .email-container { width: 100% !important; }
+    .fluid-padding { padding-left: 20px !important; padding-right: 20px !important; }
+    .stack-col { display: block !important; width: 100% !important; max-width: 100% !important; padding-bottom: 20px !important; }
+    .stack-col:last-child { padding-bottom: 0 !important; }
+    .h1-mobile { font-size: 18px !important; }
+    .hide-mobile { display: none !important; }
+  }
+</style>
+</head>
+
+<body style="margin:0; padding:0;">
+
+  <!-- Preheader (ukryty podgląd wiadomości w skrzynce odbiorczej) -->
+  <div style="display:none; max-height:0; overflow:hidden; mso-hide:all; font-size:1px; line-height:1px; color:#ffffff; opacity:0;">
+    {{invitation_text}}
+  </div>
+  <div style="display:none; max-height:0; overflow:hidden; mso-hide:all;">&#8199;&#847;&nbsp;&#8199;&#847;&nbsp;&#8199;&#847;&nbsp;&#8199;&#847;&nbsp;&#8199;&#847;&nbsp;&#8199;&#847;&nbsp;&#8199;&#847;&nbsp;&#8199;&#847;&nbsp;&#8199;&#847;&nbsp;&#8199;&#847;&nbsp;&#8199;&#847;&nbsp;</div>
+
+  <center role="article" aria-roledescription="email" style="width:100%;">
+  <!--[if mso]>
+  <table role="presentation" width="600" align="center" cellpadding="0" cellspacing="0" border="0"><tr><td>
+  <![endif]-->
+
+  <table role="presentation" class="email-container" width="100%" align="center" cellpadding="0" cellspacing="0" border="0" style="max-width:600px; margin:0 auto; background-color:#fffbf4; border-radius:16px; overflow:hidden; font-family:'Open Sans', Arial, sans-serif;">
+
+    <!-- HERO / BADGE GRAFICZNY -->
+    <tr>
+      <td style="padding:0;">
+        <img src="[trade_fair_exhibitor_generator_header_url]" alt="[pwe_name_{{lang}}]" width="600" style="display:block; width:100%; max-width:600px; height:auto;" />
+      </td>
+    </tr>
+
+    <!-- POWITANIE -->
+    <tr>
+      <td class="fluid-padding" style="padding:32px 26px 0 26px;">
+        <h1 class="h1-mobile" style="margin:0; font-family:'Montserrat','Open Sans',Arial,sans-serif; font-size:20px; line-height:1.3; color:#1a1a1a; font-weight:700; text-align:left;">
+          {{greeting}} {name:1},
+        </h1>
+      </td>
+    </tr>
+
+    <!-- TREŚĆ ZAPROSZENIA -->
+    <tr>
+      <td class="fluid-padding" style="padding:16px 26px 28px 26px;">
+        <p style="margin:0; font-family:'Open Sans',Arial,sans-serif; font-size:15px; line-height:1.6; color:#4a4a4a; text-align:left;">
+          {{invitation_text}}
+        </p>
+      </td>
+    </tr>
+
+    <!-- CTA: POBIERZ IDENTYFIKATOR -->
+    <tr>
+      <td align="center" style="padding:0 26px 8px 26px;">
+        <!--[if mso]>
+        <v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://warsawexpo.eu/assets/badge/local/loading.html?category=[trade_fair_badge]_vipgold_a6&getname={name:1}&firma={company:11}&qrcode={pwe_qr_url_encoded name=rejestracja_gosci_wystawcow}" style="height:52px;v-text-anchor:middle;width:320px;" arcsize="50%" strokecolor="[trade_fair_accent]" fillcolor="[trade_fair_accent]">
+        <w:anchorlock/>
+        <center style="color:#ffffff;font-family:Arial,sans-serif;font-size:15px;font-weight:bold;">{{badge_link_text}}</center>
+        </v:roundrect>
+        <![endif]-->
+        <!--[if !mso]><!-->
+        <a href="https://warsawexpo.eu/assets/badge/local/loading.html?category=[trade_fair_badge]_vipgold_a6&getname={name:1}&firma={company:11}&qrcode={pwe_qr_url_encoded name=rejestracja_gosci_wystawcow}"
+           target="_blank"
+           class="btn-primary"
+           style="background-color:[trade_fair_accent]; box-shadow:0 6px 14px rgba(0,0,0,0.12);">
+          {{badge_link_text}}
+        </a>
+        <!--<![endif]-->
+      </td>
+    </tr>
+
+    <!-- CO OBEJMUJE IDENTYFIKATOR -->
+    <tr>
+      <td class="fluid-padding" style="padding:36px 26px 4px 26px;">
+        <p style="margin:0 0 20px 0; font-family:'Open Sans',Arial,sans-serif; font-size:15px; font-weight:700; color:#1a1a1a; text-align:center;">
+          {{entitles}}
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:0 26px 8px 26px;">
+        [trade_fair_exhibitor_generator_icons]
+      </td>
+    </tr>
+
+    <!-- PRZYCISKI: KALENDARZ / WIĘCEJ -->
+    <tr>
+      <td class="fluid-padding" style="padding:28px 26px 8px 26px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td class="stack-col" width="50%" align="center" valign="top" style="padding:0 8px 0 0;">
+              <a href="{{calendar_link}}" target="_blank" class="btn-secondary" style="display:block;">
+                {{calendar_link_text}}
+              </a>
+              <img src="https://[trade_fair_domainadress]/wp-content/plugins/pwe-media/media/ticket/kalendarz.png" alt="Kalendarz" width="220" style="display:block; width:100%; max-width:220px; height:auto; margin:14px auto 0;" />
+            </td>
+            <td class="stack-col" width="50%" align="center" valign="top" style="padding:0 0 0 8px;">
+              <a href="{{more_link}}" target="_blank" class="btn-secondary" style="display:block;">
+                {{more_link_text}}
+              </a>
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="margin:14px auto 0;">
+                <tr>
+                  <td style="padding:0 8px 0 0;" valign="middle">
+                    <img src="https://[trade_fair_domainadress]/doc/logo-color.png" alt="Logo targów" height="46" style="display:block; width:auto; height:46px; max-width:110px;" />
+                  </td>
+                  <td style="padding:0 0 0 8px;" valign="middle">
+                    <img src="https://[trade_fair_domainadress]/doc/kongres-color.png" alt="Logo kongresu" height="46" style="display:block; width:auto; height:46px; max-width:110px;" />
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="fluid-padding" style="padding:28px 26px 0 26px;"><div class="divider"></div></td></tr>
+
+    <!-- KOD QR -->
+    <tr>
+      <td class="fluid-padding" style="padding:28px 26px 28px 26px;">
+        <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td class="stack-col" width="55%" valign="middle" style="padding:0 16px 0 0;">
+              <p style="margin:0 auto; max-width: 200px; font-family:'Open Sans',Arial,sans-serif; font-size:15px; font-weight:700; line-height:1.5; color:#1a1a1a; text-align:left;">
+                {{qr_text}}
+              </p>
+            </td>
+            <td class="stack-col" width="45%" align="center" valign="top">
+              <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border:3px solid #D6B685; border-radius:20px;">
+                <tr>
+                  <td style="padding:12px;">
+                    [pwe_qr_img name="rejestracja_gosci_wystawcow"]
+                  </td>
+                </tr>
+              </table>
+              <p style="margin:10px 0 0; font-family:'Open Sans',Arial,sans-serif; font-size:11px; line-height:1.5; color:#8a8a8a; text-align:center;">
+                {{qr_blocking_text}}
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="fluid-padding" style="padding:0 26px;"><div class="divider"></div></td></tr>
+
+    <!-- SOCIAL MEDIA -->
+    <tr>
+      <td align="center" style="padding:24px 26px;">
+        <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+          <tr>
+            <td style="padding:0 8px;">
+              <a href="[trade_fair_linkedin]" target="_blank">
+                <img src="https://[trade_fair_domainadress]/wp-content/plugins/pwe-media/media/ticket/media_Business_linkedin.png" alt="LinkedIn" width="42" height="42" style="display:block; border-radius:50%;" />
+              </a>
+            </td>
+            <td style="padding:0 8px;">
+              <a href="[trade_fair_facebook]" target="_blank">
+                <img src="https://[trade_fair_domainadress]/wp-content/plugins/pwe-media/media/ticket/media_Business_fb.png" alt="Facebook" width="42" height="42" style="display:block; border-radius:50%;" />
+              </a>
+            </td>
+            <td style="padding:0 8px;">
+              <a href="[trade_fair_youtube]" target="_blank">
+                <img src="https://[trade_fair_domainadress]/wp-content/plugins/pwe-media/media/ticket/media_Business_yt.png" alt="YouTube" width="42" height="42" style="display:block; border-radius:50%;" />
+              </a>
+            </td>
+            <td style="padding:0 8px;">
+              <a href="[trade_fair_instagram]" target="_blank">
+                <img src="https://[trade_fair_domainadress]/wp-content/plugins/pwe-media/media/ticket/media_Business_instagram.png" alt="Instagram" width="42" height="42" style="display:block; border-radius:50%;" />
+              </a>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+
+    <tr><td class="fluid-padding" style="padding:0 26px;"><div class="divider"></div></td></tr>
+
+    <!-- PODPIS -->
+    <tr>
+      <td class="fluid-padding" style="padding:24px 26px 4px 26px;">
+        <p style="margin:0; font-family:'Open Sans',Arial,sans-serif; font-size:14px; line-height:1.6; color:#1a1a1a;">
+          {{regards}}
+        </p>
+      </td>
+    </tr>
+    <tr>
+      <td class="fluid-padding" style="padding:0 26px 28px 26px;">
+        <p style="margin:0; font-family:'Open Sans',Arial,sans-serif; font-size:12px; line-height:1.5; color:#9a9a9a;">
+          {{auto_generated_message}}
+        </p>
+      </td>
+    </tr>
+
+    <!-- FOOTER GRAFICZNY -->
+    <tr>
+      <td style="padding:0; line-height:0;">
+        <img src="https://warsawexpo.eu/assets/mail/footer.jpg" alt="" width="600" style="display:block; width:100%; max-width:600px; height:auto;" />
+      </td>
+    </tr>
+
+    <!-- COPYRIGHT -->
+    <tr>
+      <td align="center" style="padding:18px 26px; background-color:#111111;">
+        <p style="margin:0; font-family:'Open Sans',Arial,sans-serif; font-size:12px; line-height:1.6; color:#ffffff;">
+          {{copyright}}
+        </p>
+      </td>
+    </tr>
+
+  </table>
+
+  <!-- NOTA PRAWNA / RODO -->
+  <table role="presentation" class="email-container" width="100%" align="center" cellpadding="0" cellspacing="0" border="0" style="max-width:600px; margin:0 auto; background-color:#eeeeee;">
+    <tr>
+      <td class="fluid-padding" style="padding:20px 26px 24px 26px;">
+        <p class="footer__rodo" style="margin:0; font-family:'Open Sans',Arial,sans-serif; font-size:11px; line-height:1.6; color:#8a8a8a; text-align:left;">
+          {{privacy_notice}}
+        </p>
+      </td>
+    </tr>
+  </table>
+
+  <!--[if mso]>
+  </td></tr></table>
+  <![endif]-->
+  </center>
+
+</body>
+</html>

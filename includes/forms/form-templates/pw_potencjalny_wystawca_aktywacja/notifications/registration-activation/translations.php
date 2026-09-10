@@ -1,0 +1,38 @@
+<?php
+
+return [
+    'pl' => [
+        'lang' => 'pl',
+        'header_img' => 'plan.jpg',
+        'header_alt' => 'Zobacz plan targów',
+        'layout_link' => 'layout',
+        'thank_you_message' => 'Dziękujemy za aktywację zaproszenia. Poniżej znajduje się twój bilet na targi. Załączony QR upoważnia do wejścia na teren targów w wybrany dzień targowy. Więcej informacji na stronie internetowej targów.',
+        'invitation_text' => 'Zapraszamy do sprawdzenia aktualnego planu targowego Warsaw Pack. Intensywne przygotowania do kolejnej edycji targów trwają, a wystawców błyskawicznie przybywa. Chcesz zostać wystawcą? Zobacz jakie firmy zadeklarowały już swoją obecność i zarezerwuj stoisko już dziś!',
+        'see_plan' => 'Zobacz plan targów!',
+        'name' => 'Imię i nazwisko:',
+        'fair' => 'Nazwa targów:',
+        'place' => 'Miejsce targów:',
+        'more_invitation' => 'Potrzebujesz więcej zaproszeń. Zapraszam do kontaktu!',
+        'best_regards' => 'Pozdrawiamy, Zespół',
+        'auto_message' => 'Wiadomość wygenerowana automatycznie, prosimy na nią nie odpowiadać.',
+        'all_rights_reserved' => 'Wszelkie prawa zastrzeżone',
+        'rodo' => 'Administratorem Pani/Pana danych osobowych jest spółka PTAK WARSAW EXPO sp. z o.o. z siedzibą w Nadarzynie (kod pocztowy: 05-830), przy Al. Katowickiej 62, wpisaną do rejestru przedsiębiorców Krajowego Rejestru Sądowego pod numerem KRS 0000671001, NIP 532544579. Dane osobowe będą przetwarzane zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (RODO), na podstawie art. 6 ust. 1 lit. a lub b ww. Rozporządzenia w celach wskazanych w treści ww. zgód. Dane będą przetwarzane do czasu wycofania zgody i będą podlegały okresowemu przeglądowi co 2 lata. Pani/a dane osobowe mogą być przekazane osobom trzecim, które przetwarzają dane osobowe w imieniu PTAK WARSAW EXPO sp. z o.o. na podstawie umów powierzenia tj. usługi IT, podmioty świadczące usługi marketingowe, podmioty przetwarzające dane w celu dochodzenia roszczeń i windykacji lub innych. Ma Pan/i możliwość dostępu do swoich danych, w celu ich sprostowania i usunięcia, przeniesienia danych oraz żądania ograniczenia ich przetwarzania ze względu na swoją szczególną sytuację, wniesienia sprzeciwu oraz wycofania udzielonej zgody w każdym momencie, przy czym, cofnięcie uprzednio wyrażonej zgody nie wpłynie na legalność przetwarzania przed jej wycofaniem, a także wniesienia skargi do organu nadzorczego – Prezesa Urzędu Ochrony Danych Osobowych. Dane nie będą przekazywane do państw trzecich oraz nie podlegają profilowaniu tj. automatycznemu podejmowaniu decyzji. Kontakt z administratorem możliwy jest pod adresem e-mail: rodo@warsawexpo.eu.',
+    ],
+    'en' => [
+        'lang' => 'en',
+        'header_img' => 'plan-en.jpg',
+        'header_alt' => 'View the exhibition floor plan',
+        'layout_link' => 'en/layout',
+        'thank_you_message' => 'Thank you for activating your invitation. Below you will find your trade fair ticket. The attached QR code authorizes entry to the exhibition grounds on the selected exhibition day. More information is available on the trade fair website.',
+        'invitation_text' => 'We invite you to check the current Warsaw Pack exhibition floor plan. Intensive preparations for the next edition of the trade fair are underway, and the number of exhibitors is growing rapidly. Would you like to become an exhibitor? See which companies have already confirmed their participation and reserve your stand today!',
+        'see_plan' => 'View the exhibition floor plan!',
+        'name' => 'Full name:',
+        'fair' => 'Trade fair name:',
+        'place' => 'Trade fair venue:',
+        'more_invitation' => 'Need more invitations? Feel free to contact us!',
+        'best_regards' => 'Best regards, Team',
+        'auto_message' => 'This message was generated automatically. Please do not reply to it.',
+        'all_rights_reserved' => 'All rights reserved',
+        'rodo' => 'The controller of your personal data is PTAK WARSAW EXPO sp. z o.o., with its registered office in Nadarzyn (postal code: 05-830), Al. Katowicka 62, entered into the Register of Entrepreneurs of the National Court Register under KRS number 0000671001, NIP 532544579. Personal data will be processed in accordance with Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 (GDPR), on the basis of Article 6(1)(a) or (b) of the Regulation, for the purposes specified in the content of the granted consents. The data will be processed until consent is withdrawn and will be subject to periodic review every 2 years. Your personal data may be disclosed to third parties processing personal data on behalf of PTAK WARSAW EXPO sp. z o.o. under data processing agreements, including IT service providers, marketing service providers, entities processing data for claims enforcement and debt collection purposes, or other entities. You have the right to access your data, rectify and erase it, transfer data, request restriction of processing due to your particular situation, object to processing, and withdraw your consent at any time. Withdrawal of consent shall not affect the lawfulness of processing carried out before its withdrawal. You also have the right to lodge a complaint with the supervisory authority – the President of the Personal Data Protection Office. Personal data will not be transferred to third countries and will not be subject to profiling or automated decision-making. You may contact the controller via e-mail at: rodo@warsawexpo.eu.',
+    ],
+];

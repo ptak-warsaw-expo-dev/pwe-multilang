@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="{{lang}}">
+    <head>
+        <style>
+            @media (max-width: 600px) {
+                table {
+                    width: 100% !important;
+                }
+
+                td {
+                    display: block;
+                    width: 100% !important;
+                    text-align: center;
+                }
+
+                img {
+                    max-width: 100% !important;
+                    height: auto !important;
+                }
+
+                .btn {
+                    display: block !important;
+                    width: 80% !important;
+                    margin: 10px auto !important;
+                }
+            }
+        </style>
+        <title>{{notification_title}}</title>
+    </head>
+
+    <body style="text-align: justify; max-width: 600px; margin: 0 auto; font-family: sans-serif">
+        <table width="100%">
+            <tr>
+                <td>
+                    <img style="width: 100%" src="https://[trade_fair_domainadress]/doc/vip.jpg" alt="[trade_fair_name] Vip" />
+                </td>
+            </tr>
+        </table>
+        <table width="100%" cellpadding="10" cellspacing="0" border="0">
+            <tr>
+                <td style="border: 4px solid #5f3d0c; padding: 5px">
+                    <h1 align="center" style="font-size: 22px; margin: 10px auto">{{fair_name}}</h1>
+                    <h5 style="font-size: 16px; margin: 20px 0">{{greeting}}</h5>
+                    <p style="font-size: 14px">{{invitation_text}}</p>
+                    <p>
+                        {{details_intro}}
+                        <a style="color: #d0aa7d" href="{{details_url}}">{{details_label}}</a>.
+                    </p>
+                </td>
+            </tr>
+        </table>
+        <table width="100%" align="center" cellpadding="10">
+            <tr>
+                <td align="center">
+                    <img width="90%" src="{{vip_package_image_url}}" alt="{{vip_package_alt}}" />
+                </td>
+            </tr>
+        </table>
+        <table width="100%" cellpadding="10">
+            <tr align="center">
+                <td valign="center" style="max-width: 200px">{{qr_img}}</td>
+                <td valign="center" style="max-width: 350px">
+                    <p style="font-size: 14px">{{qr_text}}</p>
+                    <p style="font-size: 14px">{{qr_blocking_text}}</p>
+                </td>
+            </tr>
+        </table>
+        <table width="100%" align="center" cellpadding="10">
+            <tr>
+                <td align="center">
+                    <a style="background-color: #d0aa7d; color: black; padding: 15px 20px; text-align: center; text-transform: uppercase; font-weight: 600; text-decoration: none; display: inline-block; font-size: 16px; margin: 4px 2px; cursor: pointer" href="{{badge_url}}" target="_blank" rel="noopener">{{badge_button}}</a>
+                </td>
+            </tr>
+        </table>
+        <table width="100%" cellpadding="10">
+            <tr>
+                <td>
+                    <p style="font-size: 14px">{{calendar_text}}</p>
+                </td>
+            </tr>
+        </table>
+        <table width="100%" cellpadding="10">
+            <tr align="center">
+                <td>
+                    <a href="[trade_fair_facebook]" style="margin-right: 20px; text-decoration: none">
+                        <img src="https://warsawexpo.eu/docs/facebook_gold_sm.png" alt="Facebook Link" />
+                    </a>
+                    <a href="[trade_fair_instagram]" style="text-decoration: none">
+                        <img src="https://warsawexpo.eu/docs/instagram_gold%20_sm.png" alt="Instagram Link" />
+                    </a>
+                </td>
+            </tr>
+        </table>
+        <table width="100%" cellpadding="10">
+            <tr>
+                <td>
+                    <p style="font-size: 14px">{{regards}}</p>
+                    <sub style="font-size: 12px">{{auto_message}}</sub>
+                </td>
+            </tr>
+        </table>
+        <table width="100%" cellpadding="10">
+            <tr>
+                <td>
+                    <img style="display: block; max-width: 100%; height: auto; margin: 0" src="https://warsawexpo.eu/assets/mail/footer.jpg" alt="email_footer" />
+                </td>
+            </tr>
+            <tr>
+                <td align="center" style="padding: 16px; background-color: #000; color: #fff">{{copyright}}</td>
+            </tr>
+        </table>
+        <table width="100%" cellpadding="10">
+            <tr>
+                <td>
+                    <p style="font-size: 12px">{{privacy_notice}}</p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
