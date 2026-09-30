@@ -1,0 +1,999 @@
+<mjml>
+  <mj-head>
+    <!-- ===================================================== -->
+    <!-- META / PREVIEW -->
+    <!-- ===================================================== -->
+
+    <mj-title>{{notification_title}}</mj-title>
+    <mj-preview>{{notification_preview}}</mj-preview>
+    <mj-breakpoint width="600px" />
+
+    <!-- ===================================================== -->
+    <!-- GLOBAL MJML ATTRIBUTES -->
+    <!-- ===================================================== -->
+
+    <mj-attributes>
+      <mj-all font-family="'Open Sans', Arial, Helvetica, sans-serif" />
+      <mj-text color="#4a4a4a" font-size="15px" line-height="24px" />
+      <mj-section padding="0" />
+      <mj-column padding="0" />
+    </mj-attributes>
+
+    <!-- ===================================================== -->
+    <!-- RESPONSIVE STYLES / HELPERS -->
+    <!-- ===================================================== -->
+
+    <mj-style>
+       
+    </mj-style>
+  </mj-head>
+
+  <mj-body background-color="#ffffff" width="600px">
+
+    <!-- ==================================================== -->
+    <!-- MAIN CREAM CONTAINER -->
+    <!-- ==================================================== -->
+
+    <mj-wrapper padding="10px 6px">
+
+      <!-- ==================================================== -->
+      <!-- HERO -->
+      <!-- ==================================================== -->
+
+      <mj-section>
+        <mj-column width="100%">
+          <mj-image
+            src="https://mr.glasstec.pl/doc/header.jpg"
+            alt="MR & testowy 2026"
+            padding="0"
+            border-radius="14px"
+          />
+            
+        </mj-column>
+      </mj-section>
+
+      <!-- ==================================================== -->
+      <!-- GREETING -->
+      <!-- ==================================================== -->
+
+      <mj-section background-color="#ffffff" padding="24px 16px 0">
+        <mj-column>
+          <mj-text
+            css-class="mobile-title"
+            align="left"
+            color="#1a1a1a"
+            font-family="Montserrat, 'Open Sans', Arial, sans-serif"
+            font-size="18px"
+            line-height="26px"
+            font-weight="700"
+            padding="0"
+          >
+            Witaj {name:1},
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- ==================================================== -->
+      <!-- INVITATION CONTENT -->
+      <!-- ==================================================== -->
+
+      <mj-section background-color="#ffffff" padding="8px 16px 28px">
+        <mj-column>
+          <mj-text
+            align="left"
+            color="#4a4a4a"
+            font-size="14px"
+            line-height="24px"
+            padding="0"
+          >
+            Serdecznie dziękujemy za poświęcony czas. W poniższej wiadomości znajdziesz kod QR, który uprawnia do darmowego wejścia na targi <strong>MR & testowy 22 - 24 września 2026.</strong>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <!-- ==================================================== -->
+      <!-- WEBSITE -->
+      <!-- ==================================================== -->
+
+      <mj-section
+        background-color="[color_mix base='accent' percent='95' target='white']"
+        border="1px solid [color_mix base='accent' percent='85' target='white']"
+        border-radius="10px"
+        padding="20px"
+        css-class="website-section"
+      >
+        <mj-column
+          width="60%"
+          vertical-align="middle"
+          padding="0 18px 0 0"
+          border-right="1px solid [color_mix base='accent' percent='85' target='white']"
+        >
+
+          <mj-text
+            align="left"
+            color="#1a1a1a"
+            font-family="Montserrat, 'Open Sans', Arial, sans-serif"
+            font-size="14px"
+            font-weight="700"
+            line-height="22px"
+            padding="0 0 4px"
+          >
+            Szczegółowe informacje o wydarzeniu<br>dostępne są na naszej stronie.
+          </mj-text>
+
+          <mj-text
+            align="left"
+            color="#4a4a4a"
+            font-size="12px"
+            line-height="20px"
+            padding="0"
+          >
+            Poznaj pełen program, listę wystawców oraz praktyczne informacje dla uczestników.
+          </mj-text>
+        </mj-column>
+
+        <mj-column width="40%" vertical-align="middle" padding="0 0 0 18px">
+          <mj-button
+            href="https://mr.glasstec.pl/"
+            background-color="[trade_fair_accent]"
+            color="#ffffff"
+            border-radius="18px"
+            font-size="12px"
+            font-weight="700"
+            padding="0"
+            inner-padding="11px 28px"
+          >
+            mr.glasstec.pl
+          </mj-button>
+
+          <mj-text
+            align="center"
+            color="#71808a"
+            font-size="9px"
+            font-weight="700"
+            letter-spacing="1.2px"
+            text-transform="uppercase"
+            padding="6px 0 0"
+          >
+            Odwiedź stronę
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <mj-section background-color="#ffffff" padding="10px 0">
+        <mj-column>
+          <mj-spacer height="0" />
+        </mj-column>
+      </mj-section>
+
+      <!-- ==================================================== -->
+      <!-- FREE TICKET / QR CODE -->
+      <!-- ==================================================== -->
+
+      <mj-section
+        background-color="[color_mix base='accent' percent='95' target='white']"
+        border="1px solid [color_mix base='accent' percent='85' target='white']"
+        border-radius="8px"
+        padding="20px"
+        css-class="free-ticket-section"
+      >
+        <mj-column width="60%" vertical-align="middle" padding="12px 14px 12px 4px">
+          <mj-text
+            align="left"
+            color="[trade_fair_accent]"
+            font-family="Montserrat, 'Open Sans', Arial, sans-serif"
+            font-size="16px"
+            line-height="22px"
+            font-weight="700"
+            padding="0 0 12px"
+          >
+            Darmowy bilet upoważnia do:
+          </mj-text>
+
+          <mj-table padding="0" width="100%">
+            <tr>
+              <td width="24" valign="middle" style="padding:0 10px 8px 0;">
+                <div style="width:20px; height:20px; border-radius:50%; background:[color_mix base='accent' percent='75' target='white']; color:[trade_fair_accent]; font-size:13px; line-height:20px; text-align:center; font-weight:700;">&#10003;</div>
+              </td>
+              <td valign="middle" style="padding:0 0 8px; color:#000000; font-size:14px; line-height:20px;">Wejścia na targi</td>
+            </tr>
+            <tr>
+              <td width="24" valign="middle" style="padding:0 10px 8px 0;">
+                <div style="width:20px; height:20px; border-radius:50%; background:[color_mix base='accent' percent='75' target='white']; color:[trade_fair_accent]; font-size:13px; line-height:20px; text-align:center; font-weight:700;">&#10003;</div>
+              </td>
+              <td valign="middle" style="padding:0 0 8px; color:#000000; font-size:14px; line-height:20px;">Udziału w konferencji lub kongresie</td>
+            </tr>
+            <tr>
+              <td width="24" valign="middle" style="padding:0 10px 8px 0;">
+                <div style="width:20px; height:20px; border-radius:50%; background:[color_mix base='accent' percent='75' target='white']; color:[trade_fair_accent]; font-size:13px; line-height:20px; text-align:center; font-weight:700;">&#10003;</div>
+              </td>
+              <td valign="middle" style="padding:0 0 8px; color:#000000; font-size:14px; line-height:20px;">Korzystania ze strefy networkingowej</td>
+            </tr>
+            <tr>
+              <td width="24" valign="middle" style="padding:0 10px 0 0;">
+                <div style="width:20px; height:20px; border-radius:50%; background:[color_mix base='accent' percent='75' target='white']; color:[trade_fair_accent]; font-size:13px; line-height:20px; text-align:center; font-weight:700;">&#10003;</div>
+              </td>
+              <td valign="middle" style="padding:0; color:#000000; font-size:14px; line-height:20px;">Dostępu do stoisk wystawców</td>
+            </tr>
+          </mj-table>
+        </mj-column>
+
+        <mj-column
+          width="40%"
+          vertical-align="middle"
+          background-color="#ffffff"
+          border="1px solid #e4eef2"
+          border-radius="10px"
+          padding="10px"
+        >
+          <mj-text
+            align="center"
+            color="[trade_fair_accent]"
+            font-family="Montserrat, 'Open Sans', Arial, sans-serif"
+            font-size="11px"
+            line-height="16px"
+            font-weight="700"
+            letter-spacing="1px"
+            text-transform="uppercase"
+            padding="4px"
+          >
+            Twój darmowy bilet
+          </mj-text>
+
+          <mj-image
+            src="https://mr.glasstec.pl/?pwe_qr_img=1&amp;value=MR_G2741750rnd365911750&amp;label&amp;size=200&amp;sig=db400bce3e19ad8ac67ea8a42d87226639f4617c43b2eb99c3e6bf9ed583eba9&amp;logo=%2Fdoc%2Ffavicon-color.webp"
+            alt="Kod QR darmowego biletu"
+            width="164px"
+            padding="0"
+            border-radius="4px"
+          />
+
+          <mj-text
+            align="center"
+            color="#6c7478"
+            font-size="10px"
+            line-height="14px"
+            padding="2px"
+          >
+            Jeżeli nie widzisz kodu QR, wyłącz blokowanie obrazków dla tego maila.
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <mj-section background-color="#ffffff" padding="10px 0">
+        <mj-column>
+          <mj-spacer height="0" />
+        </mj-column>
+      </mj-section>
+
+      <!-- ==================================================== -->
+      <!-- SAVE THE DATE -->
+      <!-- ==================================================== -->
+
+      <mj-section
+        background-color="[trade_fair_accent]"
+        border-radius="10px"
+        padding="20px 26px"
+        css-class="save-date-section"
+      >
+        <mj-column>
+
+          <mj-text
+            align="center"
+            color="#d7d7e0"
+            font-size="15px"
+            line-height="22px"
+            padding="0"
+          >
+            <strong>Do zobaczenia w dniach 22 - 24 września 2026<br>na targach MR & testowy w Ptak Warsaw Expo!</strong>
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+      <mj-section background-color="#ffffff" padding="10px 0">
+        <mj-column>
+          <mj-spacer height="0" />
+        </mj-column>
+      </mj-section>
+
+    <!-- ===================================================== -->
+      <!-- OBIEKT -->
+      <!-- ===================================================== -->
+
+      <mj-section padding="0 6px">
+        <mj-column>
+          <mj-image
+            src="https://mr.glasstec.pl/wp-content/plugins/pwe-media/media/notifications/email_footer.jpg"
+            padding="0"
+            border-radius="10px 10px 0 0"
+          />
+        </mj-column>
+      </mj-section>
+
+      <!-- ===================================================== -->
+      <!-- STATYSTYKI -->
+      <!-- ===================================================== -->
+
+      <mj-section  padding="0 6px">
+        <mj-column width="100%" padding="20px 6px" background-color="#1e1e1e">
+          <mj-raw>
+            <tr>
+              <td
+                align="center"
+                bgcolor="#1e1e1e"
+                style="
+                  padding: 0;
+                  font-size: 0;
+                  text-align: center;
+                  background: #1e1e1e;
+                "
+              >
+                <div style="width: 100%; font-size: 0; text-align: center">
+                  <!-- ================================================= -->
+                  <!-- GRUPA 1: STAT 1 + 2 -->
+                  <!-- ================================================= -->
+
+                  <div
+                    style="
+                      display: inline-block;
+                      vertical-align: top;
+                      width: 100%;
+                      max-width: 275px;
+                      min-width: 250px;
+                      box-sizing: border-box;
+                      text-align: center;
+                    "
+                  >
+                    <!-- ===================== -->
+                    <!-- STAT 1 -->
+                    <!-- ===================== -->
+
+                    <div
+                      class="stat-card"
+                      style="
+                        display: inline-block;
+                        vertical-align: top;
+                        width: 100%;
+                        max-width: 135px;
+                        min-width: 120px;
+                        box-sizing: border-box;
+                        padding: 4px;
+                      "
+                    >
+                      <table
+                        role="presentation"
+                        width="100%"
+                        cellpadding="0"
+                        cellspacing="0"
+                        border="0"
+                        bgcolor="#1e1e1e"
+                        style="
+                          width: 100%;
+                          border-collapse: separate;
+                          border-spacing: 0;
+                          background: #1e1e1e;
+                          border: 1px solid #505050;
+                          border-radius: 12px;
+                        "
+                      >
+                        <tbody>
+                          <tr>
+                            <td
+                              valign="middle"
+                              bgcolor="#1e1e1e"
+                              style="
+                                height: 90px;
+                                padding: 10px;
+                                background: #1e1e1e;
+                                border-radius: 12px;
+                                vertical-align: middle;
+                              "
+                            >
+                              <table
+                                role="presentation"
+                                width="100%"
+                                cellpadding="0"
+                                cellspacing="0"
+                                border="0"
+                                style="width: 100%; border-collapse: collapse"
+                              >
+                                <tbody>
+                                  <tr>
+                                    <td align="right" style="padding: 0 0 8px">
+                                      <img
+                                        src="https://mr.glasstec.pl/wp-content/plugins/pwe-media/media/notifications/exhibitors_icon.png"
+                                        width="30"
+                                        alt=""
+                                        style="
+                                          display: block;
+                                          width: 30px;
+                                          height: auto;
+                                          margin-left: auto;
+                                          border: 0;
+                                        "
+                                      />
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td
+                                      align="left"
+                                      style="
+                                        padding: 0;
+                                        color: #ffffff;
+                                        font-family:
+                                          Arial, Helvetica, sans-serif;
+                                        font-size: 27px;
+                                        line-height: 30px;
+                                        font-weight: 700;
+                                        text-align: left;
+                                      "
+                                    >
+                                      2000+
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td
+                                      align="left"
+                                      style="
+                                        padding: 3px 0 0;
+                                        color: #ffffff;
+                                        font-family:
+                                          Arial, Helvetica, sans-serif;
+                                        font-size: 9px;
+                                        line-height: 12px;
+                                        font-weight: 700;
+                                        text-align: left;
+                                      "
+                                    >
+                                      {{exhibitors_text}}
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <!-- ===================== -->
+                    <!-- STAT 2 -->
+                    <!-- ===================== -->
+
+                    <div
+                      class="stat-card"
+                      style="
+                        display: inline-block;
+                        vertical-align: top;
+                        width: 100%;
+                        max-width: 135px;
+                        min-width: 120px;
+                        box-sizing: border-box;
+                        padding: 4px;
+                      "
+                    >
+                      <table
+                        role="presentation"
+                        width="100%"
+                        cellpadding="0"
+                        cellspacing="0"
+                        border="0"
+                        bgcolor="#1e1e1e"
+                        style="
+                          width: 100%;
+                          border-collapse: separate;
+                          border-spacing: 0;
+                          background: #1e1e1e;
+                          border: 1px solid #505050;
+                          border-radius: 12px;
+                        "
+                      >
+                        <tbody>
+                          <tr>
+                            <td
+                              valign="middle"
+                              bgcolor="#1e1e1e"
+                              style="
+                                height: 90px;
+                                padding: 10px;
+                                background: #1e1e1e;
+                                border-radius: 12px;
+                                vertical-align: middle;
+                              "
+                            >
+                              <table
+                                role="presentation"
+                                width="100%"
+                                cellpadding="0"
+                                cellspacing="0"
+                                border="0"
+                                style="width: 100%; border-collapse: collapse"
+                              >
+                                <tbody>
+                                  <tr>
+                                    <td align="right" style="padding: 0 0 8px">
+                                      <img
+                                        src="https://mr.glasstec.pl/wp-content/plugins/pwe-media/media/notifications/visitors_icon.png"
+                                        width="30"
+                                        alt=""
+                                        style="
+                                          display: block;
+                                          width: 30px;
+                                          height: auto;
+                                          margin-left: auto;
+                                          border: 0;
+                                        "
+                                      />
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td
+                                      align="left"
+                                      style="
+                                        padding: 0;
+                                        color: #ffffff;
+                                        font-family:
+                                          Arial, Helvetica, sans-serif;
+                                        font-size: 27px;
+                                        line-height: 30px;
+                                        font-weight: 700;
+                                        text-align: left;
+                                      "
+                                    >
+                                      1 mln+
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td
+                                      align="left"
+                                      style="
+                                        padding: 3px 0 0;
+                                        color: #ffffff;
+                                        font-family:
+                                          Arial, Helvetica, sans-serif;
+                                        font-size: 9px;
+                                        line-height: 12px;
+                                        font-weight: 700;
+                                        text-align: left;
+                                      "
+                                    >
+                                      {{visitors_text}}
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <!-- ================================================= -->
+                  <!-- GRUPA 2: STAT 3 + 4 -->
+                  <!-- ================================================= -->
+
+                  <div
+                    style="
+                      display: inline-block;
+                      vertical-align: top;
+                      width: 100%;
+                      max-width: 275px;
+                      min-width: 250px;
+                      box-sizing: border-box;
+                      text-align: center;
+                    "
+                  >
+                    <!-- ===================== -->
+                    <!-- STAT 3 -->
+                    <!-- ===================== -->
+
+                    <div
+                      class="stat-card"
+                      style="
+                        display: inline-block;
+                        vertical-align: top;
+                        width: 100%;
+                        max-width: 135px;
+                        min-width: 120px;
+                        box-sizing: border-box;
+                        padding: 4px;
+                      "
+                    >
+                      <table
+                        role="presentation"
+                        width="100%"
+                        cellpadding="0"
+                        cellspacing="0"
+                        border="0"
+                        bgcolor="#1e1e1e"
+                        style="
+                          width: 100%;
+                          border-collapse: separate;
+                          border-spacing: 0;
+                          background: #1e1e1e;
+                          border: 1px solid #505050;
+                          border-radius: 12px;
+                        "
+                      >
+                        <tbody>
+                          <tr>
+                            <td
+                              valign="middle"
+                              bgcolor="#1e1e1e"
+                              style="
+                                height: 90px;
+                                padding: 10px;
+                                background: #1e1e1e;
+                                border-radius: 12px;
+                                vertical-align: middle;
+                              "
+                            >
+                              <table
+                                role="presentation"
+                                width="100%"
+                                cellpadding="0"
+                                cellspacing="0"
+                                border="0"
+                                style="width: 100%; border-collapse: collapse"
+                              >
+                                <tbody>
+                                  <tr>
+                                    <td align="right" style="padding: 0 0 8px">
+                                      <img
+                                        src="https://mr.glasstec.pl/wp-content/plugins/pwe-media/media/notifications/fairs_icon.png"
+                                        width="30"
+                                        alt=""
+                                        style="
+                                          display: block;
+                                          width: 30px;
+                                          height: auto;
+                                          margin-left: auto;
+                                          border: 0;
+                                        "
+                                      />
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td
+                                      align="left"
+                                      style="
+                                        padding: 0;
+                                        color: #ffffff;
+                                        font-family:
+                                          Arial, Helvetica, sans-serif;
+                                        font-size: 27px;
+                                        line-height: 30px;
+                                        font-weight: 700;
+                                        text-align: left;
+                                      "
+                                    >
+                                      140+
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td
+                                      align="left"
+                                      style="
+                                        padding: 3px 0 0;
+                                        color: #ffffff;
+                                        font-family:
+                                          Arial, Helvetica, sans-serif;
+                                        font-size: 9px;
+                                        line-height: 12px;
+                                        font-weight: 700;
+                                        text-align: left;
+                                      "
+                                    >
+                                      {{fairs_text}}
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <!-- ===================== -->
+                    <!-- STAT 4 -->
+                    <!-- ===================== -->
+
+                    <div
+                      class="stat-card"
+                      style="
+                        display: inline-block;
+                        vertical-align: top;
+                        width: 100%;
+                        max-width: 135px;
+                        min-width: 120px;
+                        box-sizing: border-box;
+                        padding: 4px;
+                      "
+                    >
+                      <table
+                        role="presentation"
+                        width="100%"
+                        cellpadding="0"
+                        cellspacing="0"
+                        border="0"
+                        bgcolor="#1e1e1e"
+                        style="
+                          width: 100%;
+                          border-collapse: separate;
+                          border-spacing: 0;
+                          background: #1e1e1e;
+                          border: 1px solid #505050;
+                          border-radius: 12px;
+                        "
+                      >
+                        <tbody>
+                          <tr>
+                            <td
+                              valign="middle"
+                              bgcolor="#1e1e1e"
+                              style="
+                                height: 90px;
+                                padding: 10px;
+                                background: #1e1e1e;
+                                border-radius: 12px;
+                                vertical-align: middle;
+                              "
+                            >
+                              <table
+                                role="presentation"
+                                width="100%"
+                                cellpadding="0"
+                                cellspacing="0"
+                                border="0"
+                                style="width: 100%; border-collapse: collapse"
+                              >
+                                <tbody>
+                                  <tr>
+                                    <td align="right" style="padding: 0 0 8px">
+                                      <img
+                                        src="https://mr.glasstec.pl/wp-content/plugins/pwe-media/media/notifications/area_icon.png"
+                                        width="30"
+                                        alt=""
+                                        style="
+                                          display: block;
+                                          width: 30px;
+                                          height: auto;
+                                          margin-left: auto;
+                                          border: 0;
+                                        "
+                                      />
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td
+                                      align="left"
+                                      style="
+                                        padding: 0;
+                                        color: #ffffff;
+                                        font-family:
+                                          Arial, Helvetica, sans-serif;
+                                        font-size: 27px;
+                                        line-height: 30px;
+                                        font-weight: 700;
+                                        text-align: left;
+                                      "
+                                    >
+                                      153 k
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td
+                                      align="left"
+                                      style="
+                                        padding: 3px 0 0;
+                                        color: #ffffff;
+                                        font-family:
+                                          Arial, Helvetica, sans-serif;
+                                        font-size: 9px;
+                                        line-height: 12px;
+                                        font-weight: 700;
+                                        text-align: left;
+                                      "
+                                    >
+                                      {{area_text}}
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </mj-raw>
+        </mj-column>
+      </mj-section>
+
+      <!-- ===================================================== -->
+      <!-- LOGO + SOCIAL -->
+      <!-- ===================================================== -->
+
+      <mj-section
+        padding="0 6px"
+      >
+        <mj-column width="100%" padding="30px 24px 20px" background-color="#1e1e1e">
+
+          <mj-table padding="0">
+
+            <tr>
+
+              <!-- LOGO -->
+              <td
+                width="50%"
+                valign="middle"
+                align="left"
+                style="
+                  width:50%;
+                  vertical-align:middle;
+                  text-align:left;
+                  padding:0;
+                "
+              >
+                <img
+                  src="https://mr.glasstec.pl/wp-content/plugins/pwe-media/media/notifications/pwe-logo-white.png"
+                  width="50"
+                  alt=""
+                  style="
+                    display:block;
+                    width:50px;
+                    max-width:50px;
+                    height:auto;
+                    border:0;
+                  "
+                />
+              </td>
+
+
+              <!-- SOCIAL -->
+              <td
+                width="50%"
+                valign="middle"
+                align="right"
+                style="
+                  width:50%;
+                  vertical-align:middle;
+                  text-align:right;
+                  padding:0;
+                "
+              >
+
+                <table
+                  role="presentation"
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                  align="right"
+                  style="
+                    border-collapse:collapse;
+                    margin-left:auto;
+                  "
+                >
+                  <tr>
+
+                    <!-- FACEBOOK -->
+                    <td
+                      valign="middle"
+                      style="
+                        padding:0 6px 0 0;
+                      "
+                    >
+                      <a
+                        href="https://www.facebook.com/ptakwarsawexpo"
+                        target="_blank"
+                        style="
+                          display:block;
+                          text-decoration:none;
+                        "
+                      >
+                        <img
+                          src="https://mr.glasstec.pl/wp-content/plugins/pwe-media/media/notifications/facebook_icon.png"
+                          width="38"
+                          height="38"
+                          alt="Facebook"
+                          style="
+                            display:block;
+                            width:38px;
+                            height:38px;
+                            border:0;
+                            background:#1e1e1e;
+                          "
+                        />
+                      </a>
+                    </td>
+
+
+                    <!-- INSTAGRAM -->
+                    <td
+                      valign="middle"
+                      style="
+                        padding:0;
+                      "
+                    >
+                      <a
+                        href="https://www.instagram.com/ptakwarsawexpo/"
+                        target="_blank"
+                        style="
+                          display:block;
+                          text-decoration:none;
+                        "
+                      >
+                        <img
+                          src="https://mr.glasstec.pl/wp-content/plugins/pwe-media/media/notifications/instagram_icon.png"
+                          width="38"
+                          height="38"
+                          alt="Instagram"
+                          style="
+                            display:block;
+                            width:38px;
+                            height:38px;
+                            border:0;
+                            background:#1e1e1e;
+                          "
+                        />
+                      </a>
+                    </td>
+
+                  </tr>
+                </table>
+
+              </td>
+
+            </tr>
+
+          </mj-table>
+
+        </mj-column>
+      </mj-section>
+
+      <!-- ===================================================== -->
+      <!-- RODO -->
+      <!-- ===================================================== -->
+
+      <mj-section
+        padding="0 6px 10px"
+      >
+        <mj-column
+            background-color="#1e1e1e"
+            border-radius="0 0 14px 14px"
+            padding="0 24px 24px"
+        >
+          <mj-text
+            color="#ffffff"
+            font-size="9px"
+            line-height="13px"
+            padding="0"
+            align="left"
+          >
+            Administratorem Pani/Pana danych osobowych jest spółka PTAK WARSAW EXPO sp. z o.o. z siedzibą w Nadarzynie (kod pocztowy: 05-830), przy Al. Katowickiej 62, wpisaną do rejestru przedsiębiorców Krajowego Rejestru Sądowego pod numerem KRS 0000671001, NIP 532544579. Dane osobowe będą przetwarzane zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (RODO), na podstawie art. 6 ust. 1 lit. a lub b ww. Rozporządzenia w celach wskazanych w treści ww. zgód. Dane będą przetwarzane do czasu wycofania zgody i będą podlegały okresowemu przeglądowi co 2 lata. Pani/a dane osobowe mogą być przekazane osobom trzecim, które przetwarzają dane osobowe w imieniu PTAK WARSAW EXPO sp. z o.o. na podstawie umów powierzenia tj. usługi IT, podmioty świadczące usługi marketingowe, podmioty przetwarzające dane w celu dochodzenia roszczeń i windykacji lub innych. Ma Pan/i możliwość dostępu do swoich danych, w celu ich sprostowania i usunięcia, przeniesienia danych oraz żądania ograniczenia ich przetwarzania ze względu na swoją szczególną sytuację, wniesienia sprzeciwu oraz wycofania udzielonej zgody w każdym momencie, przy czym, cofnięcie uprzednio wyrażonej zgody nie wpłynie na legalność przetwarzania przed jej wycofaniem, a także wniesienia skargi do organu nadzorczego - Prezesa Urzędu Ochrony Danych Osobowych. Dane nie będą przekazywane do państw trzecich oraz nie podlegają profilowaniu tj. automatycznemu podejmowaniu decyzji. Kontakt z administratorem możliwy jest pod adresem e-mail:
+
+            <a
+              href="mailto:rodo@warsawexpo.eu"
+              style="color: #ffffff; text-decoration: underline"
+            >
+              rodo@warsawexpo.eu </a
+            >.
+          </mj-text>
+        </mj-column>
+      </mj-section>
+
+  </mj-body>
+</mjml>

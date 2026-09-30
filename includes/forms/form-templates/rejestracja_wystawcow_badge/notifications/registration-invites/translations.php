@@ -1,0 +1,25 @@
+<?php
+return [
+    'pl' => [
+        'lang' => 'pl',
+        'notification_title' => 'Zaproszenie obsługi stoiska',
+        'notification_preview' => 'Spersonalizowany identyfikator będzie czekał na odbiór w Biurze Wystawców',
+        'greeting' => 'Witaj,',
+        'invitation_text' => 'Dziękujmy za wypełnienie formularza. Spersonalizowany identyfikator będzie czekał na odbiór w Biurze Wystawców na targach <b>[pwe_name_pl]</b> odbywających się w dniach <b>[trade_fair_date_multilang lang="pl"]</b> w Ptak Warsaw Expo.',
+        'regards' => 'Z wyrazami szacunku,<br>Zespół [pwe_name_pl]',
+        'auto_generated_message' => 'Wiadomość wygenerowana automatycznie, prosimy na nią nie odpowiadać.',
+        'copyright' => '© [trade_fair_actualyear] Ptak Warsaw Expo<br>Wszystkie prawa zastrzeżone',
+        'privacy_notice' => 'Administratorem Pani/Pana danych osobowych jest spółka PTAK WARSAW EXPO sp. z o.o. z siedzibą w Nadarzynie (kod pocztowy: 05-830), przy Al. Katowickiej 62, wpisaną do rejestru przedsiębiorców Krajowego Rejestru Sądowego pod numerem KRS 0000671001, NIP 532544579. Dane osobowe będą przetwarzane zgodnie z Rozporządzeniem Parlamentu Europejskiego i Rady (UE) 2016/679 z dnia 27 kwietnia 2016 r. w sprawie ochrony osób fizycznych w związku z przetwarzaniem danych osobowych i w sprawie swobodnego przepływu takich danych oraz uchylenia dyrektywy 95/46/WE (RODO), na podstawie art. 6 ust. 1 lit. a lub b ww. Rozporządzenia w celach wskazanych w treści ww. zgód. Dane będą przetwarzane do czasu wycofania zgody i będą podlegały okresowemu przeglądowi co 2 lata. Pani/a dane osobowe mogą być przekazane osobom trzecim, które przetwarzają dane osobowe w imieniu PTAK WARSAW EXPO sp. z o.o. na podstawie umów powierzenia tj. usługi IT, podmioty świadczące usługi marketingowe, podmioty przetwarzające dane w celu dochodzenia roszczeń i windykacji lub innych. Ma Pan/i możliwość dostępu do swoich danych, w celu ich sprostowania i usunięcia, przeniesienia danych oraz żądania ograniczenia ich przetwarzania ze względu na swoją szczególną sytuację, wniesienia sprzeciwu oraz wycofania udzielonej zgody w każdym momencie, przy czym, cofnięcie uprzednio wyrażonej zgody nie wpłynie na legalność przetwarzania przed jej wycofaniem, a także wniesienia skargi do organu nadzorczego - Prezesa Urzędu Ochrony Danych Osobowych. Dane nie będą przekazywane do państw trzecich oraz nie podlegają profilowaniu tj. automatycznemu podejmowaniu decyzji. Kontakt z administratorem możliwy jest pod adresem e-mail: rodo@warsawexpo.eu.'
+    ],
+    'en' => [
+        'lang' => 'en',
+        'notification_title' => 'Invitation for Booth Staff',
+        'notification_preview' => 'The personalized badge will be ready for collection at the Exhibitors\' Office',
+        'greeting' => 'Hello,',
+        'invitation_text' => 'Thank you for completing the form. The personalized badge will be ready for collection at the Exhibitors\' Office at the <b>[pwe_name_en]</b> fair taking place on <b>[trade_fair_date_multilang lang="en"]</b> at Ptak Warsaw Expo.',
+        'regards' => 'Best regards,<br>The [pwe_name_en] Team',
+        'auto_generated_message' => 'This message was generated automatically, please do not reply to it.',
+        'copyright' => '© [trade_fair_actualyear] Ptak Warsaw Expo<br>All rights reserved',
+        'privacy_notice' => 'The administrator of your personal data is PTAK WARSAW EXPO sp. z o.o. with its registered office in Nadarzyn (postal code: 05-830), at Al. Katowicka 62, entered in the register of entrepreneurs of the National Court Register under KRS number 0000671001, NIP 532544579. Personal data will be processed in accordance with the Regulation (EU) 2016/679 of the European Parliament and of the Council of 27 April 2016 on the protection of natural persons with regard to the processing of personal data and on the free movement of such data, and repealing Directive 95/46/EC (GDPR), pursuant to Art. 6(1)(a) or (b) of the said Regulation for the purposes specified in the content of the said consents. Data will be processed until the consent is withdrawn and will be subject to periodic review every 2 years. You may have your personal data transferred to third parties who process personal data on behalf of PTAK WARSAW EXPO sp. z o.o. under commission contracts, i.e. IT services, entities providing marketing services, entities processing data for the purpose of pursuing claims and debt collection or others. You have the right to access your data, to rectify and delete it, to transfer it, and to request restriction of its processing due to your particular situation, to object and to withdraw the given consent at any time, provided that the withdrawal of previously given consent does not affect the legality of processing before its withdrawal, and to lodge a complaint with the supervisory authority - the President of the Personal Data Protection Office. Data will not be transferred to third countries and will not be subject to profiling, i.e. automated decision-making. Contact with the administrator is possible at the e-mail address: rodo@warsawexpo.eu.'
+    ],
+];

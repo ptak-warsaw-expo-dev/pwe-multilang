@@ -1,0 +1,56 @@
+<?php
+
+return [
+    'pl' => [
+        'lang' => 'pl',
+        'notification_title' => 'Potwierdzenie aktywacji rejestracji',
+        'notification_preview' => 'Dziękujemy za aktywację zaproszenia!',
+
+        'header_img' => 'plan.jpg',
+        'title' => 'Dziękujemy za aktywację zaproszenia!',
+        'description' => 'Poniżej znajduje się twój bilet na targi. Załączony QR upoważnia do wejścia na teren targów w wybrany dzień targowy. Więcej informacji na stronie internetowej targów.',
+        'plan_title' => 'Plan targów [pwe_name_pl]',
+        'plan_description' => 'Zapraszamy do sprawdzenia aktualnego planu targowego [pwe_name_pl]. Intensywne przygotowania do kolejnej edycji targów trwają, a wystawców błyskawicznie przybywa. Chcesz zostać wystawcą? Zobacz jakie firmy zadeklarowały już swoją obecność i zarezerwuj stoisko już dziś!',
+        'plan_link' => 'https://[trade_fair_domainadress]/layout/?getmail={Email:2}',
+        'plan_link_text' => 'Zobacz plan targów!',
+        'guest_name' => 'Imię i nazwisko',
+        'fair_name' => 'Nazwa targów',
+        'fair_location' => 'Lokalizacja targów',
+        'fair_location_address' => 'Ptak Warsaw Expo, Al. Katowicka 62, Nadarzyn',
+        'support_title' => 'Potrzebujesz więcej zaproszeń?<br>Zapraszamy do kontaktu',
+        'phone' => 'Tel',
+        'regards' => 'Pozdrawiamy, Zespół',
+        'auto_message' => 'Wiadomość wygenerowana automatycznie, prosimy na nią nie odpowiadać.',
+
+        'exhibitors_text' => 'Wystawców rocznie',
+        'visitors_text' => 'Odwiedzających rocznie',
+        'fairs_text' => 'Targów B2B rocznie',
+        'area_text' => 'Powierzchni m²',
+    ],
+    'en' => [
+        'lang' => 'en',
+        'notification_title' => 'Registration Activation Confirmation',
+        'notification_preview' => 'Thank you for activating the invitation!',
+
+        'header_img' => 'plan-en.jpg',
+        'title' => 'Thank you for activating the invitation!',
+        'description' => 'Below is your ticket to the fair. The attached QR code authorizes entry to the fairgrounds on the selected fair day. More information is available on the fair\'s website.',
+        'plan_title' => 'Fair plan [pwe_name_en]',
+        'plan_description' => 'We invite you to check the current fair plan [pwe_name_en]. Intensive preparations for the next edition of the fair are underway, and exhibitors are rapidly increasing. Do you want to become an exhibitor? See which companies have already declared their presence and reserve a booth today!',
+        'plan_link' => 'https://[trade_fair_domainadress]/en/layout/?getmail={Email:2}',
+        'plan_link_text' => 'See the fair plan!',
+        'guest_name' => 'Name and surname',
+        'fair_name' => 'Fair name',
+        'fair_location' => 'Fair location',
+        'fair_location_address' => 'Ptak Warsaw Expo, Al. Katowicka 62, Nadarzyn',
+        'support_title' => 'Need more invitations?<br>Feel free to contact us',
+        'phone' => 'Tel',
+        'regards' => 'Best regards, Team',
+        'auto_message' => 'This message was generated automatically, please do not reply.',
+
+        'exhibitors_text' => 'Exhibitors annually',
+        'visitors_text' => 'Visitors annually',
+        'fairs_text' => 'B2B fairs annually',
+        'area_text' => 'Area m²',
+    ],
+];

@@ -1,0 +1,1319 @@
+<mjml>
+  <mj-head>
+    <!-- ===================================================== -->
+    <!-- META / PREVIEW -->
+    <!-- ===================================================== -->
+
+    <mj-title>{{notification_title}}</mj-title>
+    <mj-preview>{{notification_preview}}</mj-preview>
+    <mj-breakpoint width="600px" />
+
+    <!-- ===================================================== -->
+    <!-- GLOBAL MJML ATTRIBUTES -->
+    <!-- ===================================================== -->
+
+    <mj-attributes>
+      <mj-all font-family="'Open Sans', Arial, Helvetica, sans-serif" />
+      <mj-text color="#4a4a4a" font-size="15px" line-height="24px" />
+      <mj-section padding="0" />
+      <mj-column padding="0" />
+    </mj-attributes>
+
+    <!-- ===================================================== -->
+    <!-- RESPONSIVE STYLES / HELPERS -->
+    <!-- ===================================================== -->
+
+    <mj-style>
+      @media only screen and (max-width: 520px) { .stat-group { width: 100%
+      !important; max-width: 100% !important; min-width: 100% !important; } }
+    </mj-style>
+  </mj-head>
+
+  <mj-body background-color="#ffffff" width="600px">
+    <!-- ==================================================== -->
+    <!-- MAIN CREAM CONTAINER -->
+    <!-- ==================================================== -->
+
+    <mj-wrapper padding="10px 6px">
+      <!-- ==================================================== -->
+      <!-- HERO / BADGE GRAFICZNY -->
+      <!-- ==================================================== -->
+
+      <mj-section padding="0">
+        <mj-column>
+          <mj-image
+            src="https://[trade_fair_domainadress]/doc/{{header_img}}"
+            href="{{plan_link}}"
+            target="_blank"
+            alt="[pwe_name_{{lang}}]"
+            width="600px"
+            fluid-on-mobile="true"
+            padding="0"
+            border-radius="16px"
+          />
+        </mj-column>
+      </mj-section>
+
+      <!-- ==================================================== -->
+      <!-- GREETING -->
+      <!-- ==================================================== -->
+
+      <mj-section background-color="#ffffff" padding="20px 6px 0">
+        <mj-column>
+          <mj-raw>
+            <table
+              role="presentation"
+              cellpadding="0"
+              cellspacing="0"
+              border="0"
+              width="100%"
+              style="
+                width: 100%;
+                border: 1px solid #eeeeee;
+                border-radius: 16px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+                border-collapse: separate;
+              "
+            >
+              <tr>
+                <td
+                  width="72"
+                  valign="middle"
+                  style="width: 72px; padding: 20px 12px 20px 18px"
+                >
+                  <div
+                    style="
+                      width: 54px;
+                      height: 54px;
+                      border-radius: 50%;
+                      background-color: #fff0f3;
+                      text-align: center;
+                    "
+                  >
+                    <img
+                      src="https://[trade_fair_domainadress]/wp-content/plugins/pwe-media/media/notifications/potential-exhibitor/thank-you-icon.png"
+                      width="30"
+                      height="30"
+                      alt=""
+                      style="
+                        display: inline-block;
+                        width: 30px;
+                        height: 30px;
+                        margin: 12px;
+                        border: 0;
+                      "
+                    />
+                  </div>
+                </td>
+                <td
+                  valign="middle"
+                  style="
+                    padding: 18px 18px 18px 0;
+                    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+                  "
+                >
+                  <div
+                    style="
+                      color: #1a2a4a;
+                      font-family: Montserrat, 'Open Sans', Arial, sans-serif;
+                      font-size: 15px;
+                      line-height: 22px;
+                      font-weight: 700;
+                    "
+                  >
+                    {{title}}
+                  </div>
+                  <div
+                    style="
+                      padding-top: 4px;
+                      color: #4a4a4a;
+                      font-size: 13px;
+                      line-height: 19px;
+                    "
+                  >
+                    {{description}}
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </mj-raw>
+        </mj-column>
+      </mj-section>
+
+      <!-- ==================================================== -->
+      <!-- PLAN TARGÓW TILE -->
+      <!-- ==================================================== -->
+
+      <mj-section background-color="#ffffff" padding="8px 6px">
+        <mj-column>
+          <mj-raw>
+            <table
+              role="presentation"
+              cellpadding="0"
+              cellspacing="0"
+              border="0"
+              width="100%"
+              style="
+                width: 100%;
+                border: 1px solid #eeeeee;
+                border-radius: 16px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+                border-collapse: separate;
+              "
+            >
+              <tr>
+                <td
+                  width="72"
+                  valign="middle"
+                  style="width: 72px; padding: 20px 12px 20px 18px"
+                >
+                  <div
+                    style="
+                      width: 54px;
+                      height: 54px;
+                      border-radius: 50%;
+                      background-color: #fff0f3;
+                      text-align: center;
+                    "
+                  >
+                    <img
+                      src="https://[trade_fair_domainadress]/wp-content/plugins/pwe-media/media/notifications/potential-exhibitor/plan-icon.png"
+                      width="30"
+                      height="30"
+                      alt=""
+                      style="
+                        display: inline-block;
+                        width: 30px;
+                        height: 30px;
+                        margin: 12px;
+                        border: 0;
+                      "
+                    />
+                  </div>
+                </td>
+                <td
+                  valign="middle"
+                  style="
+                    padding: 18px 18px 18px 0;
+                    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+                  "
+                >
+                  <div
+                    style="
+                      color: #1a2a4a;
+                      font-family: Montserrat, 'Open Sans', Arial, sans-serif;
+                      font-size: 15px;
+                      line-height: 22px;
+                      font-weight: 700;
+                    "
+                  >
+                    {{plan_title}}
+                  </div>
+                  <div
+                    style="
+                      padding-top: 4px;
+                      color: #4a4a4a;
+                      font-size: 13px;
+                      line-height: 19px;
+                    "
+                  >
+                    {{plan_description}}
+                    <a
+                      href="{{plan_link}}"
+                      target="_blank"
+                      style="
+                        color: #ff3366;
+                        font-weight: 700;
+                        text-decoration: underline;
+                        white-space: nowrap;
+                      "
+                      >{{plan_link_text}}</a
+                    >
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </mj-raw>
+        </mj-column>
+      </mj-section>
+
+      <!-- ==================================================== -->
+      <!-- BILET / TICKET -->
+      <!-- ==================================================== -->
+
+      <mj-section background-color="#ffffff" padding="8px 6px">
+        <mj-column>
+          <mj-raw>
+            <table
+              role="presentation"
+              cellpadding="0"
+              cellspacing="0"
+              border="0"
+              width="100%"
+              style="
+                width: 100%;
+                border: 1px solid #eeeeee;
+                border-top: 4px solid #ff3366;
+                border-radius: 16px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+                border-collapse: separate;
+              "
+            >
+              <tr>
+                <td style="padding: 24px 24px 20px; text-align: center">
+                  <div
+                    style="
+                      color: #1a2a4a;
+                      font-family: Montserrat, 'Open Sans', Arial, sans-serif;
+                      font-size: 26px;
+                      line-height: 32px;
+                      font-weight: 700;
+                    "
+                  >
+                    [pwe_name_{{lang}}]
+                  </div>
+                  <table
+                    role="presentation"
+                    align="center"
+                    cellpadding="0"
+                    cellspacing="0"
+                    border="0"
+                    style="margin: 8px auto 0"
+                  >
+                    <tr>
+                      <td style="padding: 0 10px 0 0">
+                        <div
+                          style="
+                            width: 20px;
+                            border-top: 2px solid #ff3366;
+                            font-size: 0;
+                            line-height: 0;
+                          "
+                        >
+                          &nbsp;
+                        </div>
+                      </td>
+                      <td
+                        style="
+                          color: #ff3366;
+                          font-family:
+                            'Open Sans', Arial, Helvetica, sans-serif;
+                          font-size: 18px;
+                          font-weight: 700;
+                          white-space: nowrap;
+                        "
+                      >
+                        [trade_fair_date_multilang lang="{{lang}}"]
+                      </td>
+                      <td style="padding: 0 0 0 10px">
+                        <div
+                          style="
+                            width: 20px;
+                            border-top: 2px solid #ff3366;
+                            font-size: 0;
+                            line-height: 0;
+                          "
+                        >
+                          &nbsp;
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding: 20px 24px">
+                  <table
+                    role="presentation"
+                    cellpadding="0"
+                    cellspacing="0"
+                    border="0"
+                    width="100%"
+                  >
+                    <tr>
+                      <td
+                        width="26"
+                        valign="top"
+                        style="width: 26px; padding: 0 8px 12px 0"
+                      >
+                        <img
+                          src="https://[trade_fair_domainadress]/wp-content/plugins/pwe-media/media/notifications/potential-exhibitor/name-icon.png"
+                          width="18"
+                          height="18"
+                          alt=""
+                          style="
+                            display: block;
+                            width: 18px;
+                            height: 18px;
+                            border: 0;
+                          "
+                        />
+                      </td>
+                      <td
+                        valign="top"
+                        style="
+                          padding: 0 0 12px;
+                          color: #4a4a4a;
+                          font-family:
+                            'Open Sans', Arial, Helvetica, sans-serif;
+                          font-size: 14px;
+                          line-height: 20px;
+                        "
+                      >
+                        <span style="color: #1a2a4a; font-weight: 700"
+                          >{{guest_name}}:</span
+                        >
+                        {name:1}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        width="26"
+                        valign="top"
+                        style="width: 26px; padding: 0 8px 12px 0"
+                      >
+                        <img
+                          src="https://[trade_fair_domainadress]/wp-content/plugins/pwe-media/media/notifications/potential-exhibitor/fair-icon.png"
+                          width="18"
+                          height="18"
+                          alt=""
+                          style="
+                            display: block;
+                            width: 18px;
+                            height: 18px;
+                            border: 0;
+                          "
+                        />
+                      </td>
+                      <td
+                        valign="top"
+                        style="
+                          padding: 0 0 12px;
+                          color: #4a4a4a;
+                          font-family:
+                            'Open Sans', Arial, Helvetica, sans-serif;
+                          font-size: 14px;
+                          line-height: 20px;
+                        "
+                      >
+                        <span style="color: #1a2a4a; font-weight: 700"
+                          >{{fair_name}}:</span
+                        >
+                        [pwe_name_{{lang}}]
+                      </td>
+                    </tr>
+                    <tr>
+                      <td
+                        width="26"
+                        valign="top"
+                        style="width: 26px; padding: 0 8px 0 0"
+                      >
+                        <img
+                          src="https://[trade_fair_domainadress]/wp-content/plugins/pwe-media/media/notifications/potential-exhibitor/location-icon.png"
+                          width="18"
+                          height="18"
+                          alt=""
+                          style="
+                            display: block;
+                            width: 18px;
+                            height: 18px;
+                            border: 0;
+                          "
+                        />
+                      </td>
+                      <td
+                        valign="top"
+                        style="
+                          padding: 0;
+                          color: #4a4a4a;
+                          font-family:
+                            'Open Sans', Arial, Helvetica, sans-serif;
+                          font-size: 14px;
+                          line-height: 20px;
+                        "
+                      >
+                        <span style="color: #1a2a4a; font-weight: 700"
+                          >{{fair_location}}:</span
+                        >
+                        {{fair_location_address}}
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding: 0 24px">
+                  <div
+                    style="
+                      border-top: 2px dashed #e0e0e0;
+                      font-size: 0;
+                      line-height: 0;
+                    "
+                  >
+                    &nbsp;
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="padding: 24px; text-align: center">[pwe_qr_img]</td>
+              </tr>
+
+              <tr>
+                <td style="padding: 0 24px">
+                  <div
+                    style="
+                      border-top: 2px dashed #e0e0e0;
+                      font-size: 0;
+                      line-height: 0;
+                    "
+                  >
+                    &nbsp;
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <td colspan="2" style="padding: 0">
+                  <table
+                    role="presentation"
+                    cellpadding="0"
+                    cellspacing="0"
+                    border="0"
+                    width="100%"
+                    style="width: 100%"
+                  >
+                    <tr>
+                      <td
+                        width="72"
+                        valign="top"
+                        style="width: 72px; padding: 20px 12px 20px 18px"
+                      >
+                        <div
+                          style="
+                            width: 54px;
+                            height: 54px;
+                            border-radius: 50%;
+                            background-color: #fff0f3;
+                            text-align: center;
+                          "
+                        >
+                          <img
+                            src="https://[trade_fair_domainadress]/wp-content/plugins/pwe-media/media/notifications/potential-exhibitor/support-icon.png"
+                            width="30"
+                            height="30"
+                            alt=""
+                            style="
+                              display: inline-block;
+                              width: 30px;
+                              height: 30px;
+                              margin: 12px;
+                              border: 0;
+                            "
+                          />
+                        </div>
+                      </td>
+                      <td
+                        valign="top"
+                        style="
+                          padding: 18px 18px 18px 0;
+                          font-family:
+                            'Open Sans', Arial, Helvetica, sans-serif;
+                          min-width: 0;
+                        "
+                      >
+                        <div
+                          style="
+                            max-width: 100%;
+                            color: #1a2a4a;
+                            font-family:
+                              Montserrat, 'Open Sans', Arial, sans-serif;
+                            font-size: 15px;
+                            line-height: 22px;
+                            font-weight: 700;
+                            overflow-wrap: anywhere;
+                            word-break: break-word;
+                          "
+                        >
+                          {{support_title}}
+                        </div>
+                        <div
+                          style="
+                            max-width: 100%;
+                            padding-top: 4px;
+                            color: #4a4a4a;
+                            font-size: 13px;
+                            line-height: 19px;
+                            overflow-wrap: anywhere;
+                            word-break: break-word;
+                          "
+                        >
+                          <strong>{IDName:8}</strong><br />
+                          Tel:
+                          <a
+                            href="tel:{IDPhone:10}"
+                            style="color: #4a4a4a; text-decoration: underline"
+                            >{IDPhone:10}</a
+                          ><br />
+                          <a
+                            href="mailto:{IDEmail:9}"
+                            style="
+                              color: #4a4a4a;
+                              text-decoration: underline;
+                              overflow-wrap: anywhere;
+                              word-break: break-all;
+                            "
+                            >{IDEmail:9}</a
+                          >
+                        </div>
+                      </td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </mj-raw>
+        </mj-column>
+      </mj-section>
+
+      <!-- ==================================================== -->
+      <!-- AUTOMATYCZNA WIADOMOŚĆ -->
+      <!-- ==================================================== -->
+
+      <mj-section background-color="#ffffff" padding="8px 6px 16px">
+        <mj-column>
+          <mj-raw>
+            <table
+              role="presentation"
+              cellpadding="0"
+              cellspacing="0"
+              border="0"
+              width="100%"
+              style="
+                width: 100%;
+                border: 1px solid #eeeeee;
+                border-radius: 16px;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+                border-collapse: separate;
+              "
+            >
+              <tr>
+                <td
+                  width="72"
+                  valign="middle"
+                  style="width: 72px; padding: 20px 12px 20px 18px"
+                >
+                  <div
+                    style="
+                      width: 54px;
+                      height: 54px;
+                      border-radius: 50%;
+                      background-color: #fff0f3;
+                      text-align: center;
+                    "
+                  >
+                    <img
+                      src="https://[trade_fair_domainadress]/wp-content/plugins/pwe-media/media/notifications/potential-exhibitor/send-icon.png"
+                      width="30"
+                      height="30"
+                      alt=""
+                      style="
+                        display: inline-block;
+                        width: 30px;
+                        height: 30px;
+                        margin: 12px;
+                        border: 0;
+                      "
+                    />
+                  </div>
+                </td>
+                <td
+                  valign="middle"
+                  style="
+                    padding: 18px 18px 18px 0;
+                    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+                  "
+                >
+                  <div
+                    style="
+                      color: #1a2a4a;
+                      font-family: Montserrat, 'Open Sans', Arial, sans-serif;
+                      font-size: 15px;
+                      line-height: 22px;
+                      font-weight: 700;
+                    "
+                  >
+                    {{regards}} [pwe_name_{{lang}}]
+                  </div>
+                  <div
+                    style="
+                      padding-top: 4px;
+                      color: #4a4a4a;
+                      font-size: 13px;
+                      line-height: 19px;
+                    "
+                  >
+                    {{auto_message}}
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </mj-raw>
+        </mj-column>
+      </mj-section>
+
+      <!-- ===================================================== -->
+      <!-- OBIEKT -->
+      <!-- ===================================================== -->
+
+      <mj-section padding="0 6px">
+        <mj-column>
+          <mj-image
+            src="https://[trade_fair_domainadress]/wp-content/plugins/pwe-media/media/notifications/email-footer/background_footer.jpg"
+            padding="0"
+            border-radius="10px 10px 0 0"
+          />
+        </mj-column>
+      </mj-section>
+
+      <!-- ===================================================== -->
+      <!-- STATYSTYKI -->
+      <!-- ===================================================== -->
+
+      <mj-section padding="0 6px">
+        <mj-column width="100%" padding="12px 10px" background-color="#1e1e1e">
+          <mj-raw>
+            <tr>
+              <td
+                align="center"
+                bgcolor="#1e1e1e"
+                style="
+                  padding: 0;
+                  font-size: 0;
+                  text-align: center;
+                  background: #1e1e1e;
+                "
+              >
+                <div style="width: 100%; font-size: 0; text-align: center">
+                  <!-- ================================================= -->
+                  <!-- GRUPA 1: STAT 1 + 2 -->
+                  <!-- ================================================= -->
+
+                  <div
+                    class="stat-group"
+                    style="
+                      display: inline-block;
+                      vertical-align: top;
+                      width: 50%;
+                      box-sizing: border-box;
+                      text-align: center;
+                    "
+                  >
+                    <!-- ===================== -->
+                    <!-- STAT 1 -->
+                    <!-- ===================== -->
+
+                    <div
+                      style="
+                        display: inline-block;
+                        vertical-align: top;
+                        width: 50%;
+                        box-sizing: border-box;
+                        padding: 4px;
+                      "
+                    >
+                      <table
+                        role="presentation"
+                        width="100%"
+                        cellpadding="0"
+                        cellspacing="0"
+                        border="0"
+                        bgcolor="#1e1e1e"
+                        style="
+                          width: 100%;
+                          border-collapse: separate;
+                          border-spacing: 0;
+                          background: #1e1e1e;
+                          border: 1px solid #505050;
+                          border-radius: 12px;
+                        "
+                      >
+                        <tbody>
+                          <tr>
+                            <td
+                              valign="middle"
+                              bgcolor="#1e1e1e"
+                              style="
+                                height: 90px;
+                                padding: 10px;
+                                background: #1e1e1e;
+                                border-radius: 12px;
+                                vertical-align: middle;
+                              "
+                            >
+                              <table
+                                role="presentation"
+                                width="100%"
+                                cellpadding="0"
+                                cellspacing="0"
+                                border="0"
+                                style="width: 100%; border-collapse: collapse"
+                              >
+                                <tbody>
+                                  <tr>
+                                    <td align="right" style="padding: 0 0 8px">
+                                      <img
+                                        src="https://[trade_fair_domainadress]/wp-content/plugins/pwe-media/media/notifications/exhibitors_icon.png"
+                                        width="30"
+                                        alt=""
+                                        style="
+                                          display: block;
+                                          width: 30px;
+                                          height: auto;
+                                          margin-left: auto;
+                                          border: 0;
+                                        "
+                                      />
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td
+                                      align="left"
+                                      style="
+                                        padding: 0;
+                                        color: #ffffff;
+                                        font-family:
+                                          Arial, Helvetica, sans-serif;
+                                        font-size: 27px;
+                                        line-height: 30px;
+                                        font-weight: 700;
+                                        text-align: left;
+                                      "
+                                    >
+                                      2000+
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td
+                                      align="left"
+                                      style="
+                                        padding: 3px 0 0;
+                                        color: #ffffff;
+                                        font-family:
+                                          Arial, Helvetica, sans-serif;
+                                        font-size: 9px;
+                                        line-height: 12px;
+                                        font-weight: 700;
+                                        text-align: left;
+                                      "
+                                    >
+                                      {{exhibitors_text}}
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <!-- ===================== -->
+                    <!-- STAT 2 -->
+                    <!-- ===================== -->
+
+                    <div
+                      style="
+                        display: inline-block;
+                        vertical-align: top;
+                        width: 50%;
+                        box-sizing: border-box;
+                        padding: 4px;
+                      "
+                    >
+                      <table
+                        role="presentation"
+                        width="100%"
+                        cellpadding="0"
+                        cellspacing="0"
+                        border="0"
+                        bgcolor="#1e1e1e"
+                        style="
+                          width: 100%;
+                          border-collapse: separate;
+                          border-spacing: 0;
+                          background: #1e1e1e;
+                          border: 1px solid #505050;
+                          border-radius: 12px;
+                        "
+                      >
+                        <tbody>
+                          <tr>
+                            <td
+                              valign="middle"
+                              bgcolor="#1e1e1e"
+                              style="
+                                height: 90px;
+                                padding: 10px;
+                                background: #1e1e1e;
+                                border-radius: 12px;
+                                vertical-align: middle;
+                              "
+                            >
+                              <table
+                                role="presentation"
+                                width="100%"
+                                cellpadding="0"
+                                cellspacing="0"
+                                border="0"
+                                style="width: 100%; border-collapse: collapse"
+                              >
+                                <tbody>
+                                  <tr>
+                                    <td align="right" style="padding: 0 0 8px">
+                                      <img
+                                        src="https://[trade_fair_domainadress]/wp-content/plugins/pwe-media/media/notifications/visitors_icon.png"
+                                        width="30"
+                                        alt=""
+                                        style="
+                                          display: block;
+                                          width: 30px;
+                                          height: auto;
+                                          margin-left: auto;
+                                          border: 0;
+                                        "
+                                      />
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td
+                                      align="left"
+                                      style="
+                                        padding: 0;
+                                        color: #ffffff;
+                                        font-family:
+                                          Arial, Helvetica, sans-serif;
+                                        font-size: 27px;
+                                        line-height: 30px;
+                                        font-weight: 700;
+                                        text-align: left;
+                                      "
+                                    >
+                                      1 mln+
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td
+                                      align="left"
+                                      style="
+                                        padding: 3px 0 0;
+                                        color: #ffffff;
+                                        font-family:
+                                          Arial, Helvetica, sans-serif;
+                                        font-size: 9px;
+                                        line-height: 12px;
+                                        font-weight: 700;
+                                        text-align: left;
+                                      "
+                                    >
+                                      {{visitors_text}}
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                  <!-- ================================================= -->
+                  <!-- GRUPA 2: STAT 3 + 4 -->
+                  <!-- ================================================= -->
+
+                  <div
+                    class="stat-group"
+                    style="
+                      display: inline-block;
+                      vertical-align: top;
+                      width: 50%;
+                      box-sizing: border-box;
+                      text-align: center;
+                    "
+                  >
+                    <!-- ===================== -->
+                    <!-- STAT 3 -->
+                    <!-- ===================== -->
+
+                    <div
+                      style="
+                        display: inline-block;
+                        vertical-align: top;
+                        width: 50%;
+                        box-sizing: border-box;
+                        padding: 4px;
+                      "
+                    >
+                      <table
+                        role="presentation"
+                        width="100%"
+                        cellpadding="0"
+                        cellspacing="0"
+                        border="0"
+                        bgcolor="#1e1e1e"
+                        style="
+                          width: 100%;
+                          border-collapse: separate;
+                          border-spacing: 0;
+                          background: #1e1e1e;
+                          border: 1px solid #505050;
+                          border-radius: 12px;
+                        "
+                      >
+                        <tbody>
+                          <tr>
+                            <td
+                              valign="middle"
+                              bgcolor="#1e1e1e"
+                              style="
+                                height: 90px;
+                                padding: 10px;
+                                background: #1e1e1e;
+                                border-radius: 12px;
+                                vertical-align: middle;
+                              "
+                            >
+                              <table
+                                role="presentation"
+                                width="100%"
+                                cellpadding="0"
+                                cellspacing="0"
+                                border="0"
+                                style="width: 100%; border-collapse: collapse"
+                              >
+                                <tbody>
+                                  <tr>
+                                    <td align="right" style="padding: 0 0 8px">
+                                      <img
+                                        src="https://[trade_fair_domainadress]/wp-content/plugins/pwe-media/media/notifications/email-footer/fairs_icon.png"
+                                        width="30"
+                                        alt=""
+                                        style="
+                                          display: block;
+                                          width: 30px;
+                                          height: auto;
+                                          margin-left: auto;
+                                          border: 0;
+                                        "
+                                      />
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td
+                                      align="left"
+                                      style="
+                                        padding: 0;
+                                        color: #ffffff;
+                                        font-family:
+                                          Arial, Helvetica, sans-serif;
+                                        font-size: 27px;
+                                        line-height: 30px;
+                                        font-weight: 700;
+                                        text-align: left;
+                                      "
+                                    >
+                                      140+
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td
+                                      align="left"
+                                      style="
+                                        padding: 3px 0 0;
+                                        color: #ffffff;
+                                        font-family:
+                                          Arial, Helvetica, sans-serif;
+                                        font-size: 9px;
+                                        line-height: 12px;
+                                        font-weight: 700;
+                                        text-align: left;
+                                      "
+                                    >
+                                      {{fairs_text}}
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+
+                    <!-- ===================== -->
+                    <!-- STAT 4 -->
+                    <!-- ===================== -->
+
+                    <div
+                      style="
+                        display: inline-block;
+                        vertical-align: top;
+                        width: 50%;
+                        box-sizing: border-box;
+                        padding: 4px;
+                      "
+                    >
+                      <table
+                        role="presentation"
+                        width="100%"
+                        cellpadding="0"
+                        cellspacing="0"
+                        border="0"
+                        bgcolor="#1e1e1e"
+                        style="
+                          width: 100%;
+                          border-collapse: separate;
+                          border-spacing: 0;
+                          background: #1e1e1e;
+                          border: 1px solid #505050;
+                          border-radius: 12px;
+                        "
+                      >
+                        <tbody>
+                          <tr>
+                            <td
+                              valign="middle"
+                              bgcolor="#1e1e1e"
+                              style="
+                                height: 90px;
+                                padding: 10px;
+                                background: #1e1e1e;
+                                border-radius: 12px;
+                                vertical-align: middle;
+                              "
+                            >
+                              <table
+                                role="presentation"
+                                width="100%"
+                                cellpadding="0"
+                                cellspacing="0"
+                                border="0"
+                                style="width: 100%; border-collapse: collapse"
+                              >
+                                <tbody>
+                                  <tr>
+                                    <td align="right" style="padding: 0 0 8px">
+                                      <img
+                                        src="https://[trade_fair_domainadress]/wp-content/plugins/pwe-media/media/notifications/email-footer/area_icon.png"
+                                        width="30"
+                                        alt=""
+                                        style="
+                                          display: block;
+                                          width: 30px;
+                                          height: auto;
+                                          margin-left: auto;
+                                          border: 0;
+                                        "
+                                      />
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td
+                                      align="left"
+                                      style="
+                                        padding: 0;
+                                        color: #ffffff;
+                                        font-family:
+                                          Arial, Helvetica, sans-serif;
+                                        font-size: 27px;
+                                        line-height: 30px;
+                                        font-weight: 700;
+                                        text-align: left;
+                                      "
+                                    >
+                                      153 k
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td
+                                      align="left"
+                                      style="
+                                        padding: 3px 0 0;
+                                        color: #ffffff;
+                                        font-family:
+                                          Arial, Helvetica, sans-serif;
+                                        font-size: 9px;
+                                        line-height: 12px;
+                                        font-weight: 700;
+                                        text-align: left;
+                                      "
+                                    >
+                                      {{area_text}}
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </td>
+            </tr>
+          </mj-raw>
+        </mj-column>
+      </mj-section>
+
+      <!-- ===================================================== -->
+      <!-- LOGO + SOCIAL -->
+      <!-- ===================================================== -->
+
+      <mj-section padding="0 6px">
+        <mj-column width="100%" padding="12px 16px" background-color="#1e1e1e">
+          <mj-table padding="0">
+            <tr>
+              <!-- LOGO -->
+              <td
+                width="50%"
+                valign="middle"
+                align="left"
+                style="
+                  width: 50%;
+                  vertical-align: middle;
+                  text-align: left;
+                  padding: 0;
+                "
+              >
+                <img
+                  src="https://[trade_fair_domainadress]/wp-content/plugins/pwe-media/media/notifications/email-footer/pwe-logo-white.png"
+                  width="50"
+                  alt=""
+                  style="
+                    display: block;
+                    width: 50px;
+                    max-width: 50px;
+                    height: auto;
+                    border: 0;
+                  "
+                />
+              </td>
+
+              <!-- SOCIAL -->
+              <td
+                width="50%"
+                valign="middle"
+                align="right"
+                style="
+                  width: 50%;
+                  vertical-align: middle;
+                  text-align: right;
+                  padding: 0;
+                "
+              >
+                <table
+                  role="presentation"
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                  align="right"
+                  style="border-collapse: collapse; margin-left: auto"
+                >
+                  <tr>
+                    <!-- FACEBOOK -->
+                    <td valign="middle" style="padding: 0 6px 0 0">
+                      <a
+                        href="[pwe_facebook]"
+                        target="_blank"
+                        style="display: block; text-decoration: none"
+                      >
+                        <img
+                          src="https://[trade_fair_domainadress]/wp-content/plugins/pwe-media/media/notifications/email-footer/facebook_icon.png"
+                          width="38"
+                          height="38"
+                          alt="Facebook"
+                          style="
+                            display: block;
+                            width: 38px;
+                            height: 38px;
+                            border: 0;
+                            background: #1e1e1e;
+                            border-radius: 8px;
+                          "
+                        />
+                      </a>
+                    </td>
+
+                    <!-- INSTAGRAM -->
+                    <td valign="middle" style="padding: 0">
+                      <a
+                        href="[pwe_instagram]"
+                        target="_blank"
+                        style="display: block; text-decoration: none"
+                      >
+                        <img
+                          src="https://[trade_fair_domainadress]/wp-content/plugins/pwe-media/media/notifications/email-footer/instagram_icon.png"
+                          width="38"
+                          height="38"
+                          alt="Instagram"
+                          style="
+                            display: block;
+                            width: 38px;
+                            height: 38px;
+                            border: 0;
+                            background: #1e1e1e;
+                            border-radius: 8px;
+                          "
+                        />
+                      </a>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </mj-table>
+        </mj-column>
+      </mj-section>
+
+      <!-- ===================================================== -->
+      <!-- RODO -->
+      <!-- ===================================================== -->
+
+      <mj-section padding="0 6px 10px">
+        <mj-column
+          background-color="#1e1e1e"
+          border-radius="0 0 14px 14px"
+          padding="6px 16px 16px"
+        >
+          <mj-text
+            color="#ffffff"
+            font-size="9px"
+            line-height="13px"
+            padding="0"
+            align="left"
+          >
+            {{rodo_text}}
+            <a
+              href="mailto:rodo@warsawexpo.eu"
+              style="color: #ffffff; text-decoration: underline"
+            >
+              rodo@warsawexpo.eu </a
+            >.
+          </mj-text>
+        </mj-column>
+      </mj-section>
+    </mj-wrapper>
+  </mj-body>
+</mjml>
