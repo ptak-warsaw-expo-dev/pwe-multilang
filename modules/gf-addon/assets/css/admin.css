@@ -1,0 +1,84 @@
+/* gf-addon module styles */
+
+.pwe-gf-addon {
+display: grid; gap: 16px;
+}
+
+.pwe-gf-addon-grid {
+display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px;
+}
+
+.pwe-gf-addon-feature {
+display: flex; flex-direction: column; min-width: 0; padding: 18px; background: var(--pwe-surface); border: 1px solid var(--pwe-border); border-radius: var(--pwe-radius-sm); box-shadow: var(--pwe-shadow-sm);
+}
+
+.pwe-gf-addon-feature-header {
+display: flex; align-items: flex-start; gap: 16px; flex: 1; padding-bottom: 20px;
+}
+
+.pwe-gf-addon-feature-copy {
+flex: 1; min-width: 0;
+}
+
+.pwe-gf-addon-feature h4 {
+margin: 2px 0 6px; color: var(--pwe-ink); font-size: 14px; font-weight: 700; line-height: 1.4; overflow-wrap: anywhere;
+}
+
+.pwe-gf-addon-feature p {
+margin: 0; color: var(--pwe-muted); font-size: 12px; line-height: 1.6; overflow-wrap: anywhere;
+}
+
+.pwe-gf-addon-feature .pwe-status {
+flex-shrink: 0; gap: 5px; margin: 0; padding: 5px 8px; color: #00683d; font-size: 11px; line-height: 1.4; border-radius: 6px;
+}
+
+.pwe-gf-addon-feature .pwe-status .dashicons {
+width: 14px; height: 14px; font-size: 14px;
+}
+
+.pwe-gf-addon-feature-footer {
+display: flex; align-items: center; gap: 14px; padding-top: 14px; border-top: 1px solid var(--pwe-border);
+}
+
+.pwe-gf-addon-code {
+display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; width: 34px; height: 34px; color: #475569; background: var(--pwe-subtle-strong); border-radius: 7px;
+}
+
+.pwe-gf-addon-feature-footer strong {
+color: #475569; font-size: 11px; font-weight: 600;
+}
+
+.pwe-gf-addon-feature-footer p {
+margin-top: 2px; font-size: 10.5px;
+}
+
+.pwe-gf-addon-summary {
+display: flex; align-items: center; gap: 14px; padding: 18px 22px; background: linear-gradient(100deg, #effbf6, #f5fcfa); border: 1px solid #bce9df; border-radius: var(--pwe-radius-sm);
+}
+
+.pwe-gf-addon-summary-icon {
+display: flex; align-items: center; justify-content: center; flex-shrink: 0; width: 30px; height: 30px; color: #fff; background: #00864c; border-radius: 50%; font-size: 23px;
+}
+
+.pwe-gf-addon-summary strong {
+color: #065f46; font-size: 12px;
+}
+
+.pwe-gf-addon-summary p {
+margin: 2px 0 0; color: var(--pwe-muted); font-size: 11px; line-height: 1.6;
+}
+
+@media (max-width: 1100px) {
+.pwe-gf-addon-feature-header {
+display: grid; grid-template-columns: 54px minmax(0, 1fr); gap: 12px;
+}
+.pwe-gf-addon-feature .pwe-status {
+grid-column: 2; justify-self: start;
+}
+}
+
+@media (max-width: 782px) {
+.pwe-gf-addon-grid {
+grid-template-columns: 1fr;
+}
+}

@@ -1,0 +1,227 @@
+/* tools module styles */
+
+.pwe-tools-form-grid {
+display: grid;
+    grid-template-columns: minmax(260px, 1fr) minmax(150px, 220px);
+    gap: 20px;
+    align-items: start;
+    margin-bottom: 18px;
+}
+
+.pwe-tools-topbar {
+display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.pwe-tools-email-field {
+flex: 1;
+    min-width: 280px;
+    max-width: 440px;
+}
+
+.pwe-tools-email-row {
+display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pwe-tools-email-row + .pwe-tools-email-row,
+#pwe-tools-add-email {
+margin-top: 8px;
+}
+
+.pwe-tools-email-row input {
+flex: 1;
+    min-width: 0;
+}
+
+.pwe-tools-remove-email {
+display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 20px;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    border: 0;
+    border-radius: 50%;
+    background: #dc2626;
+    color: #fff;
+    cursor: pointer;
+    transition: background var(--pwe-t);
+}
+
+.pwe-tools-remove-email:hover {
+background: #b91c1c;
+}
+
+.pwe-tools-remove-email:focus-visible {
+outline: 2px solid #b91c1c;
+    outline-offset: 3px;
+}
+
+.pwe-tools-remove-email .dashicons {
+width: 12px;
+    height: 12px;
+    font-size: 13px;
+    line-height: 1;
+}
+
+.pwe-tools-filter-block {
+padding: 18px 20px;
+    margin: 16px 0;
+    background: var(--pwe-subtle);
+    border: 1.5px solid var(--pwe-border);
+    border-radius: var(--pwe-radius-lg);
+}
+
+.pwe-tools-filter-grid {
+display: grid;
+    grid-template-columns: minmax(260px, 1fr) minmax(260px, 1fr);
+    gap: 14px;
+    align-items: end;
+    margin-bottom: 18px;
+}
+
+.pwe-tools-filter-col {
+min-width: 0;
+}
+
+.pwe-tools-filter-col .pwe-field {
+margin-bottom: 0;
+}
+
+.pwe-tools-filter-grid .pwe-field {
+margin-bottom: 0;
+}
+
+.pwe-tools-filter-grid select {
+width: 100%;
+}
+
+.pwe-tools-filter-label--spaced {
+margin-top: 16px;
+}
+
+.pwe-tools-notification-list {
+display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 8px;
+    padding: 2px 6px 4px 2px;
+    margin-top: 10px;
+}
+
+.pwe-tools-filter-block .pwe-gf-title-tabs {
+max-height: none;
+    overflow: visible;
+}
+
+.pwe-tools-notification-card {
+padding: 11px 13px;
+    background: var(--pwe-surface);
+    border: 1.5px solid var(--pwe-border);
+    border-radius: var(--pwe-radius);
+    box-shadow: var(--pwe-shadow-xs);
+    transition: border-color var(--pwe-t), box-shadow var(--pwe-t);
+    cursor: pointer;
+}
+
+.pwe-tools-notification-card:hover {
+border-color: var(--pwe-accent-border);
+    box-shadow: var(--pwe-shadow-sm);
+}
+
+.pwe-tools-notification-card:has(input:checked) {
+border-color: var(--pwe-accent);
+    background: var(--pwe-accent-soft);
+    box-shadow: var(--pwe-shadow-ring);
+}
+
+.pwe-tools-notification-head {
+display: flex;
+    gap: 9px;
+    align-items: flex-start;
+}
+
+.pwe-tools-notification-title {
+display: block;
+    max-height: 36px;
+    overflow: hidden;
+    color: var(--pwe-ink);
+    font-size: 12.5px;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.pwe-tools-notification-title .dashicons {
+display: none;
+}
+
+.pwe-tools-notification-meta {
+display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    margin-top: 3px;
+    color: var(--pwe-faint);
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.pwe-tools-notification-meta span + span::before {
+content: " · ";
+    opacity: .6;
+}
+
+.pwe-tools-notification-info {
+display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 8px;
+    padding-left: 26px;
+}
+
+.pwe-tools-title-badge {
+max-width: 190px;
+    overflow: hidden;
+    color: var(--pwe-muted);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background: var(--pwe-subtle-strong);
+    border: 1px solid var(--pwe-border);
+}
+
+.pwe-tools-status-badge.is-active {
+color: #14532d; background: #dcfce7; border: 1px solid #86efac;
+}
+
+.pwe-tools-status-badge.is-inactive {
+color: #475569; background: #f1f5f9; border: 1px solid #e2e8f0;
+}
+
+.pwe-tools-submit-row {
+display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 18px;
+    padding-top: 18px;
+    border-top: 1px solid var(--pwe-border);
+}
+
+@media (max-width: 960px) {
+.pwe-tools-notification-list {
+grid-template-columns: 1fr;
+}
+.pwe-tools-filter-grid {
+grid-template-columns: 1fr;
+}
+}
+
+@media (max-width: 782px) {
+.pwe-tools-notification-info {
+padding-left: 0;
+}
+}
