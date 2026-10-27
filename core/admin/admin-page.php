@@ -50,6 +50,7 @@ final class PWE_Multilang_Admin
         $module_styles = [
             'pwe-multilang-forms' => 'forms',
             'pwe-multilang-tools' => 'tools',
+            'pwe-multilang-gf-importer' => 'gf-importer',
             'pwe-multilang-pages' => 'pages',
             'pwe-multilang-gf-addon' => 'gf-addon',
         ];
@@ -137,6 +138,11 @@ final class PWE_Multilang_Admin
     public static function render_tools_page(): void
     {
         self::render_module_page('tools');
+    }
+
+    public static function render_gf_importer_page(): void
+    {
+        self::render_module_page('gf_importer');
     }
 
     public static function render_gf_addon_page(): void

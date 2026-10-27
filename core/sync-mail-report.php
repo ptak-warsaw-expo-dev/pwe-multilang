@@ -14,6 +14,13 @@ final class PWE_Multilang_Sync_Mail_Report
 
     public static function send(array $report): void
     {
+        if (
+            !shortcode_exists('pwe_available_languages') ||
+            trim(do_shortcode('[pwe_available_languages]')) === ''
+        ) {
+            return;
+        }
+
         $status = (string) ($report['status'] ?? '');
         if (!in_array($status, ['success', 'partial', 'failed'], true)) {
             return;

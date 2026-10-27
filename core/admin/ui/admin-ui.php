@@ -15,6 +15,7 @@ final class PWE_Multilang_Admin_UI
             'forms' => '<rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 8h18M7 12h2m3 0h5M7 16h2m3 0h5"/>',
             'pages' => '<path d="M14 2H8a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8zM14 2v6h6M2 6v14a2 2 0 0 0 2 2h12"/>',
             'tools' => '<rect x="5" y="4" width="14" height="18" rx="2"/><rect x="9" y="2" width="6" height="4" rx="1"/><path d="m9 13 2 2 4-4"/>',
+            'gf_importer' => '<path d="M12 3v12m-4-4 4 4 4-4M4 16v5h16v-5"/>',
             'gf_addon' => '<path d="M8 3v5m8-5v5M6 8h12v3a6 6 0 0 1-12 0V8ZM12 17v4"/>',
             'replace_content' => '<path d="M20 7H4m0 0 4-4M4 7l4 4M4 17h16m0 0-4-4m4 4-4 4"/>',
             'notification_translations' => '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
@@ -41,6 +42,7 @@ final class PWE_Multilang_Admin_UI
             'pages' => ['label' => 'Pages', 'secondary' => 'translation'],
             'notification_translations' => ['label' => 'Tłumaczenia powiadomień', 'secondary' => 'translation'],
             'tools' => ['label' => 'Tools', 'secondary' => 'resend'],
+            'gf_importer' => ['label' => 'GF Importer', 'secondary' => 'forms'],
             'gf_addon' => ['label' => 'GF Addon', 'secondary' => 'forms'],
         ];
         $theme = $themes[$module] ?? $themes[''];

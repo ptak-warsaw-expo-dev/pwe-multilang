@@ -46,6 +46,14 @@ final class PWE_Multilang_Sync_Orchestrator
         $report = ['status' => 'pending', 'languages' => ['desired' => [], 'before' => [], 'activated' => [],
             'deactivated' => [], 'already_active' => [], 'invalid' => [], 'errors' => [], 'after' => []],
             'pages' => ['status' => 'skipped'], 'forms' => ['status' => 'skipped'], 'errors' => []];
+        if (
+            !shortcode_exists('pwe_available_languages') ||
+            trim(do_shortcode('[pwe_available_languages]')) === ''
+        ) {
+            $report['status'] = 'skipped';
+            $report['reason'] = 'shortcode_missing_or_empty';
+            return $report;
+        }
         if (!$force && get_transient(self::COMPLETED_TRANSIENT) !== false) {
             $report['status'] = 'skipped';
             $report['reason'] = 'completed_transient';
