@@ -6,64 +6,57 @@ if (!defined('ABSPATH')) {
 
 final class PWE_Multilang_Updater
 {
-    public function __construct()
-    {
-        $this->setup_updater();
+    private $update_checker = null;
+
+    public function __construct() {
+        add_action('plugins_loaded', [$this, 'setup_updater'], 5);
     }
 
     /**
-     * Retrieving the GitHub key from the database
-     *
-     * @return string|null
+     * Configure Plugin Update Checker for the PWE Multilang GitHub repository.
      */
-    private function get_github_key(): ?string
-    {
-        global $wpdb;
-
-        $table_name = $wpdb->prefix . 'custom_klavio_setup';
-
-        if ($wpdb->get_var($wpdb->prepare('SHOW TABLES LIKE %s', $table_name)) !== $table_name) {
-            return null;
+    public function setup_updater(): void {
+        if ($this->update_checker !== null) {
+            return;
         }
 
-        $github_pre = $wpdb->prepare(
-            "SELECT klavio_list_id FROM $table_name WHERE klavio_list_name = %s",
-            'github_secret_2'
-        );
-        $github_result = $wpdb->get_results($github_pre);
-
-        if (!empty($github_result)) {
-            return (string) $github_result[0]->klavio_list_id;
-        }
-
-        return null;
-    }
-
-    /**
-     * Setting the auto-update mechanism
-     */
-    private function setup_updater(): void
-    {
         $checker_file = PWE_MULTILANG_PATH . 'core/plugin-update-checker/plugin-update-checker.php';
 
-        if (!file_exists($checker_file)) {
+        if (!is_file($checker_file)) {
             return;
         }
 
         require_once $checker_file;
 
-        $update_checker = Puc_v4_Factory::buildUpdateChecker(
-            'https://github.com/ptak-warsaw-expo-dev/pwe-multilang',
+        if (!class_exists('Puc_v4_Factory')) {
+            return;
+        }
+
+        $this->update_checker = Puc_v4_Factory::buildUpdateChecker(
+            'https://github.com/ptak-warsaw-expo-dev/pwe-multilang/',
             PWE_MULTILANG_FILE,
             'pwe-multilang'
         );
 
-        $github_key = $this->get_github_key();
-
-        if ($github_key) {
-            $update_checker->setAuthentication($github_key);
+        if (!$this->update_checker) {
+            return;
         }
 
-        $update_checker->getVcsApi()->enableReleaseAssets();
+        // Token from CAP. Required only for a private repository or to avoid
+        // GitHub API rate limits. Public repositories also work without it.
+        $github_key = PWE_System_Functions::get_database_meta_data('github_personal_access_token');
+        if (is_string($github_key) && trim($github_key) !== '') {
+            $this->update_checker->setAuthentication(trim($github_key));
+        }
+
+        // Releases are the source of updates. If a release contains a ZIP
+        // asset, PUC will use it instead of GitHub's automatically generated
+        // source archive.
+        if (method_exists($this->update_checker, 'getVcsApi')) {
+            $api = $this->update_checker->getVcsApi();
+            if ($api && method_exists($api, 'enableReleaseAssets')) {
+                $api->enableReleaseAssets();
+            }
+        }
     }
 }
