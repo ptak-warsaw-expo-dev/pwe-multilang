@@ -142,7 +142,7 @@
             line-height="24px"
             padding="0"
           >
-            {{cc_platyna_invitation_intro}}<br />{{cc_platyna_qr_instruction}}
+            {{cc_platyna_invitation_intro}} {{cc_platyna_qr_instruction}}
           </mj-text>
         </mj-column>
       </mj-section>
@@ -422,7 +422,7 @@
             line-height="22px"
             padding="0 0 4px"
           >
-            test
+            {id_platyna:5}
           </mj-text>
 
           <mj-text
@@ -637,7 +637,7 @@
                                       padding: 0;
                                       color: #ffffff;
                                       font-family: Arial, Helvetica, sans-serif;
-                                      font-size: 27px;
+                                      font-size: 24px;
                                       line-height: 30px;
                                       font-weight: 700;
                                       text-align: left;
@@ -742,7 +742,7 @@
                                       padding: 0;
                                       color: #ffffff;
                                       font-family: Arial, Helvetica, sans-serif;
-                                      font-size: 27px;
+                                      font-size: 24px;
                                       line-height: 30px;
                                       font-weight: 700;
                                       text-align: left;
@@ -861,7 +861,7 @@
                                       padding: 0;
                                       color: #ffffff;
                                       font-family: Arial, Helvetica, sans-serif;
-                                      font-size: 27px;
+                                      font-size: 24px;
                                       line-height: 30px;
                                       font-weight: 700;
                                       text-align: left;
@@ -966,7 +966,7 @@
                                       padding: 0;
                                       color: #ffffff;
                                       font-family: Arial, Helvetica, sans-serif;
-                                      font-size: 27px;
+                                      font-size: 24px;
                                       line-height: 30px;
                                       font-weight: 700;
                                       text-align: left;
