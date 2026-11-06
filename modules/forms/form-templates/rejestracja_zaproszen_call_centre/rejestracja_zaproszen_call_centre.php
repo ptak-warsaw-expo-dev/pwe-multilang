@@ -235,7 +235,7 @@ final class PWE_Multilang_Form_Template_Rejestracja_Zaproszen_Call_Centre {
                 'enabled' => true,
             ],
             'enableHoneypot' => true,
-            'template_version' => '1.0.1',
+            'template_version' => '1.0.2',
         ]);
 
         if (!empty($GLOBALS['pwe_mlg_capture_template_payload'])) {
